@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="enrmarc's web site" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+    <title>tms | enrmarc</title>
+  </head>
+
+  <body>  
+      <div id="wrapper">
+          <div id="header"></div>
+          <div id="content">
+              <div id="title"><h1>Turing Machine simulator</h1></div>
+              <div id="topic">
+                  <h2>About</h2>
+                  <p>A simple <a href="http://en.wikipedia.org/wiki/Turing_machine">Turing Machine </a>simulator written in Java with a command-line interface.</p>
+                  <h2>Usage</h2>
+                  <p>To run tms: </p>
+                  <code class="exec">$ java tm.Simulator input.txt</code>
+                  <p>where <code>input.txt</code> has the format:</p>
+                  <pre class="prettyprint">
+aaabbb
+q1, a -> q2, #, R
+q2, a -> q2, a, R
+q2, b -> q2, b, R
+q2, # -> q3, #, L
+q3, b -> q4, #, L
+q4, a -> q4, a, L
+q4, b -> q4, b, L
+q4, # -> q1, #, R
+q1, # -> qf, #, R
+</pre>
+                  <p>The first line is the input string and the next lines are the transitions. The states are 
+                  labeled starting from <code>q1</code>. The final state is <code>qf</code>, and the blank symbol 
+                  is <code>#</code>.</p>
+                  <p>To run the tms step by step use the <code>s</code> option:</p>
+                  <code class="exec">$ java tm.Simulator input.txt s</code>
+                  <br/><br/><br/>
+                  <p><a id="forkme_banner" href="https://github.com/enrmarc/tms">View on GitHub</a></p>
+              </div>
+          </div>
+
+          
+          <div id="sidebar">
+              <h2><span class="sidebar header">Sitios</span></h2>
+              <ul class="sidebar content pages">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../acerca.html">Sobre mí</a></li>
+                  <li><a href="../proyectos.html">Proyectos</a></li>
+              </ul>
+              <h2><span class="sidebar header">Enlaces</span></h2>
+              <ul class="sidebar content links">
+                  <li><a class="social github" href="http://github.com/enrmarc">GitHub</a></li>
+                  <li><a class="social stackoverflow" href="http://stackoverflow.com/users/434171/enrmarc">Stackoverflow</a></li>
+                  <li><a class="social twitter" href="http://twitter.com/enrmarc">Twitter</a></li>
+                  <li><a class="social grooveshark" href="http://grooveshark.com/#!/enrmarc">Grooveshark</a></li>
+                  <li><a class="social google" href="https://profiles.google.com/101056314044406602016/about">Google+</a></li>
+              </ul>
+              <h2><span class="sidebar header">Contacto</span></h2>
+              <ul class="sidebar content contact">
+                  <li><a class="social gmail" href="mailto:enrmarc@gmail.com">Gmail</a></lu>
+              </ul>
+          </div>
+      </div>
+      <div id="footer">
+          <p>Copyright &copy; 2012 enrmarc. Sitio publicado en <a href="http://pages.github.com">GitHub Pages.</a></p>
+      </div>
+  </body>
+</html>
