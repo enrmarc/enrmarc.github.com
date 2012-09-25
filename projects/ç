@@ -133,7 +133,7 @@ a[href $='.pdf'] {
 }
 
 #spacing {
-    margin: 100px;
+    margin: 20px;
 }
 
 /**/
@@ -167,14 +167,6 @@ a[href $='.pdf'] {
 
 .exec {
    color: #d14;
-}
-
-.pre {
-    float: left;
-}
-
-.next {
-    float: right;
 }
 
 /**/
