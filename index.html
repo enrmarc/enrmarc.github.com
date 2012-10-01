@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'/>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="enrmarc's web site" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <title>Home | enrmarc</title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>Home | enrmarc</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <!-- Header -->
+            <div id="header">enrmarc</div>
 
-  <body>
-      <div id="wrapper">
-          <div id="header"></div>
+            <!-- Navigation -->
+            <div id="navigation">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="tags.html">tags</a></li>
+                    <li><a href="projects.html">proyectos</a></li>
+                    <li><a href="about.html">sobre mí</a></li>
+                </ul>
+            </div>
 
-          <!-- Main content -->
-          <div id="content">
-              <div id="title"><h1>Archivo</h1></div>
-              <ul id="topic">
-                  <li><span class="date">2012.09.09</span><a href="">Test</a></li>
-              </ul>
-          </div>
+            <!-- Content -->
+            <div id="body">
+                <div class="entry-overview">
+                    <div class="date">4 Marzo, 2012</div>
+                    <div class="detail">
+                        <h1><a href="projects/tms.html">Turing Machine Simulator</a></h1>
+                        <div class="summary"><p>A simple Turing Machine simulator written in Java.</p></div>
+                    </div>
+                </div>
 
+                <div class="entry-overview">
+                    <div class="date">Febrero 22, 2012</div>
+                    <div class="detail">
+                        <h1><a href="projects/javamines.html">JavaMines</a></h1>
+                        <div class="summary"><p>Another minesweeper game written in Java.</p></div>
+                    </div>
+                </div>
 
+                <div class="entry-overview">
+                    <div class="date">Septiembre 12, 2008</div>
+                    <div class="detail">
+                        <h1><a href="projects/logo-interpreter.html">Logo interpreter</a></h1>
+                        <div class="summary"><p>A basic interpreter of the Logo programming language.</p></div>
+                    </div>
+                </div>
+            </div>
 
-          <!-- Left sidebar -->
-          <div id="sidebar">
-              <h2><span class="sidebar header">Sitios</span></h2>
-              <ul class="sidebar content pages">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">Sobre mí</a></li>
-                  <li><a href="projects.html">Proyectos</a></li>
-              </ul>
-              <h2><span class="sidebar header">Enlaces</span></h2>
-              <ul class="sidebar content links">
-                  <li><a class="social github" href="http://github.com/enrmarc">GitHub</a></li>
-                  <li><a class="social stackoverflow" href="http://stackoverflow.com/users/434171/enrmarc">Stackoverflow</a></li>
-                  <li><a class="social twitter" href="http://twitter.com/enrmarc">Twitter</a></li>
-                  <li><a class="social grooveshark" href="http://grooveshark.com/#!/enrmarc">Grooveshark</a></li>
-                  <li><a class="social google" href="https://profiles.google.com/101056314044406602016/about">Google+</a></li>
-              </ul>
-              <h2><span class="sidebar header">Contacto</span></h2>
-              <ul class="sidebar content contact">
-                  <li><a class="social gmail" href="mailto:enrmarc@gmail.com">Gmail</a></li>
-              </ul>
-          </div>
-      </div>
-
-      <!-- footer -->
-      <div id="footer">
-          <p>Copyright &copy; 2012 enrmarc. Sitio publicado en <a href="http://pages.github.com">GitHub Pages.</a></p>
-      </div>
-      <div id="spacing"></div>
-      
-      <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-35072506-1']);
-          _gaq.push(['_trackPageview']);
-          
-          (function() {
-           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-           })();
-       </script>
-   </body>
+            <!-- Footer -->
+            <div id="footer">
+                <p>&copy; Copyright 2012 by enrmarc.</p>
+                <p class="social">Contacto:</p>
+                  <ul class="social">
+                    <li><a class="social github" href="http://github.com/enrmarc"></a></li>
+                    <li><a class="social stackoverflow" href="http://stackoverflow.com/users/434171/enrmarc"></a></li>
+                    <li><a class="social twitter" href="http://twitter.com/enrmarc"></a></li>
+                    <li><a class="social grooveshark" href="http://grooveshark.com/#!/enrmarc"></a></li>
+                    <li><a class="social google" href="https://profiles.google.com/101056314044406602016/about"></a></li>
+                    <li><a class="social gmail" href="mailto:enrmarc@gmail.com"></a></li>
+                  </ul>
+            </div>
+        </div>
+    </body>
 </html>

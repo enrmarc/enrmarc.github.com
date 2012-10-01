@@ -1,175 +1,172 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic|Coda|Droid+Sans+Mono);
-
-/* Meyer's CSS reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-	  padding: 0;
-	  border: 0;
-	  font-size: 100%;
-	  font: inherit;
-	  vertical-align: baseline;
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+/* general */
+body { 
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 25px;
 }
 
-/* General */
-html, body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.5em;
-    height: 99%;
-    width: 1200px;
-}
-
-a {
-    font-size: 15px;
-    color: #1155CC;
+h1, h2 {
+    font-weight: 300;
 }
 
 h1 {
-    font-size: 40px;
-    font-weight: 100;
-    display: block;
-    height: 49px;
-    letter-spacing: -1px;
-    line-height: 49px;
-    text-rendering: optimizelegibility;
-    margin: 0 0 10px 0;
+    font-size: 38px; 
+    line-height: 52px;
 }
 
 h2 {
-    font-size: 24px;
-    margin: 15px 0 15px 0;
+    font-size: 24px; 
 }
 
-p {
-    font-size: 15px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400; /* font-weight:400*/
-    line-height: 1.5;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-code {
-    font-size: 13px;
-    font-family: Consolas, monospace;
-}
-
-a:link, a:visited {
+a {
+    color: #1155CC;
+    font-weight: 200;
     text-decoration: none;
 }
 
-a:hover {
+#navigation a {
+    color: black;
+}
+
+a:hover { 
+    /*border-bottom: 1px solid #1155CC;*/
     text-decoration: underline;
 }
 
-ul, li {
-    line-height: 22px;
-    list-style: none;
+p a {
+    font-weight: 200;
 }
 
 a[href $='.pdf'] {
     padding-right: 18px;
-    background: transparent url('../images/pdf.png') no-repeat center right;
+    background: transparent url('../img/pdf.png') no-repeat center right;
 }
 
-/**/
-#wrapper {
-    width: 940px;
-    height: auto !important;
-    height: 100%;
-    min-height: 100%; 
-    position: relative;
-    margin: 0 auto -30px;
+/* layouts */
+#container {
+    width: 740px; 
+    margin: 48px auto; 
 }
 
 #header {
-    width: 100%;
-    height: 60px;
-    float: right;
-}
-
-#title {
-    width: 700px;
-    font-size: 25px;
-    color:#00915a;
-    line-height: 30px;
-}
-
-#sidebar {
-    width: 180px;
-    padding: 10px 20px;
     float: left;
+    margin-bottom: 42px;
 }
 
-#content {
-    width: 680px;
-    height: 100%;
-    padding: 10px 20px;
+#navigation {
     float: right;
+    margin-bottom: 42px;
+}
+
+#navigation ul,
+#footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navigation ul li,
+#footer ul li {
+    display: inline;
+    margin: 0 2px;
+}
+
+#body {
+    clear: both;
 }
 
 #footer {
-    font-size: 12px;
-    clear: both;
-    width: 700px;
-    margin: 0 auto;
-    left: 120px;
-    position: relative;
-    margin-top: -30px;
-    height: 30px;
+    border-top: 1px solid #555;
+    padding-top: 9px;
+    margin-top: 42px;
+    font-size: 15px;
+    text-align: center;
+    color: #555;
 }
 
-#spacing {
-    margin: 100px;
+#footer p {
+    margin: 0;
 }
 
-/**/
-.sidebar.header {
-    font-family: 'Coda', sans-serif;
+/* entry */
+div.entry-overview {
+    margin: 25px 120px 25px 100px;
 }
 
-.sidebar.content {
-    line-height: 24px;
+div.entry-overview h1 {
+    font-size: 20px;
 }
 
-.sidebar.content a {
-    color: #222222;
-    font-size: 14px;
+div.entry-overview h1:after { 
+    content: " \2014"; /* mdash */
 }
 
-.date {
-    font-size: 13px;
+div.entry-overview h1, 
+div.entry-overview div.summary, 
+div.entry-overview div.summary p {
+    display: inline; 
+    line-height: 25px;
+}
+
+div.entry-overview div.detail {
+    margin-left: 160px;
+}
+
+div.entry-overview div.date { 
+    float: left;
+    width: 140px; 
     color: black;
-    margin-right: 1em;
-    text-align: left;
-    width: 75px;
-    display:block;
-    float:left;
+    /*color: #CC0033;*/
+    /*color: #1155CC;*/
+    text-align: right; 
+    font-size: 14px; 
 }
 
-.date2 {
-    font-size: 13px;
-    color: black;
+/* pagination */
+div.pagination {
+    margin: 36px 0 0 0; 
+    text-align: center;
 }
 
-.exec {
-   color: #d14;
+div.pagination strong {
+    font-weight: normal;
+    font-style: italic;
 }
 
-.pre {
+/* other */
+img.align-center { 
+    margin: 15px auto;
+    display: block;
+}
+
+/* tags */
+p.tags {
+    text-align: right;
+}
+
+ul.tagcloud {
+    font-size: 16px;
+    margin: 36px 0;
+    padding: 0;
+    list-style: none; 
+}
+
+ul.tagcloud li {
+    margin: 0;
+    padding: 0 10px;
+    display: inline; 
+}
+
+p.date {
+    margin-top: -25px;
+}
+
+.previous {
     float: left;
 }
 
@@ -177,33 +174,47 @@ a[href $='.pdf'] {
     float: right;
 }
 
-/**/
+.title {
+    color: #00915A;
+    width: 560px;
+}
+
 .social {
-    padding: 2px 0 2px 20px;
+    display: inline;
+    padding: 10px;
+}
+
+.social2 {
+    list-style:none;
+}
+
+.social2 a {
+    padding: 2px 0 2px 20px;    
+    color: #222222;
 }
 
 .social.stackoverflow {
-    background: url('../images/stackoverflow.png') scroll no-repeat left center;
+    background: url('../img/stackoverflow.png') scroll no-repeat left center;
 }
 
 .social.twitter {
-    background: url('../images/twitter2.png') scroll no-repeat left center;
+    background: url('../img/twitter2.png') scroll no-repeat left center;
 }
 
 .social.github {
-    background: url('../images/github.png') scroll no-repeat left center;
+    background: url('../img/github.png') scroll no-repeat left center;
 }
 
 .social.grooveshark {
-    background: url('../images/grooveshark2.png') scroll no-repeat left center;
+    background: url('../img/grooveshark2.png') scroll no-repeat left center;
 }
 
 .social.gmail {
-    background: url('../images/gmail.png') scroll no-repeat left center;
+    background: url('../img/gmail.png') scroll no-repeat left center;
 }
 
 .social.google {
-    background: url('../images/google.png') scroll no-repeat left center;
+    background: url('../img/google.png') scroll no-repeat left center;
 }
 
 /* Twitter bootstrap */
@@ -254,15 +265,19 @@ pre code {
     border: 0;
 }
 
+.exec {
+   color: #d14;
+}
+
 #forkme_banner {
     display: block;
     top: 0;
-    width: 118px;
+    width: 135px;
     right: 10px;
     z-index: 10;
     padding: 10px 50px 10px 10px;
     color: white;
-    background: url('../images/blacktocat.png') #0090FF no-repeat 95% 50%;
+    background: url('../img/blacktocat.png') #0090FF no-repeat 95% 50%;
     font-weight: 700;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     border-bottom-left-radius: 2px;
