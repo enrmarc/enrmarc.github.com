@@ -1,11 +1,9 @@
-/* fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(fonts.css);
+@import url(google-code-prettify/prettify.css);
 /* general */
 body { 
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 17px;
+    font-family: proxima-nova, 'Open Sans', sans-serif;
+    font-size: 16px;
     font-weight: 300;
     line-height: 25px;
 }
@@ -45,6 +43,10 @@ p a {
 a[href $='.pdf'] {
     padding-right: 18px;
     background: transparent url('../img/pdf.png') no-repeat center right;
+}
+
+::selection {
+    background: #6BD7F3;
 }
 
 /* layouts */
@@ -166,6 +168,29 @@ p.date {
     margin-top: -25px;
 }
 
+.entry-content {
+    clear: both;
+    padding-top: 10px;
+}
+
+.entry-posted {
+/*    position: absolute;*/
+    float: left;
+    width: 48px;
+    height: 52px;
+    padding: 6px 10px 16px;
+    background: url("../img/bg-date-lt.png") center center no-repeat;
+    text-align: center;
+    /*background-color: #333334;*/
+    font: 10px/1 proxima-nova, "Open Sans Light", sans-serif;
+}
+.entry-posted .posted-month { display: block; font-size: 1.4em; text-transform: uppercase; }
+.entry-posted .posted-date { display: block; font-size: 2.6em; line-height: .95; }
+.entry-posted .posted-year { display: block; font-size: 1.4em; }
+#body h2 {
+    clear: both;
+}
+
 .previous {
     float: left;
 }
@@ -176,7 +201,12 @@ p.date {
 
 .title {
     color: #00915A;
-    width: 560px;
+    /*width: 560px;*/
+    width: 660px;
+    float: right;
+    padding: 0;
+    margin: 0;
+    /*background-color: #333334;*/
 }
 
 .social {
@@ -241,7 +271,7 @@ pre {
     padding: 9.5px;
     margin: 10px 0 10px; /* new */
     font-size: 13px;
-    line-height: 20px;
+    line-height: normal; /* new */
     word-break: break-all;
     word-wrap: break-word;
     white-space: pre;
