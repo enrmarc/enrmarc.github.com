@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="entry-header">
+    <p class="entry-posted">
+    <a class="posted-month">{{ page.date | date: "%b" }}</a>
+    <a class="posted-date">{{ page.date | date: "%d" }}</a>
+    <a class="posted-year">{{ page.date | date: "%Y" }}</a>
+    </p>
+    <h1 class="title">{{ page.title }}</h1>
+</div>
+
+<div class="entry-content">
+    {{ content }}
+</div>
+
+<!-- Next / Previus -->
+<div class="previous">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
+    {% endif %}
+</div>
+
+<div class="next">
+    {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
+    {% endif %}
+</div>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simulador de Máquina de Turing | enrmarc</title>
+        <meta name="author"   content="enrmarc"/>
+        <meta name="keywords" content="enrmarc, programming"/>
+        <link type="image/x-icon" rel="icon" href="http://enrmarc.github.com/img/favicon.ico"/>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/pygments/default.css">
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35072506-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+ </script>
+
+    </head>
+    <body>
+        <div id="container">
+            <!-- Header -->
+            <div id="header">enrmarc</div>
+
+
+            <!-- Navigation -->
+            <div id="navigation">
+    <ul>
+        <li><a href="/index.html">home</a></li>
+        <li><a href="/projects.html">proyectos</a></li>
+        <li><a href="/about.html">sobre mí</a></li>
+    </ul>
+</div>
+
+
+            <!-- Content -->
+            <div id="body">
+                <div class="entry-header">
+    <p class="entry-posted">
+    <a class="posted-month">Mar</a>
+    <a class="posted-date">03</a>
+    <a class="posted-year">2012</a>
+    </p>
+    <h1 class="title">Simulador de Máquina de Turing</h1>
+</div>
+
+<div class="entry-content">
+    <h2 id="acerca-de">Acerca de</h2>
+<p>Un simulador de <a href="http://en.wikipedia.org/wiki/Turing_machine">Máquina de Turing</a> escrito en Java.</p>
+
+<h2 id="uso">Uso</h2>
+<p>Para ejecutar el simulador:</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> java tm.Simulator input.txt
+</code></pre>
+</div>
+
+<p>donde <code>input.txt</code> tiene el siguiente formato:</p>
+
+<div class="highlight"><pre><code class="console"><span class="go">aaabbb</span>
+<span class="go">q1, a -&gt; q2, #, R</span>
+<span class="go">q2, a -&gt; q2, a, R</span>
+<span class="go">q2, b -&gt; q2, b, R</span>
+<span class="go">q2, # -&gt; q3, #, L</span>
+<span class="go">q3, b -&gt; q4, #, L</span>
+<span class="go">q4, a -&gt; q4, a, L</span>
+<span class="go">q4, b -&gt; q4, b, L</span>
+<span class="go">q4, # -&gt; q1, #, R</span>
+<span class="go">q1, # -&gt; qf, #, R</span>
+</code></pre>
+</div>
+
+<p>La primera línea es la cadena de entrada, que será almacenada en la cinta. 
+Las siguientes líneas indican las transiciones: los estados están etiquetados
+empezando desde <code>q1</code> (el estado inicial). El estado final se etiqueta como <code>qf</code> y
+el símbolo blanco como <code>#</code>.</p>
+
+<p>Para ejecutar el simulador paso a paso, añadir la opción <code>s</code>:</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">$</span> java tm.Simulator input.txt s
+</code></pre>
+</div>
+
+
+</div>
+
+<!-- View on GitHub -->
+<p><a id="view_banner" href="https://github.com/enrmarc/tms">View on GitHub</a></p><br/>
+
+<!-- Next / Previus -->
+<div class="previous">
+    
+    <a href="/blog/JavaMines">&larr; JavaMines</a>
+    
+</div>
+
+<div class="next">
+    
+    <a href="/blog/WS-Axis2-Android">Web Services con Apache Axis2 y Android &rarr;</a>
+    
+</div>
+
+            </div>
+
+            <!-- Footer -->
+            <div id="footer">
+    <p>&copy; Copyright 2012 enrmarc</p>
+    <p class="social">Contacto:</p>
+    <ul class="social">
+        <li><a class="social github" href="http://github.com/enrmarc"></a></li>
+        <li><a class="social stackoverflow" href="http://stackoverflow.com/users/434171/enrmarc"></a></li>
+        <li><a class="social twitter" href="http://twitter.com/enrmarc"></a></li>
+        <li><a class="social grooveshark" href="http://grooveshark.com/#!/enrmarc"></a></li>
+        <li><a class="social google" href="https://profiles.google.com/101056314044406602016/about"></a></li>
+        <li><a class="social gmail" href="mailto:enrmarc@gmail.com"></a></li>
+    </ul>
+</div>
+
+        </div>
+    </body>
+</html>

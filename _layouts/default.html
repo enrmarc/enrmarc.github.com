@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <meta name="author"   content="{{ site.author }}"/>
+        <meta name="keywords" content="enrmarc, programming"/>
+        <link type="image/x-icon" rel="icon" href="http://enrmarc.github.com/img/favicon.ico"/>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/pygments/default.css">
+        {% include google-analytics.html %}
+    </head>
+    <body>
+        <div id="container">
+            <!-- Header -->
+            {% include header.html %}
+
+            <!-- Navigation -->
+            {% include navigation.html %}
+
+            <!-- Content -->
+            <div id="body">
+                {{ content }}
+            </div>
+
+            <!-- Footer -->
+            {% include footer.html %}
+        </div>
+    </body>
+</html>
