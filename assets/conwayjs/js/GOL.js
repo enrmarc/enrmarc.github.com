@@ -4,7 +4,7 @@ var GOL = (function($) {
     var canvas, ctx, width, height, blockSize, rows, cols, timer, drawing, speed = 250;
 
     var init = function() {
-        Grid.setConfig({ rows : 50, cols : 50, speed : speed });
+        Grid.setConfig({ rows : 40, cols : 40, speed : speed });
         Grid.create();
         Grid.applyPattern({ x : 12, y : 10, code : "b3o7bo$b2o2bob2ob2o$3b3o4bob$bo2bobo3bob$o4bo4bob$o4bo4bob$bo2bobo3bob$3b3o4bob$b2o2bob2ob2o$b3o7bo!"}); // RLE file format
         setUpCanvas();
