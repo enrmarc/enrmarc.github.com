@@ -1,0 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+@font-face {
+    font-family: proxima-nova;
+    src:url(../fonts/proximanova-light-webfont.ttf);
+    font-weight: 300;
+    font-style: normal;
+}

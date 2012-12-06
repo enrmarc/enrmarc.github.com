@@ -1,0 +1,9 @@
+title: "enrmarc"
+url: "http://enrmarc.github.com"
+author: "enrmarc"
+description: "enrmarc's personal site."
+
+permalink: /blog/:title
+
+markdown: kramdown
+pygments: true
