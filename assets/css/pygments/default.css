@@ -25,7 +25,9 @@ pre { background-color: #282828 }
 .vg { color: #f7f7f7 } /* Name.Variable.Global */
 .vi { color: #f7f7f7 } /* Name.Variable.Instance */
 
-.err { border: 1px solid #FF0000 } /* Error */
+/*.err { border: 1px solid #f7f7f7 } Error */
+.err { color: #f7f7f7 }
+
 
 .o { color: #f7f7f7 } /* Operator */
 
@@ -67,7 +69,7 @@ pre { background-color: #282828 }
 .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
 .sx { color: #008000 } /* Literal.String.Other */
 .sr { color: #BB6688 } /* Literal.String.Regex */
-.s1 { color: #BA2121 } /* Literal.String.Single */
+.s1 { color: #62ccff } /* Literal.String.Single */
 .ss { color: #19177C } /* Literal.String.Symbol */
 
 .na { color: #f7f7f7 } /* Name.Attribute */
