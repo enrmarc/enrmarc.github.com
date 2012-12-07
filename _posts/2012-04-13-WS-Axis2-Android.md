@@ -2,6 +2,7 @@
 layout : post
 title  : Web Services con Apache Axis2 y Android
 summary: Enviar y recibir objetos complejos utilizando la librería Ksoap2.
+tags   : axis2 android ksoap2 web services
 ---
 
 Es necesario tener instalado y configurado [Axis2].

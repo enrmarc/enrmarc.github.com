@@ -1,0 +1,55 @@
+---
+layout : default
+title  : tags
+---
+
+<div class="tag-cloud">
+    {% for tag in site.tags %}
+        <a class="{{ tag[0] }}">{{ tag[0] }}</a>
+        <div class="hidden" style="display:none;">{{ tag[0] }}</div>
+    {% endfor %}
+</div>
+
+<div class="post-list" style="margin-top: 40px"></div>
+
+<div class="tag-list">
+    <ul>
+        {% for tag in site.tags %}
+          <div class="{{ tag[0] }}" style="display:none;">
+            {% for post in tag[1] %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </div>
+        {% endfor %}
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+            {% assign max = 1.0 %}
+            {% for tag in site.tags %}
+              {% if tag[1].size > max %}
+                {% assign max = tag[1].size %}
+              {% endif %}
+            {% endfor %}
+            
+            var max = {{ max }},
+                minFont = 10.0,
+                maxFont = 30.0,
+                diffFont = maxFont - minFont,
+                size = 0;
+            {% for tag in site.tags %}
+              size = (({{ tag[1].size }} * (100.0 / max) / 100.0) * diffFont) + minFont;
+              $(".{{ tag[0] }}").css("font-size", size + "px");
+            {% endfor %}
+
+            $('.hidden').each(function() {
+                $('.tag-cloud .' + $(this).text()).click(function() {
+                    $('.post-list').empty();
+                    $('.tag-list .' + $(this).text()).each(function() {
+                        $('.post-list').append($(this).html());
+                    });
+                });
+            });
+    });
+</script>

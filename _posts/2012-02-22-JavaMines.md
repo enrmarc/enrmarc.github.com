@@ -4,6 +4,10 @@ title   : JavaMines
 summary : Otra implementación del famoso juego, en Java.
 link    : https://github.com/enrmarc/javamines  
 img     : /assets/img/java.png
+tags    :
+- java
+- buscaminas
+- swing
 ---
 
 ##Acerca de

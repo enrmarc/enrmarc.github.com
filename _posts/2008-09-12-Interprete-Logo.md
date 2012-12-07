@@ -4,6 +4,9 @@ title   : Intérprete de Logo
 summary : Intérprete básico de un subconjunto del lenguaje de programación Logo.
 link    : https://github.com/enrmarc/logo-interpreter
 img     : /assets/img/logo.png
+tags    :
+- C
+- logo
 ---
 
 ##Acerca de
