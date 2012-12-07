@@ -22,7 +22,7 @@ hence `jekyll-tagcloud`.
 Just include the next template `tags.html`:
 
 {% highlight javascript %}
-{% raw %}
+{% literal %}
 ---
 layout : default
 title  : tags
@@ -67,17 +67,17 @@ title  : tags
              });
     });
 </script>
-{% endraw %}
+{% endliteral %}
 {% endhighlight %}
 
 Replace 
 {% highlight console %}
-{% raw %}
+{% literal %}
 ---
 layout : default
 title  : tags
 ---
-{% endraw %}
+{% endliteral %}
 {% endhighlight %}
 with your personal configuration.
 
