@@ -3,14 +3,14 @@ layout : default
 title  : tags
 ---
 
-<div class="tag-cloud">
+<ul class="tag-cloud" style="list-style:none">
     {% for tag in site.tags %}
-        <a class="{{ tag[0] }}">{{ tag[0] }}</a>
+        <li style="display:inline; margin: 2px 4px"><a class="{{ tag[0] }}">{{ tag[0] }}</a></li>
         <div class="hidden" style="display:none;">{{ tag[0] }}</div>
     {% endfor %}
-</div>
+</ul>
 
-<div class="post-list" style="margin-top: 40px"></div>
+<div class="post-list" style="margin-top: 40px; margin-left: 60px"></div>
 
 <div class="tag-list">
     <ul>
@@ -28,19 +28,19 @@ title  : tags
     $(function() {
             {% assign max = 1.0 %}
             {% for tag in site.tags %}
-              {% if tag[1].size > max %}
-                {% assign max = tag[1].size %}
-              {% endif %}
+                {% if tag[1].size > max %}
+                    {% assign max = tag[1].size %}
+                {% endif %}
             {% endfor %}
             
             var max = {{ max }},
                 minFont = 10.0,
-                maxFont = 30.0,
+                maxFont = 35.0,
                 diffFont = maxFont - minFont,
                 size = 0;
             {% for tag in site.tags %}
-              size = (({{ tag[1].size }} * (100.0 / max) / 100.0) * diffFont) + minFont;
-              $(".{{ tag[0] }}").css("font-size", size + "px");
+                size = ({{ tag[1].size }} / max) * diffFont + minFont;
+                $(".{{ tag[0] }}").css("font-size", size + "px");
             {% endfor %}
 
             $('.hidden').each(function() {
