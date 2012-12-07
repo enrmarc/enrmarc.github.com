@@ -2,7 +2,7 @@
 layout: default
 title: Sobre mí
 ---
-Me llamo Enrique. Puedes echar un vistazo a mi [CV] o ponerte en contacto conmigo mediante:
+Contacto:
 
 <ul class="social2">
     <li><a class="social github" href="http://github.com/enrmarc">GitHub</a></li>
@@ -11,5 +11,3 @@ Me llamo Enrique. Puedes echar un vistazo a mi [CV] o ponerte en contacto conmig
     <li><a class="social google" href="https://profiles.google.com/101056314044406602016/about">Google+</a></li>
     <li><a class="social gmail" href="mailto:enrmarc@gmail.com">Gmail</a></li>
 </ul>
-
-[CV]: http://enrmarc.github.com/docs/cv.pdf 
