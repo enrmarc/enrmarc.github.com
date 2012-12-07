@@ -234,3 +234,6 @@ pre code {
 
 .social2 a:hover, #footer a:hover { top: -3px; text-decoration: none; }
 
+.comments {
+    margin-top: 55px;
+}
