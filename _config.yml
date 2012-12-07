@@ -7,3 +7,4 @@ permalink: /blog/:title
 
 markdown: kramdown
 pygments: true
+auto: false
