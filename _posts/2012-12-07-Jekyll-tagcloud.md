@@ -72,10 +72,12 @@ title  : tags
 
 Replace 
 {% highlight console %}
+{% raw %}
 ---
 layout : default
 title  : tags
 ---
+{% endraw %}
 {% endhighlight %}
 with your personal configuration.
 
