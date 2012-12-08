@@ -4,7 +4,7 @@ title  : tags
 ---
 <div class="tag-cloud">
     {% for tag in site.tags %}
-        <a class="__{{ tag[0] }}">{{ tag[0] }}</a>
+        <a class="__{{ tag[0] }}" style="margin: 5px">{{ tag[0] }}</a>
         <div class="list_{{ tag[0] }}" style="display:none;">
             {% for post in tag[1] %}
                 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -17,8 +17,8 @@ title  : tags
 
 <script type="text/javascript">
     $(function() {
-            var minFont = 10.0,
-                maxFont = 35.0,
+            var minFont = 15.0,
+                maxFont = 40.0,
                 diffFont = maxFont - minFont,
                 size = 0;
 
@@ -30,7 +30,7 @@ title  : tags
             {% endfor %}
             
             {% for tag in site.tags %}
-                size = ({{ tag[1].size }} / {{ max }}) * diffFont + minFont;
+                size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
                 $(".__{{ tag[0] }}").css("font-size", size + "px");
             {% endfor %}
 
