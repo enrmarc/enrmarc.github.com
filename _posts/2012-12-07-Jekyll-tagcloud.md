@@ -3,7 +3,8 @@ layout  : project
 title   : Jekyll-tagcloud
 summary : Tag cloud for Jekyll without plugins.
 link    : https://github.com/enrmarc/jekyll-tagcloud
-tags    : jekyll proyectos liquid 
+img     : /assets/img/jekyll-tagcloud.png
+tags    : jekyll proyectos liquid
 ---
 
 ##About
