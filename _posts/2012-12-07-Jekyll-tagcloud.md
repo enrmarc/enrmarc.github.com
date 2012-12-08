@@ -10,7 +10,7 @@ tags    : jekyll proyectos liquid
 ##About
 `jekyll-tagcloud` is a little hack to create a tag cloud and their respective 
 posts for your [Jekyll] generated site hosted in [GitHub Pages], using Liquid
-and JavaScript (without plugins).
+and JavaScript (jQuery); without plugins.
 `jekyll-tagcloud` uses a logarithmic assessment (very simple) in order to weight tags.
 
 Of course you can do the same using Jekyll plugins, but that means that
