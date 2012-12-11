@@ -5,11 +5,11 @@ title  : tags
 <div class="tag-cloud">
     {% for tag in site.tags %}
         <a class="__{{ tag[0] }}" style="margin: 5px">{{ tag[0] }}</a>
-        <div class="list_{{ tag[0] }}" style="display:none;">
+        <ul class="list_{{ tag[0] }}" style="display:none;">
             {% for post in tag[1] %}
                 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
-        </div>
+        </ul>
     {% endfor %}
 </div>
 
