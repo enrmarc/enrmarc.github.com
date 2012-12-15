@@ -11,7 +11,7 @@ body {
 
 h1, h2 { font-weight: 300; }
 h1     { font-size: 38px; line-height: 45px; }
-h2     { font-size: 24px; }
+h2     { font-size: 24px; margin:0 }
 a      { color: #1155CC; text-decoration: none; }
 #navigation a { color: black;}
 a:hover { border-bottom: 1px solid #1155CC; }
@@ -58,7 +58,8 @@ div.entry-overview div.date {
     text-align: right; 
     font-size: 14px; 
 }
-.entry-content { clear: both; padding-top: 5px; }
+.entry-content { clear: both; padding-top: 0px; }
+.entry-header  { width: 50px; height: 90px}
 .entry-posted  {
     float: left;
     width: 48px;
@@ -76,8 +77,9 @@ div.entry-overview div.date {
 .title {
     color: #00915A;
     width: 660px;
-    float: right;
-    padding: 0;
+    /*float: right;*/
+    padding-left: 80px;
+    padding-top: 1px;
     margin: 0;
 }
 
@@ -232,7 +234,8 @@ pre code {
     -webkit-transition-duration:.05s;
 }
 
-.social2 a:hover, #footer a:hover { top: -3px; text-decoration: none; }
+.social2 a:hover { left: -8px; text-decoration: none;}
+#footer a:hover  { top: -3px; text-decoration: none; }
 
 .comments {
     margin-top: 55px;

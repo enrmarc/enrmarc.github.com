@@ -7,7 +7,7 @@ img     : /assets/img/jekyll-tagcloud.png
 tags    : jekyll proyectos liquid
 ---
 
-##About
+## About
 `jekyll-tagcloud` is a little hack to create a tag cloud and their respective 
 posts for your [Jekyll] generated site hosted in [GitHub Pages], using Liquid
 and JavaScript (jQuery); without plugins.
