@@ -1,8 +1,4 @@
-f({
-   "meta": {
-      "status": 200
-   },
-   "data": [
+[
   {
     "id": 7027915,
     "name": "conwayjs",
@@ -760,4 +756,3 @@ f({
     "default_branch": "master"
   }
 ]
-})
