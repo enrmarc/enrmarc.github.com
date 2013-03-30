@@ -2,12 +2,11 @@
 
 html, body{
     font-family: 'PT Sans', arial, helvetica, sans-serif !important;
-    /*font-size: .94em;*/
     text-align: justify;
-/*    line-height: 1.5em;*/
     color: #444444;
 }
 
+/* Navigation bar */
 .navbar {
    color: #CCC;
    padding: 15px 0px 10px 0px;
@@ -25,8 +24,9 @@ html, body{
    color: #999;
 }
 
+/* Container */
 .container a, h4{
-/*    color: #C83E22;*/
+   /*    color: #C83E22;*/
    color: #00A399;
    text-decoration: none;
 }
@@ -39,11 +39,18 @@ html, body{
 /*    text-decoration: none;*/
 }
 
-.container ul {
+/*.container ul {
     list-style-type: none;
     padding: 0;
     margin-left: 0;
+}*/
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin-left: 0;
 }
+
 
 .container li {
     border-bottom : 1px solid #eee;
@@ -161,3 +168,4 @@ footer {
    font-size: 11px;
    font-weight: normal;
 }
+

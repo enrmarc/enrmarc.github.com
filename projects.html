@@ -8,6 +8,37 @@ title: proyectos
       background: url('/assets/img/bg.png') repeat;
    }
 
+   li.repo {
+      height: 250px;
+      width: 220px;
+   } 
+   
+   li.repo h2, li.repo h3, li.repo p {
+      margin: 10px 15px;
+   }
+
+   li.repo p {
+      color: #666;
+   }
+
+   /* nombre del repo */
+   li.repo h2 {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 2px;
+      color: #0084B4;
+      line-height: 28px;
+   }
+   /* leng del repo */
+   li.repo h3 {
+      font-size: 12px;
+      margin-top: 2px;
+      margin-bottom: 15px;
+      color: #999;
+      font-weight: normal;
+      line-height: 20px;
+   }   
+
    h3 {
       font-size: 20px;
    }
@@ -25,6 +56,42 @@ title: proyectos
       margin-bottom: 20px;
    }
 
+.thumbnails .repo:after {
+   content: '';
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   border-bottom: 50px solid transparent;
+   border-left: 50px solid transparent;
+   border-right: 50px solid #0080B0;
+pointer-events: none;
+}  
+
+.repo.javascript:after {
+   border-right-color: #00a8a8;
+}
+
+.repo.java:after {
+   border-right-color: #542d8a;
+}
+
+.repo.python:after {
+   border-right-color: #b63b95; 
+}
+
+.repo.viml:after {
+   border-right-color: #881e04;
+}
+
+.repo.c:after {
+   border-right-color: #333;
+}
+
+.span9, .span3 {
+   position:relative;}
+
    div.repo {
 /*      height: 130px;*/
    }
@@ -40,7 +107,11 @@ title: proyectos
       color: #08C;
       text-decoration: none;
    }
-
+   .container ul {
+      list-style-type: none;
+      padding: 0;
+   /*   margin-left: 0;*/
+   }
 </style>
 
 <div class="container">
@@ -63,6 +134,8 @@ title: proyectos
          </ul>
       </div>
    </div>
+   <ul class="thumbnails" id="repos">
+   </ul>
 </div>
 
 
