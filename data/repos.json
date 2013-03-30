@@ -1,4 +1,5 @@
-f(
+f({
+   "data":
 [
   {
     "id": 7027915,
@@ -673,4 +674,4 @@ f(
     "default_branch": "master"
   }
 ]
-)
+})
