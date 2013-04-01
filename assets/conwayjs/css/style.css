@@ -1,38 +1,5 @@
-body {
-    /*background-color: rgb(38, 38, 38);*/
-}
-
 canvas {
     border: 1px solid rgba(242, 198, 65, 0.1);
     margin: 50px auto 0 auto;
     display: block;
-}
-
-h1 span {
-    color:#5A85FF;
-}
-
-.btn-group {
-    width: 50%;
-    margin: 0px auto;
-    font-size: 10px;
-    margin-top: 10px;
-}
-
-.buttons-left {
-    display: inline-block;
-    width: 120px;
-}
-
-.buttons-middle {
-    display: inline-block;
-    width: 70px;
-    vertical-align: bottom;
-}
-
-.buttons-right {
-    display: inline-block;
-    width: 170px;
-    text-align: right;
-    float: right;
 }

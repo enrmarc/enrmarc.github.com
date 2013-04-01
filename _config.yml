@@ -1,10 +1,10 @@
 title: "enrmarc"
 url: "http://enrmarc.github.com"
 author: "enrmarc"
-description: "enrmarc's personal site."
+description: "Personal website."
 
 permalink: /blog/:title
 
 markdown: kramdown
-pygments: true
+pygments: false
 auto: false
