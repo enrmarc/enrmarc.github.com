@@ -58,7 +58,7 @@ title  : tags
       $('.tag-cloud a[class^="__"]').click(function() {
          $('.post-list').empty();
          $('.list_' + $(this).text()).each(function() {
-            $('.post-list').append($(this).html());
+            $('.post-list').append('<ul>' + $(this).html() + '</ul>');
          });
       });
    });
