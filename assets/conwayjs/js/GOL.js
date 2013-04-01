@@ -1,7 +1,8 @@
 //var Grid = require('./Grid');
 
 var GOL = (function($) {
-    var canvas, ctx, width, height, blockSize, rows, cols, timer, drawing, speed = 250;
+    var canvas, ctx, width, height, blockSize, rows, cols, timer, drawing, speed = 50;
+    var running = false;
 
     var init = function() {
         Grid.setConfig({ rows : 40, cols : 40, speed : speed });
@@ -21,10 +22,10 @@ var GOL = (function($) {
         cols      = Grid.getCols(),
         blockSize = Math.floor(width / rows);
 
-        $('#run').toggle(run, pause);
+        $('#run').click(run);
         $('#clear').click(clear);
         $('#step').click(step);
-        $('#slider').slider(slider);
+        /*$('#slider').slider(slider);*/
         $('#randomize').click(randomize);
         $('#canvas').mousedown(onmousedown);
         $('#canvas').mousemove(onmousemove);
@@ -32,15 +33,21 @@ var GOL = (function($) {
     }
 
     var run = function() {
-        tick();
-        $(this).find('span').text('Pause');
-        $('#step').attr('disabled', true).addClass('ui-state-disabled');
+       if (!running) {
+          running = true;
+          tick();
+          $(this).text('Stop');
+          $('#step').attr('disabled', true);
+       } else {
+          pause(this);
+       }
     };
     
-    var pause = function() {
-        clearTimeout(timer);
-        $(this).find('span').text('Run');
-        $('#step').attr('disabled', false).removeClass('ui-state-disabled');
+    var pause = function(that) {
+          running = false;
+          clearTimeout(timer);
+          $(that).text('Run');
+          $('#step').attr('disabled', false).removeClass('ui-state-disabled');
     };
 
     var tick = function() {

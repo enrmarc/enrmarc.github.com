@@ -1,11 +1,14 @@
 ---
 layout : post
-title  : Web Services con Apache Axis2 y Android
-summary: Enviar y recibir objetos complejos utilizando la librería Ksoap2.
+title  : Android, Axis2 y Ksoap2
+summary: Enviar y recibir objetos complejos utilizando la librería Ksoap2 para Android.
 tags   : axis2 android ksoap2 webservices java
 ---
 
-Es necesario tener instalado y configurado [Axis2].
+Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
+si lo que quieres es enviar objetos complejos. Solo escribo una de tantas formas de hacerlo.
+(Es necesario tener instalado y configurado [Axis2] e incluir el el directorio `lib` del proyecto Android 
+la librería [Ksoap2]).
 
 ##Servidor
 La manera más rápida de desplegar un servicio web en Axis2 es creando un
@@ -36,7 +39,7 @@ public class Persona {
 }
 {% endhighlight %}
 
-La clase que expondrá el servicio web será
+La clase que expondrá el servicio web será:
 {% highlight java %}
 package org;
 
@@ -65,7 +68,7 @@ El fichero de configuración `services.xml` indica la clase que representará el
 </service>
 {% endhighlight %}
 
-La estructura de directorios en el servidor queda así
+La estructura de directorios en el servidor queda así:
 {% highlight console %}
 objetos/
 ├── META-INF
@@ -188,7 +191,7 @@ public class MarshalDouble implements Marshal {
 }
 {% endhighlight %}
 
-Por último la Activity
+Y por último la Activity:
 {%highlight java %}
 package com.objetos;
 
@@ -273,12 +276,10 @@ public class Main extends Activity {
         HttpTransportSE transport = new HttpTransportSE(URL);
         SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
         request.addProperty(p.getClass().getSimpleName(), p);
-        SoapSerializationEnvelope envelope = 
-            new SoapSerializationEnvelope(SoapEnvelope.VER11);
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         envelope.dotNet = true;
         envelope.setOutputSoapObject(request);
-        envelope.addMapping(TARGET_NAMESPACE, p.getClass().getSimpleName(),
-                p.getClass());
+        envelope.addMapping(TARGET_NAMESPACE, p.getClass().getSimpleName(), p.getClass());
         MarshalDouble md = new MarshalDouble();
         md.register(envelope);
 
@@ -293,6 +294,7 @@ public class Main extends Activity {
     }
 }
 {% endhighlight %}
+
 
 [Axis2]: http://axis.apache.org/axis2/java/core/ 
 [POJO]: http://axis.apache.org/axis2/java/core/docs/pojoguide.html 
