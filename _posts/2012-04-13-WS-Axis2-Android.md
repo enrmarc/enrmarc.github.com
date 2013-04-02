@@ -7,7 +7,7 @@ tags   : axis2 android ksoap2 webservices java
 
 Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
 si lo que quieres es enviar objetos complejos. Solo escribo una de tantas formas de hacerlo.
-(Es necesario tener instalado y configurado [Axis2] e incluir el el directorio `lib` del proyecto Android 
+(Es necesario tener instalado y configurado [Axis2] e incluir el el directorio `libs/` del proyecto Android 
 la librería [Ksoap2]).
 
 ##Servidor
