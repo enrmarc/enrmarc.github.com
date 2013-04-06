@@ -164,8 +164,9 @@ h2.post-title {
 
 
 /* About.html */
-.about .social a { color: #444; }
-.about li { border-bottom: 0; padding-top: 3px; }
+.about li { border-bottom: 0; padding-top: 4px; }
+.container .about ul li a { color: #444;}
+.container .about ul li a:hover {color: #2b4984;} 
 
 /* cv.html */
 .cv .wrap { margin-top: 30px; margin-bottom: 30px;}
