@@ -1,11 +1,22 @@
 (function($, undefined) {
    $(function() {
-     $.getJSON('http://enrmarc.github.com/data/repos.json?callback=?', f);
+     $.getJSON('http://enrmarc.github.io/data/repos.json?callback=?', f);
    });
 
 })(jQuery);
 
 function f(result) {
+
+   var desc = {
+      'conwawjs': 'El juego de la vida de Conway',
+      'enrmarc.github.com': 'Página personal usando Jekyll y Twitter Bootstrap. ¡Es responsive!',
+      'javamines': 'El Buscaminas implementado en Java usando Swing.',
+      'jekyll-tagcloud': 'Un pequeño hack en Jekyll para crear una nube de tags sin usar plugins.',
+      'logo-interpreter': 'Intérprete de un subconjunto del lenguaje de programación Logo.',
+      'tms': 'Simulador de la Máquina de Turing.',
+      'vim-config': 'Archivos de configuración de vim.'
+   }
+
    $(function() {
       var repos = 0;
       setTimeout(function() {
@@ -24,7 +35,7 @@ function f(result) {
       var $link = $("<a>").attr("href", repo.html_url).appendTo($item).attr('target', '_blank');
       $link.append($("<h2>").text(repo.name));      
       $link.append($("<h3>").text(repo.language || ''));
-      $link.append($("<p>").text(repo.description));
+      $link.append($("<p>").text(/*repo.description*/desc[repo.name]));
       $item.appendTo("#repos");
    }
 }
