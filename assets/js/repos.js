@@ -17,6 +17,10 @@ function f(result) {
       'vim-config': 'Archivos de configuración de vim.'
    }
 
+   var language = {
+      'jekyll-tagcloud': 'Jekyll'
+   }
+
    $(function() {
       var repos = 0;
       setTimeout(function() {
@@ -34,7 +38,7 @@ function f(result) {
       var $item = $("<li>").addClass("repo span3 " + (repo.language || '').toLowerCase());
       var $link = $("<a>").attr("href", repo.html_url).appendTo($item).attr('target', '_blank');
       $link.append($("<h2>").text(repo.name));      
-      $link.append($("<h3>").text(repo.language || '<br>'));
+      $link.append($("<h3>").text(repo.language || language[repo.name]));
       $link.append($("<p>").text(/*repo.description*/desc[repo.name]));
       $item.appendTo("#repos");
    }
