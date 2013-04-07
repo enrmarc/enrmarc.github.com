@@ -2,7 +2,7 @@
 layout    : post
 title     : Jekyll-tagcloud
 summary   : Tag cloud for Jekyll without plugins.
-tags      : jekyll proyectos liquid c++ c++
+tags      : jekyll proyectos liquid c++
 ---
 
 jekyll-tagcloud is a little hack to create a tag cloud and their respective 
