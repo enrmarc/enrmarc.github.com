@@ -37,30 +37,30 @@ title  : tags
 <div id="posts-tags" class="post-list" style="margin: 50px;"></div>
 
 <script type="text/javascript">
-$(function() {
-   var minFont = 15.0,
-       maxFont = 40.0,
-       diffFont = maxFont - minFont,
-       size = 0;
+   $(function() {
+      var minFont = 15.0,
+          maxFont = 40.0,
+          diffFont = maxFont - minFont,
+          size = 0;
        
-       {% assign max = 1.0 %}
-       {% for tag in site.tags %}
-          {% if tag[1].size > max %}
-             {% assign max = tag[1].size %}
-          {% endif %}
-       {% endfor %}
+      {% assign max = 1.0 %}
+      {% for tag in site.tags %}
+         {% if tag[1].size > max %}
+            {% assign max = tag[1].size %}
+         {% endif %}
+      {% endfor %}
             
-       {% for tag in site.tags %}
-          size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
-          $("#{{ forloop.index }}").css("font-size", size + "px");
-       {% endfor %}
+      {% for tag in site.tags %}
+         size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+         $("#{{ forloop.index }}").css("font-size", size + "px");
+      {% endfor %}
 
-       $('.tag-cloud a[class^="__tag"]').click(function() {
-          $('.post-list').empty();
-          $('#list_' + $(this).attr('id')).each(function() {
-             $('.post-list').append('<ul>' + $(this).html() + '</ul>');
-          });
-       });
+      $('.tag-cloud a[class^="__tag"]').click(function() {
+         $('.post-list').empty();
+         $('#list_' + $(this).attr('id')).each(function() {
+            $('.post-list').append('<ul>' + $(this).html() + '</ul>');
+         });
+      });
    });
 </script>
 {% endraw %}
