@@ -8,7 +8,7 @@
 function f(result) {
 
    var desc = {
-      'conwawjs': 'El juego de la vida de Conway',
+      'conwayjs': 'El juego de la vida de Conway',
       'enrmarc.github.com': 'Página personal usando Jekyll y Twitter Bootstrap. ¡Es responsive!',
       'javamines': 'El Buscaminas implementado en Java usando Swing.',
       'jekyll-tagcloud': 'Un pequeño hack en Jekyll para crear una nube de tags sin usar plugins.',
