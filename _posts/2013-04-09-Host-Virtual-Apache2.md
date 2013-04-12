@@ -1,13 +1,13 @@
 ---
 layout  : post
 title   : Host virtual en Apache
-summary : Configuración de un Host virtual en Apache2
+summary : Configuración de un host virtual Apache2 en Linux
 tags    : apache linux
 ---
 
 Lo que sigue es un recordatorio de cómo configurar un host virtual bajo Apache. Siempre
 se me olvida, asi que por qué recordarlo si puedo anotarlo. El hecho de usar un 
-Host virtual permite desplegar varios proyectos web en directorios diferentes
+host virtual permite desplegar varios proyectos web en directorios diferentes
 al usual `/var/www/`.
 
 Crea el fichero de configuración del host virtual

@@ -175,3 +175,15 @@ h2.post-title {
 .cv .cv-section-title { margin: 0 0 25px 0; }
 .cv .logo { text-transform: none; }
 .cv .wrap p { font-size: 13px; }
+
+/* default.html */
+#resize_me {
+   position: fixed;
+   height: 150px;
+   width: 150px;
+   right: 0;
+   bottom: 0;
+   background: url(../img/flechas.png) no-repeat;
+   background-size: 256px 256px;
+   z-index: 100;
+}
