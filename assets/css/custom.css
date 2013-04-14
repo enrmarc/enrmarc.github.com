@@ -1,148 +1,38 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 
-/* General */
-html, body {
-    font-family: 'PT Sans', helvetica, sans-serif !important;
-    text-align: justify;
-    color: #444444;
-    line-height: 1.5em;
-}
-
-h1  { line-height: 1.5em; }
-h3  { line-height: 1.5em; font-size: 17px; }
-h2  { line-height: 1.5em; font-size: 21px; }
-pre { background-color: ghostWhite; padding: 2px; }
-ul { list-style: none; padding: 0; margin-left: 0;}
+/* General  */
+html,
+body { font-family: 'PT Sans', helvetica, sans-serif !important; text-align: justify; color: #444; line-height: 1.5em;}
+h2   { line-height: 1.5em; font-size: 21px; }
+/*h3   { line-height: 1.5em; font-size: 17px; }*/
+pre     { background-color: ghostWhite; padding: 2px; }
+ul      { list-style: none; padding: 0; margin-left: 0;}
+.green  { color: #8CAC29; }
+.red    { color: #C00; }
+::selection { background-color: #F43059; color: #FFF;}
 
 /* Container */
-.container a, h4 {
-   /* color: #C83E22;*/
-   color: #00A399;
-   text-decoration: none;
-}
+.container a, h4         { color: #00A399; text-decoration: none;}
+.container a:hover       { color: #2b4984; text-decoration: none;}
+.container li            { border-bottom:  1px solid #eee;}
+.container li:last-child { border-bottom:  none;}
 
-.container a:hover {
-   /*color: #08C;*/
-   color:#2b4984;
-   text-decoration: none;
-   /*color: #AE361E;*/
-}
-
-.container li {
-    border-bottom : 1px solid #eee;
-    /*padding: 5px 0 5px 0;*/
-}
-
-.container li:last-child {
-    border-bottom : none;
-    /*padding: 5px 0 5px 0;*/
-}
-
-/* Navigation bar */
-.navbar {
-   color: #CCC;
-   padding: 15px 0px 10px 0px;
-   border-bottom: 1px solid #EEE;
-   margin-bottom: 0;
-}
+/* navbar */
+.navbar               { color: #CCC; padding: 15px 0px 10px; border-bottom: 1px solid #EEE; margin-bottom: 0;}
 .navbar a:first-child { margin-left: 0; }
-.navbar a {
-   margin: 0 5px;
-   text-decoration: none;
-   color: #999;
-}
+.navbar a             { margin: 0 5px; text-decoration: none; color: #999;}
 
 /* Blog entries */
-ul.slats li h3 {
-    margin-bottom : 0;
-    font-size: 17px;
-}
+.post li h3 { margin-bottom : 0; font-size: 17px; line-height: 1.5em}
+.post li p  { margin: 0; font-size: 14px;}
+.post li p span.meta { display: block; color: #999;}	
 
-ul.slats li p {
-    margin: 0;
-    font-size: 14px;
-}
-
-ul.slats li p span.meta {
-    display: block;
-    color: #999;
-}		
-
-/* Footer */
-#main-footer {
-    padding: 15px;
-    margin: 0 auto;
-    margin-top: 50px;
-    border-top : 1px solid #eee;
-    text-align: center;
-    color: gray;
-}
-
-#main-footer a { color: gray; }
-
-/* Social */
-.social { display: inline; padding: 10px 10px 10px 20px; }
-.social.twitter { background: url('../img/twitter2.png') scroll no-repeat left center; }
-.social.github  { background: url('../img/github2.png') scroll no-repeat left center; }
-.social.gmail   { background: url('../img/gmail.png') scroll no-repeat left center; }
-.social.stackoverflow { background: url('../img/so.png') scroll no-repeat left center; }
-
-/* CV */
-.cv-divider {
-   margin: 15px 0 40px 0;
-   /*padding: 3px 0;*/
-   border-top: 1px solid #EFEFEF;
-   /*border-bottom: 1px solid #EFEFEF;*/
-   font-weight: 300;
-   font-size: 20px;
-   line-height: 32px;
-   text-align: center;
-}
-
-@media (min-width: 900px) { 
-  .pdf {position: fixed; top:160px; margin-left: 275px;}
-}
-
-.pdf {
-   width: 50px;
-   display: block;
-   height: 50px;
-   background-image: url(../img/pdf_icon.png);
-   cursor: pointer;
-   margin-top: 10px;
-}
-  
-/* Proyectos */
-.very-small {
-   font-size: 11px;
-   font-weight: normal;
-}
-
-h2.post-title {
-   margin-bottom: 0;
-   line-height: 30px;
-}
-
-/* Container mas estrecho */
-.container {
-   margin-right: auto;
-   margin-left: auto;
-   max-width: 960px;
-}
-
-/* post */
-.date {
-   color: gray;
-   font-size: 12px;
-   display: inline-block;
-}
-
-.next { float: right; }
+/* Post */
+h2.post-title { margin-bottom: 0; line-height: 30px; font-size: 30px; color: #242424;}
+.date     { color: gray; font-size: 12px; display: inline-block;}
+.next     { float: right; }
 .previous { float: left; }
-
-/* View in Github banner */
 #view_banner:hover { text-decoration: underline; }
-
 #view_banner {
     display: block;
     top: 0;
@@ -158,32 +48,43 @@ h2.post-title {
     border-bottom-right-radius: 2px;
 }
 
-/*Colors*/
-.green { color: #8CAC29; }
-.red { color: #C00; }
+/* footer */
+#footer   { padding: 15px; margin: 0 auto; margin-top: 50px; border-top: 1px solid #eee; text-align: center; color: gray;}
+#footer a { color: gray; }
+#footer a:hover { opacity: 0.6}
 
+/* Social */
+.social         { display: inline; padding: 10px 10px 10px 20px; }
+.social.twitter { background: url('../img/twitter2.png') scroll no-repeat left center; }
+.social.github  { background: url('../img/github2.png') scroll no-repeat left center; }
+.social.gmail   { background: url('../img/gmail.png') scroll no-repeat left center; }
+.social.stackoverflow { background: url('../img/so.png') scroll no-repeat left center; }
 
-/* About.html */
-.about li { border-bottom: 0; padding-top: 4px; }
-.container .about ul li a { color: #444;}
-.container .about ul li a:hover {color: #2b4984;} 
-
-/* cv.html */
+/* cv */
+.cv-divider { margin: 15px 0 40px; border-top: 1px solid #EFEFEF; font-weight: 300; line-height: 32px;}
+.pdf { width: 50px; display: block; height: 50px; background-image: url(../img/pdf.png); cursor: pointer; margin-top: 10px;}
 .cv .wrap { margin-top: 30px; margin-bottom: 30px;}
 .cv .table { margin-bottom: 0; margin-top: 0;}
 .cv .table p { margin: 0;}
 .cv .cv-section-title { margin: 0 0 25px 0; }
 .cv .logo { text-transform: none; }
 .cv .wrap p { font-size: 13px; }
-
-/* default.html */
-#resize_me {
-   position: fixed;
-   height: 150px;
-   width: 150px;
-   right: 0;
-   bottom: 0;
-   background: url(../img/flechas.png) no-repeat;
-   background-size: 256px 256px;
-   z-index: 100;
+@media (min-width: 900px) { 
+  .pdf {position: fixed; top:160px; margin-left: 275px;}
 }
+
+/* Proyectos */
+.very-small { font-size: 11px; font-weight: normal;}
+
+/* Container mas estrecho */
+.container {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 960px;
+}
+
+/* about.html */
+.about li { border-bottom: 0; padding-top: 4px; }
+.container .about ul li a { color: #444;}
+.container .about ul li a:hover {color: #2b4984;} 
+
