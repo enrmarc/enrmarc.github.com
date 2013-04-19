@@ -7,7 +7,7 @@ tags      : jekyll proyectos random javascript
 
 I've been looking for an easy way to get a random post using [Jekyll], but I have found nothing.
 So here is a code snippet that do the trick.
-Click the <i class="icon-random"></i> icon at the top-right corner to see how it works.
+Click the <i class="icon-random"> </i> icon at the top-right corner to see how it works.
 
 {% highlight html %}
 {% raw %}
@@ -29,7 +29,7 @@ Click the <i class="icon-random"></i> icon at the top-right corner to see how it
    <div class="row-fluid">
       <div class="navbar">
          <div>
-            <a id="random" class="random-post pull-right"><i class="icon-random"></i>
+            <a id="random" class="random-post pull-right"><i class="icon-random"> </i>
             </a>
          </div>
       </div>
