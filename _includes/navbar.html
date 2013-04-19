@@ -1,3 +1,17 @@
+<script>
+   var posts = [];
+   
+   {% for post in site.posts %}
+      posts.push("{{ post.url }}");
+   {% endfor %}   
+   
+   $(function() {
+      $('#random').click(function() {
+         window.location = posts[Math.floor(Math.random() * posts.length)]; 
+      });
+   });
+</script>
+
 <div class="container">
    <div class="row-fluid">
       <div class="navbar">
@@ -5,6 +19,9 @@
             <a href="/"><strong>B</strong>log</a> /
             <a href="/projects.html"><strong>P</strong>royectos</a> /
             <a href="/about.html"><strong>A</strong>cerca de</a>
+            <a id="random" class="random-post pull-right">
+               <i class="icon-random"></i>
+            </a>
          </div>
       </div>
    </div>

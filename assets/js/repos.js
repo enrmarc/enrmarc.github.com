@@ -1,6 +1,6 @@
 (function($, undefined) {
    $(function() {
-     $.getJSON('http://enrmarc.github.io/data/repos.json?callback=?', f);
+      $.getJSON('http://enrmarc.github.io/data/repos.json?callback=?', f);
    });
 
 })(jQuery);
