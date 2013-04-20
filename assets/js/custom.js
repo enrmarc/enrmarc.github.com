@@ -1,6 +1,6 @@
 $(function() {
    $('#random').tooltip({
-      'title': '¡Hey!',
+      'title': '¡Random!',
       'placement': 'right'
    });
 
