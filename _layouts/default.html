@@ -16,6 +16,18 @@
       <script>hljs.initHighlightingOnLoad();</script>
       <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="/assets/js/custom.js"></script>
+      <script>
+         var posts = [];
+         {% for post in site.posts %}
+            posts.push("{{ post.url }}");
+         {% endfor %}   
+   
+         $(function() {
+            $('#random').click(function() {
+               window.location = posts[Math.floor(Math.random() * posts.length)]; 
+            });
+         });
+      </script>
 
       {% include google-analytics.html %}
    </head>
