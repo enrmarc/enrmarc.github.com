@@ -1,8 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+/*@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);*/
+@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900,400italic");
 
 /* General  */
 html,
-body { font-family: 'PT Sans', helvetica, sans-serif !important; text-align: justify; color: #444; line-height: 1.5em;}
+body { font-family: 'Titillium Web', 'PT Sans', helvetica, sans-serif !important; text-align: justify; color: #444; line-height: 1.5em;}
 h2   { line-height: 1.5em; font-size: 21px; }
 /*h3   { line-height: 1.5em; font-size: 17px; }*/
 pre     { background-color: ghostWhite; padding: 2px; }
