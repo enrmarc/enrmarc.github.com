@@ -9,7 +9,7 @@
 
 /* General  */
 html,
-body { font-family: 'Trebuchet MS', 'Titillium Web', 'PT Sans', helvetica, sans-serif !important; text-align: justify; color: #444; line-height: 1.5em; font-size:14px}
+body { font-family: 'Trebuchet MS', 'Titillium Web', 'PT Sans', helvetica, sans-serif !important; text-align: justify; /*color: #444;*/ color:#000305;  line-height: 1.5em; font-size:14px}
 h2   { font-family: 'Yanone Kaffeesatz', arial; line-height: 1.5em; font-size: 21px; }
 /*h3   { line-height: 1.5em; font-size: 17px; }*/
 pre     { background-color: ghostWhite; padding: 2px; }
@@ -32,7 +32,7 @@ ul      { list-style: none; padding: 0; margin-left: 0;}
 
 /* Blog entries */
 .post li h3 { margin-bottom : 0; font-size: 17px; line-height: 1.5em}
-.post li p  { margin: 0; font-size: 16px;}
+.post li p  { margin: 0; font-size: 14px;}
 .post li p span.meta  { display: block; color: #999;}	
 .post li h3 a:hover   { font-weight: 100; color: #C83E22;}
 .post li h3 a:hover:after { content: '\2192'; margin-left: 10px;}
