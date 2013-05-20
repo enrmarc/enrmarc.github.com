@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700);
 @font-face {
    font-family: 'Trebuchet MS';
-   src: url(http://enrmarc.github.io/fonts/TrebuchetMS.ttf);
+   src: url('../font/TrebuchetMS.ttf') format('truetype');
    font-weight: 400;
 }
 
