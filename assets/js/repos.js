@@ -8,13 +8,14 @@
 function f(result) {
 
    var desc = {
-      'conwayjs': 'El juego de la vida de Conway',
+      'conwayjs': 'El juego de la vida de Conway.',
       'enrmarc.github.com': 'Página personal usando Jekyll y Twitter Bootstrap. ¡Es responsive!',
       'javamines': 'El Buscaminas implementado en Java usando Swing.',
       'jekyll-tagcloud': 'Un pequeño hack en Jekyll para crear una nube de tags sin usar plugins.',
       'logo-interpreter': 'Intérprete de un subconjunto del lenguaje de programación Logo.',
       'tms': 'Simulador de la Máquina de Turing.',
-      'vim-config': 'Archivos de configuración de vim.'
+      'vim-config': 'Archivos de configuración de vim.',
+      'python-brainfuck': 'Intérprete de Brainfuck en Python.'
    }
 
    var language = {
