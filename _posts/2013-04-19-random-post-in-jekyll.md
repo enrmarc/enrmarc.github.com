@@ -1,13 +1,25 @@
 ---
-layout    : post
+layout    : post_project
 title     : Random post in Jekyll
 summary   : How to get a random post using Jekyll
-tags      : jekyll proyectos random javascript
+tags      : Jekyll proyectos JavaScript
 ---
+<script>
+  var posts = [];
+  {% for post in site.posts %}
+    posts.push("{{ post.url }}");
+  {% endfor %}    
+  $(function() {
+    $('#random').click(function() {
+      window.location = posts[Math.floor(Math.random() * posts.length)]; 
+      return false;
+    });
+  });
+</script>
 
 I've been looking for an easy way to get a random post using [Jekyll], but I have found nothing.
 So here is a code snippet that do the trick.
-Click the <i class="icon-random"> </i> icon at the top-right corner to see how it works.
+Try it: <a href="javascript:void(0)" id="random">random post</a> 
 
 {% highlight html %}
 {% raw %}

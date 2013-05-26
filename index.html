@@ -2,24 +2,17 @@
 layout: default
 title:  Blog
 ---
-<style>
-.container ul {
-   list-style-type: none;
-   padding: 0;
-   margin-left: 0;
-}
-</style>
 
-<div class="container index">
+<div class="container">
    <div class="row-fluid">
       <div class="span8">
          <ul class="post">
             {% for post in site.posts %}
             <li>
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              <p>{{ post.summary }}
-                <span class="meta">{{ post.date | date_to_string }}</span>
-              </p>
+               <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+               <p>{{ post.summary }}
+                 <span class="meta">{{ post.date | date_to_string }}</span>
+               </p>
             </li>
             {% endfor %}
          </ul>

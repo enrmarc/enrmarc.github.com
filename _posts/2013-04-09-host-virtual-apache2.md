@@ -2,7 +2,7 @@
 layout  : post
 title   : Host virtual en Apache
 summary : Configuración de un host virtual Apache2 en Linux
-tags    : apache linux
+tags    : Apache Linux
 ---
 
 Lo que sigue es un recordatorio de cómo configurar un host virtual bajo Apache. Siempre
@@ -46,4 +46,3 @@ sudo service apache2 restart
 {% endhighlight %}
 
 Ahora puedes acceder a tu sitio usando la url: `http://nombreDelSitio`
-

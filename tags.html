@@ -1,17 +1,12 @@
 ---
-layout : default
+layout : project
 title  : tags
 ---
-<style>
-   ul { list-style: square; }
-   .container li { border-bottom: none; }
-</style>
 
-<div class="container">
+<div class="container tags">
    <div class="row-fluid">
-      <br>
-      <p>Click on any tag</p><br>
       <div class="tag-cloud">
+         <br>
          {% for tag in site.tags %}
             <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
             <ul id="list_{{ forloop.index }}" style="display:none;">
@@ -21,11 +16,7 @@ title  : tags
             </ul>
          {% endfor %}
       </div>
-
       <div id="posts-tag" class="post-list" style="margin: 50px;"></div>
-      <div>
-         Here the post: <a href="/blog/Jekyll-tagcloud/">Jekyll-tagcloud</a> 
-      </div>
       
       <script type="text/javascript">
          $(function() {
