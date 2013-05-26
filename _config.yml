@@ -3,7 +3,7 @@ url: "http://enrmarc.github.io"
 author: "enrmarc"
 description: "Personal website"
 
-permalink: /blog/:title/
+permalink: /blog/:title
 
 markdown: kramdown
 pygments: false
