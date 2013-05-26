@@ -1,11 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
-@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900,400italic");
-/*@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700);*/
-/*@font-face {
-   font-family: 'Trebuchet MS';
-   src: url('../font/TrebuchetMS.ttf') format('truetype');
-   font-weight: 400;
-}*/
 
 /* General  */
 html,
@@ -19,7 +12,7 @@ ul      { list-style: none; padding: 0; margin-left: 0;}
 ::selection { /*background-color: #F43059;*/ background-color: #F56906; color: #FFF;}
 
 /* Container */
-.container a, h4         { color:#CB4B16 ; /*color:#ED145B ;*/ /*color: #C83E22;*/ /*color: #00A399;*/ /*color: #46413B;*/  text-decoration: none;}
+.container a, h4         { font-weight: normal; color: #D30101; /*color: #4F1ACB;*/ /*color:#CB4B16 ;*/ /*color:#ED145B ;*/ /*color: #C83E22;*/ /*color: #00A399;*/ /*color: #46413B;*/  text-decoration: none;}
 .container a:hover       { color: #2b4984; text-decoration: none;}
 .container li            { border-bottom:  1px solid #eee;}
 .container li:last-child { border-bottom:  none;}
@@ -59,8 +52,8 @@ h2.post-title { margin-bottom: 0; line-height: 30px; font-size: 30px; color: #24
 }
 
 /* footer */
-#footer   { font-size: 12px; padding: 15px; margin: 0 auto; margin-top: 50px; border-top: 1px solid #eee; text-align: center; color: gray;}
-#footer .social a { color: #444; font-size:21px}
+#footer { font-size: 12px; padding: 15px; margin: 0 auto; margin-top: 50px; border-top: 1px solid #eee; text-align: center; color: gray;}
+#footer .social a { color: #444; font-size: 12px;}
 #footer a { color: gray}
 #footer a:hover { opacity: 0.6}
 
@@ -100,3 +93,7 @@ h2.post-title { margin-bottom: 0; line-height: 30px; font-size: 30px; color: #24
 .container .about ul li a { color: #444;}
 .container .about ul li a:hover {color: #2b4984;}
 .email { font-size: 14px; font-family: monospace;}
+
+/* tags.html */
+.tags ul { list-style: square; }
+.tags li {  border-bottom: none;}

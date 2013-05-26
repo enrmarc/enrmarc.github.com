@@ -1,0 +1,92 @@
+body { background: url('/assets/img/bg.png') repeat; } 
+@media (min-width: 1200px) {
+   .span3, .row-fluid .span3 {
+      width: 210px;
+   }
+}
+
+@media (max-width: 767px) {
+   .span3 {  width: 100%; }
+}
+
+li.repo { height: 250px; }
+li.repo h2, li.repo h3, li.repo p { margin: 10px 15px; }
+li.repo p { color: #666; }
+
+/* nombre del repo */
+li.repo h2 {
+   font-weight: bold;
+   font-size: 20px;
+   margin-bottom: 2px;
+   color: #0084B4;
+   line-height: 28px;
+}
+
+/* leng del repo */
+li.repo h3 {
+   font-size: 12px;
+   margin-top: 2px;
+   margin-bottom: 15px;
+   color: #999;
+   font-weight: normal;
+   line-height: 20px;
+}   
+   
+li.repo > a {
+   display: block;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   text-decoration: none;
+   color: inherit;
+}
+
+li.repo a:hover {
+   background: #efefef;
+   background: rgba(0, 0, 0, 0.05);
+}
+
+h3 { font-size: 20px;   }
+div.repo h3, div.repo p {  margin: 10px 15px 10px 15px; }
+
+#main, div.repo, li.repo {
+   background: white;
+   background: rgba(255, 255, 255, 0.7);
+   -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px;
+}
+   
+.thumbnails .repo:after {
+   content: '';
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 0;
+   height: 0;
+   border-bottom: 50px solid transparent;
+   border-left: 50px solid transparent;
+   border-right: 50px solid #0080B0;
+   pointer-events: none;
+}  
+
+/* Colores lenguajes */
+.repo.javascript:after { border-right-color: #00a8a8; }
+.repo.java:after { border-right-color: #542d8a; }
+.repo.python:after { border-right-color: #b63b95; }
+.repo.viml:after { border-right-color: #881e04; }
+.repo.c:after { border-right-color: #333; }
+
+.span9, .span3 { position:relative; }
+
+#num-repos {
+   font-size: 14px;
+   font-weight: bold;
+   color: #0084B4;
+   line-height: 15px;
+}
+
+.repo p { color: #08C; text-decoration: none;}
+.container ul { list-style-type: none; }
+div.repo p.gravatar { margin: 10px 15px 10px 2px; }

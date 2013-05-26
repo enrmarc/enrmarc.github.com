@@ -1,12 +1,16 @@
 ---
-layout: default
-title: Proyectos
+layout  : project
+title   : Proyectos
+scripts : 
+  - src : js/repos.js
+styles  :
+  - src : css/repos.css 
 ---
-<script type="text/javascript" src="/assets/js/repos.js"></script>
-<link rel="stylesheet" type="text/css" href="/assets/css/projects.css"/>
 
 <div class="container">
    <div class="row-fluid">
+
+      <!-- Statics and Gravatar -->
       <div class="span3 repo">
          <p class="pull-right gravatar">
             <a href="http://stackoverflow.com/users/434171/enrmarc">
@@ -15,20 +19,21 @@ title: Proyectos
          </p>
          <h3>Estadísticas</h3>
          <p>
-            <a href="https://github.com/enrmarc" target="_blank">
+            <a href="https://github.com/enrmarc">
               <span id="num-repos"><img src="/assets/img/spinner.gif"/></span> repositorios
             </a>
          </p>
-         <p>enrmarc</p>
       </div>
+
+      <!-- Recently updated repos -->
       <div class="span9 repo">
          <h3>Últimas actualizaciones 
-            <a href="https://github.com/enrmarc" class="very-small" target="_blank">Ver todo en GitHub</a>
+            <a href="http://github.com/enrmarc" class="very-small">Ver todo en GitHub</a>
          </h3>
-         <ul id="recently-updated-repos">
-         </ul>
+         <ul id="recently-updated-repos"></ul>
       </div>
    </div>
-   <ul class="thumbnails" id="repos">
-   </ul>
+
+   <!-- Repos -->
+   <ul class="thumbnails" id="repos"></ul>
 </div>
