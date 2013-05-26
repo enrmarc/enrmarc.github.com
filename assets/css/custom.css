@@ -1,8 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+/*@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);*/
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic);
 
 /* General  */
 html,
-body { font-family: 'PT Sans', helvetica, sans-serif !important; text-align: justify; /*color: #444;*/ color:#000305;  line-height: 1.5em; font-size:14px}
+body { font-family: 'Noto Sans', sans-serif !important; text-align: justify; /*color: #444;*/ color:#000305;  /*line-height: 1.5em;*/ font-size:15px}
 h2   { line-height: 1.5em; font-size: 21px; }
 /*h3   { line-height: 1.5em; font-size: 17px; }*/
 pre     { background-color: ghostWhite; padding: 2px; }
