@@ -20,7 +20,8 @@ function f(result) {
    }
 
    var language = {
-      'jekyll-tagcloud': 'Jekyll'
+      'jekyll-tagcloud': 'Jekyll',
+      'jekyll-random-post': 'Jekyll',
    }
 
    $(function() {
