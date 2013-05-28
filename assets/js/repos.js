@@ -15,7 +15,7 @@ function f(result) {
       'logo-interpreter': 'Intérprete de un subconjunto del lenguaje de programación Logo.',
       'tms': 'Simulador de la Máquina de Turing.',
       'vim-config': 'Archivos de configuración de vim.',
-      'python-brainfuck': 'Intérprete de Brainfuck en Python.'
+      'python-brainfuck': 'Intérprete de Brainfuck en Python.',
       'jekyll-random-post': 'Cómo obtener un post aleatorio en Jekyll.'
    }
 
