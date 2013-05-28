@@ -16,6 +16,7 @@ function f(result) {
       'tms': 'Simulador de la Máquina de Turing.',
       'vim-config': 'Archivos de configuración de vim.',
       'python-brainfuck': 'Intérprete de Brainfuck en Python.'
+      'jekyll-random-post': 'Cómo obtener un post aleatorio en Jekyll.'
    }
 
    var language = {
@@ -40,7 +41,7 @@ function f(result) {
       var $link = $("<a>").attr("href", repo.html_url).appendTo($item);
       $link.append($("<h2>").text(repo.name));      
       $link.append($("<h3>").text(repo.language || language[repo.name]));
-      $link.append($("<p>").text(/*repo.description*/desc[repo.name]));
+      $link.append($("<p>").text(repo.description || desc[repo.name]));
       $item.appendTo("#repos");
    }
 }
