@@ -16,7 +16,7 @@ li.repo p { color: #666; }
 /* nombre del repo */
 li.repo h2 {
    font-weight: bold;
-   font-size: 20px;
+   font-size: 16px;
    margin-bottom: 2px;
    color: #0084B4;
    line-height: 28px;
@@ -46,7 +46,6 @@ li.repo a:hover {
    background: rgba(0, 0, 0, 0.05);
 }
 
-h3 { font-size: 20px;   }
 div.repo h3, div.repo p {  margin: 10px 15px 10px 15px; }
 
 #main, div.repo, li.repo {
