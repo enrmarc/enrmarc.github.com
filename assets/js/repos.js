@@ -22,6 +22,7 @@ function f(result) {
    var language = {
       'jekyll-tagcloud': 'Jekyll',
       'jekyll-random-post': 'Jekyll',
+      'project-euler': 'Python',
    }
 
    $(function() {
