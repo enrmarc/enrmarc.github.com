@@ -9,7 +9,11 @@ title:  Blog
          <ul class="post">
             {% for post in site.posts %}
             <li>
-               <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
+               {% if post.ext_url %}
+                 <h3><a href="{{ post.ext_url }}">{{ post.title}}</a></h3>
+               {% else %}
+                 <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
+               {% endif %}
                <p>{{ post.summary }}
                  <span class="meta">{{ post.date | date_to_string }}</span>
                </p>
