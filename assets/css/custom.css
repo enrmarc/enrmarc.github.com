@@ -54,7 +54,7 @@ h2.post-title { margin-bottom: 0; line-height: 30px; font-size: 30px; color: #24
 }
 
 /* footer */
-#footer { font-size: 12px; padding: 15px; margin: 0 auto; margin-top: 50px; border-top: 1px solid #eee; text-align: center; color: gray;}
+#footer { font-size: 12px; padding: 25px; margin: 0 auto; margin-top: 50px; border-top: 1px solid #eee; text-align: center; color: gray;}
 #footer .social a { color: #444; font-size: 12px;}
 #footer a { color: gray}
 #footer a:hover { opacity: 0.6}
@@ -94,7 +94,8 @@ h2.post-title { margin-bottom: 0; line-height: 30px; font-size: 30px; color: #24
 .about li { border-bottom: 0; padding-top: 4px; }
 .container .about ul li a { color: #444;}
 .container .about ul li a:hover {color: #2b4984;}
-.email { font-size: 14px; font-family: monospace;}
+.email { font-size: 14px; font-family: monospace; border-bottom: 1px dashed #333;}
+.email a { color: #444;}
 
 /* tags.html */
 .tags ul { list-style: square; }
