@@ -108,7 +108,7 @@ f({
     },
     "private": false,
     "html_url": "https://github.com/enrmarc/conwayjs",
-    "description": "A JavaScript implementation of the well know John Conway's Game of Life.",
+    "description": "A JavaScript implementation of the well known John Conway's Game of Life.",
     "fork": false,
     "url": "https://api.github.com/repos/enrmarc/conwayjs",
     "forks_url": "https://api.github.com/repos/enrmarc/conwayjs/forks",

@@ -1,5 +1,6 @@
 (function($, undefined) {
    $(function() {
+      $.ajaxSetup({cache: false});
       $.getJSON('http://enrmarc.github.io/data/repos.json?callback=?', f);
    });
 
