@@ -6,7 +6,9 @@ body { background: url('/assets/img/bg.png') repeat; }
 }
 
 @media (max-width: 767px) {
-   .span3 {  width: 100%; }
+   .span3 {
+      width: 100%; 
+   }
 }
 
 li.repo { height: 250px; }
