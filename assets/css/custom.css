@@ -13,7 +13,7 @@ ul      { list-style: none; padding: 0; margin-left: 0;}
 ::selection { /*background-color: #F43059;*/ background-color: #F56906; color: #FFF;}
 
 /* Container */
-.container a, h4         { font-weight: normal; color: #D30101; /*color: #4F1ACB;*/ /*color:#CB4B16 ;*/ /*color:#ED145B ;*/ /*color: #C83E22;*/ /*color: #00A399;*/ /*color: #46413B;*/  text-decoration: none;}
+.container a, h4         { font-weight: normal; color: #7500a3; /*color: #D30101;*/ /*color: #4F1ACB;*/ /*color:#CB4B16 ;*/ /*color:#ED145B ;*/ /*color: #C83E22;*/ /*color: #00A399;*/ /*color: #46413B;*/  text-decoration: none;}
 .container a:hover       { color: #2b4984; text-decoration: none;}
 .container li            { border-bottom:  1px solid #eee;}
 .container li:last-child { border-bottom:  none;}
