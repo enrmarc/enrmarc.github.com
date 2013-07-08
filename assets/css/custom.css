@@ -17,12 +17,14 @@ ul      { list-style: none; padding: 0; margin-left: 0;}
 .container a:hover       { color: #7500a3; /*color: #2b4984;*/ text-decoration: underline;}
 .container li            { border-bottom:  1px solid #eee;}
 .container li:last-child { border-bottom:  none;}
+.container .repo a:hover {text-decoration: none;}
 
 /* navbar */
 .navbar               { color: #CCC; padding: 15px 0px 10px; border-bottom: 1px solid #EEE; margin-bottom: 0;}
 .navbar a:first-child { margin-left: 0; }
 .navbar a             { margin: 0 5px; text-decoration: none; color: #444/*color: #999;*/}
 .random-post          { /*font-size: 24px; color: #00A399; */cursor: pointer} 
+.navbar a:hover       {text-decoration: none;}
 
 /* Blog entries */
 .post li h3 { margin-bottom : 0; font-size: 17px; line-height: 1.5em}
