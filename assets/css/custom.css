@@ -28,7 +28,7 @@ ul      { list-style: none; padding: 0; margin-left: 0;}
 .post li h3 { margin-bottom : 0; font-size: 17px; line-height: 1.5em}
 .post li p  { margin: 0; font-size: 14px;}
 .post li p span.meta  { display: block; color: #999;}	
-.post li h3 a:hover   { font-weight: 100; color: #C83E22;}
+.post li h3 a:hover   { font-weight: 100; /*color: #C83E22;*/ color: #7500a3;}
 /*.post li h3 a:hover:after { content: '\2192'; margin-left: 10px;}*/
 
 /* Post */
