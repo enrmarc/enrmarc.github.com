@@ -1,29 +1,29 @@
 ---
 layout  : post
-title   : Sitio web para un repositorio en GitHub
-summary : Sitios web estáticos con GitHub Pages
-tags    : github
+title   : GitHub Pages
+summary : Sitio estático para un repositorio de GitHub
+tags    : github, github-pages
 ---
 
-Suponiendo que ya tienes alojado un repositorio en [GitHub] y que está clonado, 
+Suponiendo que ya se tiene alojado un repositorio en [GitHub] y que está clonado, 
 lo siguiente es crear la rama gh-pages :
 
-~~~bash
+{% highlight bash %}
 $ git checkout -b gh-pages
-~~~
+{% endhighlight %}
 
-Ahora puedes crear la página en esta rama y hacer un commit cuando
-todo esté listo (a menos que ya la tuvieras en
+Crear la página en esta rama y hacer un commit cuando
+todo esté listo (a menos que el contenido ya estuviera en
 la rama master, en ese caso hay que hacer `git merge master` para copiar
 la rama master en gh-pages).
 
 Al final hay que subirlo a GitHub:
 
-~~~bash
+{% highlight bash %}
 $ git push origin gh-pages
-~~~
+{% endhighlight %}
 
-(Puede que haga falta la opción `-f` si ya habíamos creado la rama desde
+(Puede que haga falta la opción `-f` si ya se había creado la rama desde
 github.com).
 
 **Nota**: a partir de la versión 1.7.2 de GitHub se puede utilizar
