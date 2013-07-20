@@ -3,7 +3,7 @@
 
 /* General  */
 html,
-body { font-family: 'Noto Sans', sans-serif !important; text-align: justify; /*color: #444;*/ color:#000305;  /*line-height: 1.5em;*/ font-size:14px}
+body {background-color: #FCFCFC; font-family: 'Noto Sans', sans-serif !important; text-align: justify; /*color: #444;*/ color:#000305;  /*line-height: 1.5em;*/ font-size:14px}
 h2   { line-height: 1.5em; font-size: 16px; }
 /*h3   { line-height: 1.5em; font-size: 17px; }*/
 h3 { font-size: 14px;}
@@ -48,7 +48,8 @@ h2.post-title { margin-bottom: 0; line-height: 30px; font-size: 30px; color: #24
     z-index: 10;
     padding: 10px 50px 10px 10px;
     color: white;
-    background: url('../img/blacktocat.png') #0090FF no-repeat 95% 50%;
+    /*background: url('../img/blacktocat.png') #0090FF no-repeat 95% 50%;*/
+    background: url('../img/blacktocat.png') #36c no-repeat 95% 50%;
     font-weight: 700;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     border-bottom-left-radius: 2px;
