@@ -1,7 +1,7 @@
 ---
 layout  : post
 title   : Sitio web para un repositorio en GitHub
-summary : Usar GitHub Pages para generar un sitio estátic
+summary : Sitios web estáticos con GitHub Pages
 tags    : github
 ---
 
