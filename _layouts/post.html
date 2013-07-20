@@ -4,7 +4,7 @@ layout: default
 
 <div class="container">
    <div class="row-fluid">
-      <div class="span12">
+      <div class="span10">
          <h2 class="post-title">{{ page.title }}</h2>
          <p class="date"> {{ page.date | date: "%B %d, %Y" }}</p>
          {{ content }}
@@ -14,20 +14,6 @@ layout: default
       </div>
    </div>
 
-   <br>
-   <div class="row-fluid">
-      <div class="previous">
-         {% if page.previous.url %}
-            <a href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
-         {% endif %}         
-      </div>
-
-      <div class="next">
-         {% if page.next.url %}
-            <a href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
-         {% endif %}
-      </div>
-   </div>
-
+   {% include pager.html %}
    {% include disqus.html  %}
 </div>
