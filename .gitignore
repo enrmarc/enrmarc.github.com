@@ -1,7 +1,3 @@
-resume.html
 _site/
-data/TODO
+_ignore/
 *.swp
-_posts/_2007-09-12-interprete-logo.md
-_posts/_2012-02-22-javamines.md
-assets/highlight.js/
