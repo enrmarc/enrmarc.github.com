@@ -2,7 +2,7 @@
 layout  : post
 title   : GitHub Pages
 summary : Sitio estático para un repositorio de GitHub
-tags    : github, github-pages
+tags    : github github-pages
 ---
 
 Suponiendo que ya se tiene alojado un repositorio en [GitHub] y que está clonado, 

@@ -2,7 +2,7 @@
 layout : post
 title  : Android, Axis2 y Ksoap2
 summary: Enviar y recibir objetos complejos utilizando la librería KSoap2 para Android.
-tags   : Axis2 Android KSoap2 WS Java
+tags   : axis2 android ksoap2 ws java
 ---
 
 Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
@@ -275,10 +275,12 @@ public class Main extends Activity {
         HttpTransportSE transport = new HttpTransportSE(URL);
         SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
         request.addProperty(p.getClass().getSimpleName(), p);
-        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+        SoapSerializationEnvelope envelope = 
+            new SoapSerializationEnvelope(SoapEnvelope.VER11);
         envelope.dotNet = true;
         envelope.setOutputSoapObject(request);
-        envelope.addMapping(TARGET_NAMESPACE, p.getClass().getSimpleName(), p.getClass());
+        envelope.addMapping(
+            TARGET_NAMESPACE, p.getClass().getSimpleName(), p.getClass());
         MarshalDouble md = new MarshalDouble();
         md.register(envelope);
 
