@@ -2,9 +2,9 @@ title: "enrmarc"
 url: "http://enrmarc.github.io"
 author: "enrmarc"
 description: "Personal website"
-
+paginate: 7
+paginate_path: "page:num"
 permalink: /blog/:title
 
 markdown: kramdown
 pygments: false
-auto: false

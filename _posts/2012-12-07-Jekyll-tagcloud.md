@@ -53,7 +53,8 @@ title  : tags
     {% endfor %}
             
     {% for tag in site.tags %}
-      size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+      size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont
+             + minFont;
       $("#{{ forloop.index }}").css("font-size", size + "px");
     {% endfor %}
 
