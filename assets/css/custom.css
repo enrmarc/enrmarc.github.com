@@ -6,7 +6,7 @@
 @font-face {
   font-family: 'Georgia';
   src: url(/assets/fonts/Georgia.eot);
-	src: local(‚ò∫o'),
+	src: local('‚ò∫o'),
        url('/assets/fonts/Georgia.ttf') format('truetype'),
        url('/assets/fonts/Georgia.woff') format('truetype');
 }
