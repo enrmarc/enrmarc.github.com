@@ -41,7 +41,8 @@ Try it: <a href="javascript:void(0)" id="random">random post</a>
    <div class="row-fluid">
       <div class="navbar">
          <div>
-            <a id="random" class="random-post pull-right"><i class="icon-random"> </i>
+            <a id="random" class="random-post pull-right">
+               <i class="icon-random"></i>
             </a>
          </div>
       </div>

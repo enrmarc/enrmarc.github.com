@@ -7,7 +7,7 @@ title:  Blog
    <div class="row-fluid">
       <div class="span8">
          <ul class="post">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             <li>
                {% if post.ext_url %}
                  <h1><a href="{{ post.ext_url }}">{{ post.title}}</a></h1>
@@ -22,4 +22,7 @@ title:  Blog
          </ul>
       </div>
    </div>
+
+   <!-- Pagination -->
+   {% include pagination.html %}
 </div>

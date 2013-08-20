@@ -46,7 +46,8 @@ import org.entidades.Persona;
 
 public class Service {
     public Persona test(Persona persona) {
-        return new Persona(persona.getNombre(), persona.getEdad(), persona.getPeso());
+        return new Persona(persona.getNombre(), persona.getEdad(), 
+             persona.getPeso());
     }
 }
 {% endhighlight %}
@@ -54,16 +55,16 @@ public class Service {
 El fichero de configuración `services.xml` indica la clase que representará el servicio web:
 {% highlight console %}
 <service name="objetos" scope="application">
-    <description>Enviar y recibir objetos complejos</description>
-    <parameter name="ServiceClass">org.Service</parameter>
-    <messageReceivers>
-        <messageReceiver
-            mep="http://www.w3.org/2004/08/wsdl/in-only"
-            class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
-        <messageReceiver
-            mep="http://www.w3.org/2004/08/wsdl/in-out"
-            class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
-    </messageReceivers>
+   <description>Enviar y recibir objetos complejos</description>
+   <parameter name="ServiceClass">org.Service</parameter>
+   <messageReceivers>
+      <messageReceiver
+         mep="http://www.w3.org/2004/08/wsdl/in-only"
+         class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+      <messageReceiver
+         mep="http://www.w3.org/2004/08/wsdl/in-out"
+         class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+   </messageReceivers>
 </service>
 {% endhighlight %}
 
@@ -175,8 +176,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlSerializer;
 
 public class MarshalDouble implements Marshal {
-    public Object readInstance(XmlPullParser parser, String namespace, String name,
-            PropertyInfo expected) throws IOException, XmlPullParserException {
+    public Object readInstance(XmlPullParser parser, String namespace, 
+           String name, PropertyInfo expected) 
+           throws IOException, XmlPullParserException {
         return Double.parseDouble(parser.nextText());
     }
 
@@ -184,7 +186,8 @@ public class MarshalDouble implements Marshal {
         cm.addMapping(cm.xsd, "double", Double.class, this);
     }
 
-    public void writeInstance(XmlSerializer writer, Object obj) throws IOException {
+    public void writeInstance(XmlSerializer writer, Object obj) 
+           throws IOException {
         writer.text(obj.toString());
     }
 }
