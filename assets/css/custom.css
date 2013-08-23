@@ -5,7 +5,7 @@
 
 /* General  */
 html, 
-body        { font-family: 'PT Serif', serif; font-size: 15px; color: #222; line-height: 22px; height: 120px !important;
+body        { font-family: 'PT Serif', serif; font-size: 16px; color: #222; line-height: 22px; height: 120px !important;
               /*color:#000305;*/}
 h1, h2, h3  { font-family: 'Lato', sans-serif; color: black !important;}
 h2          { color: #36c !important;}
@@ -31,7 +31,7 @@ a:hover     { border-bottom: solid 1px #acf; text-decoration: none; }
 
 /* navbar */
 .navbar               { color: #CCC; padding: 15px 0px 10px; border-bottom: 1px solid #EEE; 
-                        margin-bottom: 0;}
+                        margin-bottom: 0; font-family: 'Lato', sans-serif; font-size: 15px;}
 .navbar a:first-child { margin-left: 0; }
 .navbar a             { margin: 0 5px; text-decoration: none; color: #444/*color: #999;*/; 
                         font-weight:normal; font-family: 'Lato', sans-serif;}
