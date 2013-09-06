@@ -11,20 +11,20 @@ al uso de variables y métodos estáticos. Afortunadamente, los chicos
 de PHP arreglaron muchas de esas inconsistencias en el lanzamiento de
 la versión [5.3][1] (hace ya más de 4 años).
 
-Una de esas inconsistencias era que las referencias estáticas que hay
-dentro de una clase, como `self::` o `__CLASS__`, se resuelven empleando
-el nombre de la clase a la que pertenece la función. Usaré el patrón
+Una de ellas era que las referencias estáticas dentro de una clase,
+como `self::` o `__CLASS__`, se resuelven empleando
+el nombre de la clase, en tiempo de compilación. Usaré el patrón
 Singleton para poner de manifiesto el problema y su solución.
 
 **Nota:**
 los ejemplos siguientes son solo ilustrativos, en general el uso
 del patrón Singleton [está desaconsejado][2], entre otras cosas porque
-ya que incrementa el acoplamiento entre clases y hace difícil hacer 
+incrementa el acoplamiento entre clases y hace difícil hacer 
 tests de unidad.
 
 ##Singleton
 
-El patrón Singleton es considerado un patrón *creacional* ya que interviene
+Es considerado un patrón *creacional* ya que interviene
 en la creación de objetos. Su utilidad consiste básicamente en garantizar
 que una clase solo tenga una instancia. El ejemplo típico es utilizar un
 Singleton como el gestor de conexiones a una base de datos:
@@ -54,27 +54,24 @@ Singleton como el gestor de conexiones a una base de datos:
 {% endhighlight %}
 
 Algunos detalles: usamos la variable `$instance` para guardar la única 
-instancia de la clase `DBManager`. Es una *variable de clase* ya que está 
-precedida por el modificador `static`.
+instancia de la clase `DBManager`. Es una *variable de clase* porque
+está precedida del modificador `static`.
 El constructor de la clase es privado, luego nadie puede usar el constructor 
-para crear instancia de la clase. De otra manera no sería un Singleton.
+para crear instancias de la clase (de otra manera no tendríamos un Singleton).
 
 Es con el método `getInstance()` con el que obtenemos la única instancia 
 de la clase.
 El método `count()` lo he incluido solamente para demostrar que el 
-Singleton funciona.
+Singleton funciona:
 
-Como puedes ver el Singleton funciona:
 {% highlight php %}
 <?php
    $db = DBManager::getInstance();
    assert (DBManager::count() == 1);
    $db2 = DBManager::getInstance();
-   assert (DBManager::count() == 1);
+   assert (DBManager::count() == 1); // Siempre es 1
 ?>
 {% endhighlight %}
-Las aserciones anteriores son ciertas ya que el número de instancias de
-la clase es siempre uno.
 
 ##Late Static Binding
 
@@ -92,9 +89,9 @@ a múltiples bases de datos:
 ?>
 {% endhighlight %}
 
-Para soportar múltiples clases Singleton, la clase `DBManager` declara la variable
+La clase `DBManager` declara la variable
 `$klass` con la ilusión de que las clases que hereden de ella puedan sobreescribirla.
-Esto es lo que hace `MysqlManager`, provee su propia definición de `$klass`.
+Esto es lo que hace `MySQLManager`: provee su propia definición de `$klass`.
 
 El funcionamiento ideal sería que una vez instanciada `MySQLManager`, la variable
 `$klass` tomase el valor "MySQLManager". Pero esto no

@@ -5,8 +5,9 @@ summary : Cómo rooter un Jiayu con Android 4.2.1 desde Ubuntu
 tags    : android smartphone root ubuntu
 ---
 
-Este es un breve tutorial de cómo rootear un [Jiayu 3GS Turbo] con Android 4.2.1 desde Ubuntu. Seguramente sirva para
-otros modelos, pero no lo he probado.
+Este es un breve tutorial de cómo rootear un [Jiayu 3GS Turbo] con 
+Android 4.2.1 desde Ubuntu. Seguramente sirva para otros modelos, 
+pero no lo he probado.
 
 **Requisitos**
 
@@ -14,11 +15,12 @@ Tener instalado el [SDK de Android]. En realidad lo único que hace falta es el 
 no sé si se puede instalar aisladamente.
 
 ##Paso 1
-Desde la página de Jiayu hay que descargar el siguiente [zip]. Contiene [busybox], que es 
-una serie de utilidades UNIX; el binario su y el apk Superuser.
+Desde la página de Jiayu hay que descargar el siguiente [zip]. 
+Contiene [busybox], una serie de utilidades UNIX; 
+el binario su y el apk Superuser.
 
 ##Paso 2
-Descomprimimos de la manera habitual y cambiamos de directorio 
+Descomprime de la manera habitual y cambia de directorio:
 {% highlight bash %}
 unzip Root4.2.1.zip
 cd Root.4.2.1
@@ -26,7 +28,7 @@ cd Root.4.2.1
 
 ##Paso 3
 Conecta tu dispositivo y activa la depuración por USB.
-Ahora hay que teclear todos estos comandos
+Ahora teclea todos estos comandos:
 {% highlight bash %}
 adb kill-server
 adb wait-for-device
@@ -44,8 +46,6 @@ adb kill-server
 {% endhighlight %}
 
 Ya podeemos hacer `adb shell` y luego `su` y seremos superusuario.
-
-
 
 
 [busybox]: http://www.busybox.net/
