@@ -6,23 +6,19 @@ title:  Blog
 <div class="container">
    <div class="row-fluid">
       <div class="span8">
+         <h2 class="header">Archivo</h2>
          <ul class="post">
-            {% for post in paginator.posts %}
+            {% for post in site.posts %}
             <li>
+            <span class="meta">{{ post.date | date_to_string }}</span>&nbsp;&raquo;&nbsp;
                {% if post.ext_url %}
-                 <h1><a href="{{ post.ext_url }}">{{ post.title}}</a></h1>
+                 <a href="{{ post.ext_url }}">{{ post.title}}</a>
                {% else %}
-                 <h1><a href="{{ post.url }}/">{{ post.title }}</a></h1>
+                 <a href="{{ post.url }}/">{{ post.title }}</a>
                {% endif %}
-               <p>{{ post.summary }}
-                 <span class="meta">{{ post.date | date_to_string }}</span>
-               </p>
             </li>
             {% endfor %}
          </ul>
       </div>
    </div>
-
-   <!-- Pagination --> 
-   {% include pagination.html %}
 </div>
