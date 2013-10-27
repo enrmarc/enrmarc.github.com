@@ -5,7 +5,9 @@ summary : Sitio estático para un repositorio de GitHub
 tags    : github github-pages
 ---
 
-Suponiendo que ya se tiene alojado un repositorio en [GitHub] y que está clonado, 
+Lo que sigue es un recordatorio sobre cómo crear un sitio estático
+para un repositorio en [GitHub].
+Suponiendo que ya se tiene alojado un repositorio en y que está clonado, 
 lo siguiente es crear la rama gh-pages :
 
 {% highlight bash %}
