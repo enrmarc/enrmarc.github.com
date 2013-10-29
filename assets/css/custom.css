@@ -1,11 +1,6 @@
-@font-face {
-  font-family: "Palatino Linotype";
-  src: url("../fonts/PalatinoLinotype.ttf") format("truetype");
-}
-
 /* General  */
 html, 
-body        { font-family: 'Palatino Linotype', Georgia, serif; font-size: 16px; color: #222; line-height: 23px; height: 120px !important;
+body        { font-family: 'Crimson Text', Georgia, serif; font-size: 16px; color: #222; line-height: 23px; height: 120px !important;
               /*color:#000305;*/}
 h1, h2, h3  { font-family: 'Lato', sans-serif; color: black !important;}
 /*h2          { color: #36c !important;}*/
