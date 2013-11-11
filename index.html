@@ -6,11 +6,11 @@ title:  Blog
 <div class="container">
    <div class="row-fluid">
       <div class="span8">
-         <h2 class="header">Archivo</h2>
+         <h2 class="header"></h2>
          <ul class="post">
             {% for post in site.posts %}
             <li>
-            <span class="meta">{{ post.date | date_to_string }}</span>&nbsp;&raquo;&nbsp;
+            <span class="meta">{{ post.date | date_to_string }}</span>&nbsp; &nbsp;
                {% if post.ext_url %}
                  <a href="{{ post.ext_url }}">{{ post.title}}</a>
                {% else %}

@@ -10,8 +10,10 @@ pre         { background-color: ghostWhite; padding: 2px; }
 ul          { list-style: none; padding: 0; margin-left: 0; }
 .green      { color: #8CAC29; }
 .red        { color: #C00; }
-::selection { /*background-color: #F43059;*/ 
-              background-color: #F56906; color: #FFF; }
+::selection { background-color: rgba(0, 0, 0, 0.1); 
+              color: #000;
+              /*background-color: #F43059;*/ 
+              /*background-color: #F56906;*/ /*color: #FFF;*/ }
 a           { color: #00a;/*color: #36c;*/ }
 a:hover { color: #000 !important;/*color: #36c;*/ }
 /*a:hover     { color: #36c; text-decoration: underline; }*/
@@ -36,7 +38,7 @@ a:hover { color: #000 !important;/*color: #36c;*/ }
 
 /* Blog entries */
 .post h1              { font-size: 16px; margin-bottom: 4px; line-height: 1.5em; }
-.post  a            { font-weight: normal; color: #00a;/*color: #36c;*/ text-decoration:underline; line-height: 25px;}
+.post  a            { font-weight: normal; color: #00a;/*color: #36c;*/ /*text-decoration:underline;*/ line-height: 25px;}
 .post li h3           { margin-bottom : 0; font-size: 17px; line-height: 1.5em}
 .post li p            { margin: 0; font-size: 15px; line-height: 19px;}
 .post li span.meta  { margin-top: -5px; font-family: monospace, mono; display: inline; color: #999; font-size: 12px;}
@@ -78,7 +80,7 @@ a:hover { color: #000 !important;/*color: #36c;*/ }
 }
 
 /* footer */
-#footer           { font-family: 'Lato', sans-serif; font-size: 14px; padding: 25px; margin: 0 auto; margin-top: 50px; 
+#footer           { font-family: 'Source Code Pro', mono; font-size: 14px; padding: 25px; margin: 0 auto; margin-top: 50px; 
                     border-top: 1px solid #eee; text-align: center; color: gray;}
 #footer .social a { color: #444; font-size: 12px;}
 #footer a         { color: gray}
@@ -146,7 +148,7 @@ pre code { font: normal 13px/16px "Source Code Pro", monospace !important;
 
 
 .header {
-   padding: 20px 0 20px 0;
+   padding: 10px 0 0 0;
    color: #a00 !important;
 }
 
