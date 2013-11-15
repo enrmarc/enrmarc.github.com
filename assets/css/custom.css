@@ -31,7 +31,7 @@ a:hover { color: #00e; }
 /* archive */
 .archive               { padding-top: 40px;}
 .archive  a            { color: #000;/*color: #00a;*/ }
-.archive li span.meta  { font-family: mono; display: inline; color: #444; font-size: 12px;}
+.archive li span.meta  { font-family: mono, monospace; display: inline; color: #444; font-size: 12px;}
 
 /* post */
 .post-title      { font-size: 22px; margin-bottom: 0; }
@@ -42,7 +42,7 @@ a:hover { color: #00e; }
 .previous         { float: left; }
 
 /* footer */
-#footer         { font-family: 'Source Code Pro', mono; font-size: 14px; padding: 25px; margin-top: 50px; 
+#footer         { font-family: mono, monospace; font-size: 14px; padding: 25px; margin-top: 50px; 
                   border-top: 1px solid #eee; text-align: center; color: gray;}
 #footer a       { color: gray; }
 #footer a:hover { opacity: 0.6; text-decoration: none; }
