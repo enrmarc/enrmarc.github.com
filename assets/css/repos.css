@@ -84,9 +84,12 @@ div.repo h3, div.repo p {  margin: 10px 15px 10px 15px; }
 #num-repos {
    font-size: 14px;
    font-weight: bold;
-   color: #0084B4;
+   /*color: #0084B4;*/
+   color: #000;
    line-height: 15px;
 }
+
+.repo a { color: #000; }
 
 .repo p { color: #08C; text-decoration: none;}
 .container ul { list-style-type: none; }
