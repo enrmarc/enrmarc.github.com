@@ -2,7 +2,7 @@
 layout    : post_project
 title     : Random post in Jekyll
 summary   : How to get a random post using Jekyll
-tags      : jekyll proyectos javascript
+tags      : jekyll proyectos javascript html
 ---
 <script>
   var posts = [];

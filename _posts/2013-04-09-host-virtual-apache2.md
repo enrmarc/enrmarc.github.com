@@ -2,7 +2,7 @@
 layout  : post
 title   : Host virtual en Apache
 summary : Configuración de un host virtual Apache2 en Linux
-tags    : apache linux virtualhost
+tags    : apache linux virtualhost bash
 ---
 
 Lo que sigue es un recordatorio de cómo configurar un host virtual bajo Apache. Siempre
