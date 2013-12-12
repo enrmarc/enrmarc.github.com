@@ -3,7 +3,13 @@
    <head>
       <meta charset="utf-8">
       <title>{{ page.title }} | {{ site.title }}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% if page.summary %}
+        <meta name="description" content="{{page.summary}}"/>
+      {% endif %}
+      {% if page.tags %}
+        <meta name="keywords" content="enrmarc, source, code, {{page.tags | join: ','}}"/>
+      {% endif %}
       <link href='http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro' rel='stylesheet' type='text/css'>
       <link type="image/x-icon" rel="icon" href="/assets/img/favicon.ico"/>
       <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>

@@ -1,8 +1,8 @@
 ---
 layout  : post
 title   : Late static binding en PHP
-summary : Resolver referencias estáticas en tiempo de ejecución
-tags    : php
+summary : Resolver referencias estáticas en tiempo de ejecución (PHP)
+tags    : php late-static-binding
 ---
 
 Si has programado un poco en PHP te habrás dado cuenta de que su lado
