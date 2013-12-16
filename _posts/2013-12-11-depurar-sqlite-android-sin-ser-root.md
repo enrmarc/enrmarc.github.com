@@ -16,7 +16,7 @@ la necesidad de ser root.
 {% highlight bash%}
 #! /usr/bin/env bash
 
-DEFAULT_APP="org.coyotev.cassandra"
+DEFAULT_APP="org.company.app"
 DEFAULT_DB="cassandra.db"
 DEFAULT_OUTPUT="/sdcard/Download/$DEFAULT_DB"
 
@@ -51,7 +51,7 @@ el script abre directamente el fichero recién descargado.
 {% highlight bash %}
 #! /usr/bin/env bash
 
-DEFAULT_APP="org.coyotev.cassandra"
+DEFAULT_APP="org.company.app"
 DEFAULT_DB="cassandra.db"
 
 APP=${1:-$DEFAULT_APP}
