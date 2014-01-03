@@ -12,7 +12,7 @@ h3  { font-size: 14px; }
 pre { background-color: ghostWhite; padding: 2px; }
 ul          { list-style: none; padding: 0; margin-left: 0; }
 ::selection { background-color: rgba(0, 0, 0, 0.1); color: #000; }
-a       { color: #00e; }
+a       { /*color: #00e;*/ color: #00e; }
 a:hover { color: #00e; }
 
 /* Container */
@@ -30,7 +30,7 @@ a:hover { color: #00e; }
 
 /* archive */
 .archive               { padding-top: 40px;}
-.archive  a            { color: #000;/*color: #00a;*/ }
+.archive  a            { /*color: #000;*/color: #00a; }
 .archive li span.meta  { font-family: mono, monospace; display: inline; color: #444; font-size: 12px;}
 
 /* post */
