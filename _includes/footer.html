@@ -1,3 +1,20 @@
-<div class="container" id="footer">
+<!--div class="container" id="footer">
    <div>&copy; 2012-2014 <a href="http://github.com/enrmarc">enrmarc</a></div>
+</div-->
+
+<div class="footer-wrap">
+   <!--div class="related-articles">
+      <h4>Posts antiguos
+      </h4>
+      <ul>
+         {% for post in site.posts limit:3 %}
+            <li><a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a></li>
+         {% endfor %}
+      </ul>
+      <hr/>
+   </div-->
+
+   <footer>
+      <span>&copy; 2012-{{site.time | date: '%Y'}} {{site.author}}. Powered by <a href="http://jekyllrb.com">Jekyll</a>.</span>
+   </footer>
 </div>

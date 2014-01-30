@@ -2,20 +2,19 @@
 layout: default
 ---
 
-<div class="container">
-   <div class="row-fluid">
-      <div class="span8">
-         <h1   class="post-title">{{ page.title }}</h1>
-         <span class="post-date"> {{ page.date | date: "%B %d, %Y" }}</span>
-         <div  class="post-content">
-            {{ content }}
-            {% if page.src %} 
-               <br><a class="github-link" href="{{ page.src }}">Código fuente</a>
-            {% endif %}
-          </div>
-      </div>
-   </div>
-
-   {% include pager.html %}
-   {% include disqus.html  %}
-</div>
+  <article>
+    <div class="headline-wrap">
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.tagline }}</h2>
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      {{ content }}
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          {% include _author-bio.html %}
+        </div>
+        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %} by <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
