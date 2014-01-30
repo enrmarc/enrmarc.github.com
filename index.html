@@ -9,7 +9,7 @@ title:  Blog
          <ul class="archive">
             {% for post in site.posts %}
             <li>
-            <span class="meta">{{ post.date | date_to_string }}</span>&nbsp; &nbsp;
+            <strong><span class="meta">{{ post.date | date_to_string }}</span></strong>&nbsp; &nbsp;
                {% if post.ext_url %}
                  <a href="{{ post.ext_url }}">{{ post.title}}</a>
                {% else %}
