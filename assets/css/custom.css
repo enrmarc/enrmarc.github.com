@@ -34,7 +34,7 @@ a:hover { color: #00e; }
 .archive li span.meta  { font-family: mono, monospace; display: inline; color: #444; font-size: 12px;}
 
 /* post */
-.post-title      { font-size: 22px; margin-bottom: 0; }
+.post-title      { font-size: 26px; margin-bottom: 0; }
 .post-content h2 { font-size: 17px; }
 .post-date       { font-family: 'Lato', sans-serif; color: gray; font-size: 12px; display: inline-block;
                      margin: 0 0 25px 0; }
