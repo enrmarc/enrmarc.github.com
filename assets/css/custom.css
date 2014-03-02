@@ -32,6 +32,7 @@ a:hover { color: #00e; }
 .archive               { padding-top: 40px;}
 .archive  a            { /*color: #000;*/color: #00a; }
 .archive li span.meta  { font-family: mono, monospace; display: inline; color: #444; font-size: 12px;}
+/*.archive li a { font-family:Verdana,sans-serif; font-size: 13px;}*/
 
 /* post */
 .post-title      { font-size: 26px; margin-bottom: 0; }
@@ -51,6 +52,7 @@ a:hover { color: #00e; }
 .social               { display: inline; padding: 10px 10px 10px 20px; }
 .social.github        { background: url('../img/github2.png') scroll no-repeat left center; }
 .social.stackoverflow { background: url('../img/so.png') scroll no-repeat left center; }
+.social.coyotev       { background: url('../img/coyotev.png') scroll no-repeat left center; }
 
 /* repos */
 .very-small { font-size: 11px; font-weight: normal;}
