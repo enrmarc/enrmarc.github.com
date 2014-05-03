@@ -10,7 +10,7 @@ h1  { font-size: 19px; }
 h2  { font-size: 17px; margin-bottom:0; }
 h3  { font-size: 14px; }
 pre { background-color: ghostWhite; padding: 2px; }
-ul          { list-style: none; padding: 0; margin-left: 0; }
+.archive  { list-style: none; padding: 0; margin-left: 0; }
 ::selection { background-color: rgba(0, 0, 0, 0.1); color: #000; }
 a       { /*color: #00e;*/ color: #00e; }
 a:hover { color: #00e; }
