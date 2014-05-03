@@ -17,7 +17,9 @@ function f(result) {
       'tms': 'Simulador de la Máquina de Turing.',
       'vim-config': 'Archivos de configuración de vim.',
       'python-brainfuck': 'Intérprete de Brainfuck en Python.',
-      'jekyll-random-post': 'Cómo obtener un post aleatorio en Jekyll.'
+      'jekyll-random-post': 'Cómo obtener un post aleatorio en Jekyll.',
+      'acm-uva': 'Problemas de la ACM UVa.',
+      'project-euler': 'Problemas de Project Euler.'
    }
 
    var language = {
@@ -30,8 +32,8 @@ function f(result) {
       var repos = 0;
       setTimeout(function() {
          $.each(result.data, function(i, repo) {
-            if (!repo.fork) { 
-               ++repos; 
+            if (!repo.fork) {
+               ++repos;
                add(repo);
             }
          });
@@ -42,7 +44,7 @@ function f(result) {
    function add(repo) {
       var $item = $("<li>").addClass("repo span3 " + (repo.language || '').toLowerCase());
       var $link = $("<a>").attr("href", repo.html_url).appendTo($item);
-      $link.append($("<h2>").text(repo.name));      
+      $link.append($("<h2>").text(repo.name));
       $link.append($("<h3>").text(repo.language || language[repo.name]));
       $link.append($("<p>").text(repo.description || desc[repo.name]));
       $item.appendTo("#repos");
