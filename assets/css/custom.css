@@ -21,10 +21,10 @@ a:hover { color: #00e; }
 .repo, .thumbnails { font-family: 'Lato', sans-serif; }
 
 /* navbar */
-.navbar               { color: #CCC; padding: 15px 0px 10px; border-bottom: 1px solid #EEE; 
+.navbar               { color: #CCC; padding: 15px 0px 10px; border-bottom: 1px solid #EEE;
                         margin-bottom: 0; font-family: 'Lato', sans-serif; font-size: 15px;}
 .navbar a:first-child { margin-left: 0; }
-.navbar a             { margin: 0 5px; text-decoration: none; color: #444; 
+.navbar a             { margin: 0 5px; text-decoration: none; color: #444;
                         font-weight:normal; font-family: 'Lato', sans-serif;}
 .navbar a:hover       { text-decoration: none; color: #222; border-bottom: none;}
 
@@ -43,7 +43,7 @@ a:hover { color: #00e; }
 .previous         { float: left; }
 
 /* footer */
-#footer         { font-family: mono, monospace; font-size: 14px; padding: 25px; margin-top: 50px; 
+#footer         { font-family: mono, monospace; font-size: 14px; padding: 25px; margin-top: 50px;
                   border-top: 1px solid #eee; text-align: center; color: gray;}
 #footer a       { color: gray; }
 #footer a:hover { opacity: 0.6; text-decoration: none; }
@@ -74,24 +74,43 @@ a:hover { color: #00e; }
 .tags a:hover { text-decoration: none; color: gray;}
 
 /* code highlight */
-pre      { color: #444; font: normal 13px/16px monospace !important;
+/*pre      { color: #444; font: normal 13px/16px Inconsolata, monospace !important;
            padding: 0 0 0 12px !important;
            border: 0px solid transparent !important;
            background-color: transparent !important;
+
            border-left: solid 4px #EEE !important; }
-code     { color: #4E443C; font: normal 13px/16px monospace; border: none;
-           background-color: transparent;}
-pre code { font: normal 13px/16px monospace !important;   
+           */
+
+pre {
+  color: #444;
+  font: normal 13px/16px "Source Code Pro", monospace;
+  padding: 10px;
+  background: #f8fbfc;
+  border: solid 1px #f1f6f9;
+  border-bottom: solid 1px #d9eaf2;
+  border-radius: 3px;
+  overflow: auto;
+}
+/*code { color: #4E443C; font: normal 13px/16px monospace; border: none;
+         background-color: transparent;}*/
+code {
+  font: normal 13px/16px "Source Code Pro", monospace;
+  border: none;
+  background-color: transparent;
+  color: #4E443C;
+}
+/*pre code { font: normal 15px/16px "Inconsolata", monospace !important;
            background-color: transparent !important;
            border: 0px solid !important;
-           color: #444 !important; }
+           color: #444 !important; }*/
 .tag         { color: #444; }
 .class.title { color: #09A; }
-.class, 
+.class,
 .value       { color: #09A !important; }
-.keyword, 
+.keyword,
 .attribute,
-.kn         { color: #36c !important; }
+.kn         { /*color: #36c*/ color: #1481b8 !important; }
 .comment    { color: #999; }
 .string     { color: #c70; }
 .bash .string { color: #36c;}
