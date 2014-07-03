@@ -11,7 +11,7 @@ h3  { font-size: 14px; }
 pre { background-color: ghostWhite; padding: 2px; }
 .archive  { list-style: none; padding: 0; margin-left: 0; }
 ::selection { background-color: rgba(0, 0, 0, 0.1); color: #000; }
-a       { /*color: #00e;*/ color: #00e; }
+a       { /*color: #00e;*/ color: #00e; color:#0635F0;}
 a:hover { color: #00e; }
 
 /* Container */
@@ -20,21 +20,23 @@ a:hover { color: #00e; }
 .repo, .thumbnails { font-family: 'Lato', sans-serif; }
 
 /* navbar */
-.navbar               { color: #CCC; padding: 15px 0px 10px; border-bottom: 1px solid #EEE;
-                        margin-bottom: 0; font-family: 'Lato', sans-serif; font-size: 15px;}
+.navbar               { color: #222; padding: 15px 0px 10px; border-bottom: 1px solid #EEE;
+                        margin-bottom: 0; font-family: 'Lato', sans-serif; font-size: 14px;}
 .navbar a:first-child { margin-left: 0; }
 .navbar a             { margin: 0 5px; text-decoration: none; color: #444;
-                        font-weight:normal; font-family: 'Lato', sans-serif;}
+                        font-weight:normal; font-family: 'Lato', sans-serif;
+                      }
 .navbar a:hover       { text-decoration: none; color: #222; border-bottom: none;}
 
 /* archive */
-.archive               { padding-top: 40px;}
+.archive               { padding-top: 32px;}
 .archive  a            { /*color: #000;*/color: #00a; }
 .archive li span.meta  { font-family: mono, monospace; display: inline; color: #444; font-size: 12px;}
 /*.archive li a { font-family:Verdana,sans-serif; font-size: 13px;}*/
 
 /* post */
-.post-title      { font-size: 30px; margin-bottom: 0; letter-spacing: normal; color:#222; }
+.post-title      { /*font-size: 30px; margin-bottom: 0;*/ letter-spacing: normal; color:#222;
+font: 800 28px/28px "open sans"; margin-bottom: 10px}
 .post-content h2 { font-size: 17px; }
 .post-date       { font-family: georgia, sans-serif; font-style: italic; /*color: gray;*/ font-size: 14px; display: inline-block;
                      margin: 0 0 25px 0; }
@@ -42,7 +44,7 @@ a:hover { color: #00e; }
 .previous         { float: left; }
 
 /* footer */
-#footer         { font-family: serif; font-size: 14px; padding: 25px; margin-top: 50px;
+#footer         { font-family: "Source Code Pro", mono; font-size: 12px; padding: 25px; margin-top: 50px;
                   border-top: 1px solid #eee; text-align: center; color: #222;}
 #footer a       { color: #222; }
 #footer a:hover { opacity: 0.6; text-decoration: none; }
