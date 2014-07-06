@@ -5,7 +5,7 @@ summary : Python y la Streaming API de Twitter
 tags    : python api twitter streaming leer tuits oauth http
 ---
 
-*A partir de este post, todos estarán dirigidos al futuro Enrique.
+*Este y los siguientes posts estarán dirigidos al futuro Enrique.
 Supongo que algún día los reelerá.*
 
 Ahora que estás inscrito en el curso [Introduction to
