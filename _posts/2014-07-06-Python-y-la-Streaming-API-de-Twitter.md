@@ -31,7 +31,7 @@ Sigue los pasos, (¿puedes, verdad Enrique?) y listo. Ya tienes
 tus tókens.
 Ya sabes que Twitter tiene algunas librerías para tratar con
 OAuth, pero, bueno, no sé por qué te empeñas en usar Python plano.
-En realidad todo lo que Twitter requirere es que añadas
+En realidad todo lo que Twitter requiere es que añadas
 la cabecera `Authorization` a cada petición que envíes y en esa
 cabecera especificas los tókens necesarios.
 
