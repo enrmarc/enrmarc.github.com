@@ -22,7 +22,7 @@ tweets. Puedes acceder usando cualquier lenguaje. Usa el lenguaje
 al que estés fuertemente enganchado. En esta ocasión, supondré
 que usarás Python.
 
-##Autenticación
+#Autenticación
 La API de Twitter es *gratis*, pero debes pedir permiso. Twitter usa [OAuth]
 para proveer acceso autorizado a su API, de modo que lo tienes fácil.
 Lo primero que debes hacer es obtener los *tokens de acceso*.
@@ -52,14 +52,14 @@ http_handler  = urllib.HTTPHandler(debuglevel=0)
 https_handler = urllib.HTTPSHandler(debuglevel=0)
 {% endhighlight %}
 
-Terminología. En el mundo OAuth, los tókens (el access token y
+Terminología. En el mundo OAuth, los tókens (el *access token* y
 la parte secreta) son usados en lugar de los usuales usuario y
 contraseña. Las *consumer credentials* son la forma en la que
 Twitter tiene de identificar tu aplicación.
-[HMAC-SHA1] es el método que soporta Twitter para generar la firma.
+HMAC-SHA1 es el método que soporta Twitter para generar la firma.
 El resto es la inicialización de los handlers para HTTP.
 
-##Autenticando la petición
+#Autenticando la petición
 Ahora solo queda construir la petición y autenticarla con OAuth.
 
 {% highlight python %}
@@ -84,11 +84,11 @@ La petición se crea añadiendo las credenciales antes creadas y firmándola
 con HMAC-SHA1. Como solo quieres leer el stream de datos, la petición será
 un `GET` y pasaremos todos los tókens por la URL, de ahí el `req.to_url()`.
 
-##Leyendo tweets
-{% highlight python %}
+#Leyendo tweets
 Vas a leer del stream *sample*. Éste devuelve una muestra aleatoria
 de tweets en formato JSON. Luego imprimes línea a línea (tweet a tweet).
 
+{% highlight python %}
 def fetch():
   url = "https://stream.twitter.com/1/statuses/sample.json"
   response = build_req(url, 'GET', [])
