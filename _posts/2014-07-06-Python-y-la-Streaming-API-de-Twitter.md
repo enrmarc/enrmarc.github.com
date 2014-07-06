@@ -43,7 +43,7 @@ api_secret = 'TU_API_SECRET'
 access_token_key = 'TU_ACCESS_TOKEN_KEY'
 access_token_secret = 'TU_ACCESS_TOKEN_SECRET'
 
-oauth_token    = oauth.Token(key=access_token_key, secret=access_token_secret)
+oauth_token = oauth.Token(key=access_token_key, secret=access_token_secret)
 oauth_consumer = oauth.Consumer(key=api_key, secret=api_secret)
 
 signature_method_hmac_sha1 = oauth.SignatureMethod_HMAC_SHA1()
