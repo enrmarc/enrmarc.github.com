@@ -11,8 +11,8 @@ h3  { font-size: 14px; }
 pre { background-color: ghostWhite; padding: 2px; }
 .archive  { list-style: none; padding: 0; margin-left: 0; }
 ::selection { background-color: rgba(0, 0, 0, 0.1); color: #000; }
-a       { /*color: #00e;*/ color: #00e; color:#0635F0;}
-a:hover { color: #00e; }
+a       { /*color: #00e;*/ color: #00e; /*color:#0635F0;*/ color: #2455c3;}
+a:hover { /*color: #00e;*/ color: #2455c3; }
 
 /* Container */
 .container li:last-child { border-bottom:  none;}
@@ -39,7 +39,8 @@ a:hover { color: #00e; }
 font: 800 28px/28px "open sans"; margin-bottom: 10px}
 .post-content h2 { font-size: 17px; }
 .post-date       { font-family: georgia, sans-serif; font-style: italic; /*color: gray;*/ font-size: 14px; display: inline-block;
-                     margin: 0 0 25px 0; }
+                     margin: 0 0 25px 0;
+                     color: #2455c3; font-weight: bold }
 .next             { float: right; }
 .previous         { float: left; }
 
