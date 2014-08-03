@@ -21,10 +21,10 @@ a:hover { /*color: #00e;*/ color: #2455c3; }
 
 /* navbar */
 .navbar               { color: #222; padding: 15px 0px 10px; border-bottom: 1px solid #EEE;
-                        margin-bottom: 0; font-family: 'Lato', sans-serif; font-size: 14px;}
+                        margin-bottom: 25px; font-size: 14px;}
 .navbar a:first-child { margin-left: 0; }
 .navbar a             { margin: 0 5px; text-decoration: none; color: #444;
-                        font-weight:normal; font-family: 'Lato', sans-serif;
+                        font-weight:bold; font-family: 'open sans', sans-serif;
                       }
 .navbar a:hover       { text-decoration: none; color: #222; border-bottom: none;}
 
@@ -141,3 +141,8 @@ code {
 #view_banner a:hover {color:white !important;}
 
 .red {color: red; font-weight: bold}
+
+
+html {
+  overflow-y: scroll;
+}
