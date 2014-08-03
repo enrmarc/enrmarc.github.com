@@ -38,7 +38,7 @@ function f(result) {
             }
          });
          $('#num-repos').text(repos);
-      }, 1000 /* un poco de suspense */);
+      }, 100 /* un poco de suspense */);
    });
 
    function add(repo) {
