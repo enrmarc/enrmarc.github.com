@@ -6,7 +6,7 @@ tags    : python api twitter streaming leer tuits oauth http
 ---
 
 *Este y los siguientes posts estarán dirigidos al futuro Enrique.
-Supongo que algún día los reelerá.*
+Supongo que algún día los releerá.*
 
 Ahora que estás inscrito en el curso [Introduction to
 Data Science] es hora de que te pongas a escribir sobre algo
