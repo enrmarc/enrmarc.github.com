@@ -3,7 +3,7 @@ font: normal 14px/24px Georgia, serif;
    color: #000;
 }
 
-P   { margin: 0px 0px 20px 0px; font-size: 17px;  line-height: 29px; }
+P,blockquote  { margin: 0px 0px 20px 0px; font-size: 16.5px;  line-height: 29px; }
 h1, h2, h3 { color: #000; }
 h1  { font-size: 19px; }
 h2  { font-size: 17px; margin-bottom:0; }
@@ -146,3 +146,15 @@ code {
 html {
   overflow-y: scroll;
 }
+
+blockquote.intro {
+   font-style: italic;
+   border-left: none;   
+}
+blockquote {
+   padding: 0;
+}
+blockquote footer {
+   font-style: normal;
+}
+
