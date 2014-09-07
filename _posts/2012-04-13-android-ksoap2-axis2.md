@@ -1,8 +1,10 @@
 ---
-layout : post
-title  : Android, Axis2 y Ksoap2
-summary: Enviar y recibir objetos complejos utilizando la librería KSoap2 para Android.
-tags   : axis2 android ksoap2 webservices java http
+layout    : post
+title     : Android, Axis2 y Ksoap2
+summary   : Enviar y recibir objetos complejos utilizando la librería KSoap2 para Android.
+tags      : Axis2 Android Ksoap2 WebServices Java Http
+category  : note
+permalink : /blog/android-ksoap2-axis2
 ---
 
 Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
@@ -11,7 +13,7 @@ si lo que quieres es enviar objetos complejos. Solo escribo una de tantas formas
 
 ##Servidor
 La manera más rápida de desplegar un servicio web en Axis2 es creando un
-[POJO] (Plain Old Java Object). El POJO utilizado para ilustrar el ejemplo 
+[POJO] (Plain Old Java Object). El POJO utilizado para ilustrar el ejemplo
 representará a una persona.
 {% highlight java %}
 package org.entidades;
@@ -46,7 +48,7 @@ import org.entidades.Persona;
 
 public class Service {
     public Persona test(Persona persona) {
-        return new Persona(persona.getNombre(), persona.getEdad(), 
+        return new Persona(persona.getNombre(), persona.getEdad(),
              persona.getPeso());
     }
 }
@@ -81,7 +83,7 @@ objetos/
 {% endhighlight %}
 
 ##Cliente
-El código Android utiliza la librería [Ksoap2] para poder gestionar los mensajes 
+El código Android utiliza la librería [Ksoap2] para poder gestionar los mensajes
 [SOAP]. Para que un objeto complejo pueda ser enviado en un mensaje SOAP, debe
 implementar la interfaz `KvmSerializable`.
 {% highlight java %}
@@ -176,8 +178,8 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlSerializer;
 
 public class MarshalDouble implements Marshal {
-    public Object readInstance(XmlPullParser parser, String namespace, 
-           String name, PropertyInfo expected) 
+    public Object readInstance(XmlPullParser parser, String namespace,
+           String name, PropertyInfo expected)
            throws IOException, XmlPullParserException {
         return Double.parseDouble(parser.nextText());
     }
@@ -186,7 +188,7 @@ public class MarshalDouble implements Marshal {
         cm.addMapping(cm.xsd, "double", Double.class, this);
     }
 
-    public void writeInstance(XmlSerializer writer, Object obj) 
+    public void writeInstance(XmlSerializer writer, Object obj)
            throws IOException {
         writer.text(obj.toString());
     }
@@ -225,7 +227,7 @@ public class Main extends Activity {
     private Button send;
     private EditText etNombre, etEdad, etPeso;
     private TextView tvNombre, tvEdad, tvPeso;
-    
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -278,7 +280,7 @@ public class Main extends Activity {
         HttpTransportSE transport = new HttpTransportSE(URL);
         SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
         request.addProperty(p.getClass().getSimpleName(), p);
-        SoapSerializationEnvelope envelope = 
+        SoapSerializationEnvelope envelope =
             new SoapSerializationEnvelope(SoapEnvelope.VER11);
         envelope.dotNet = true;
         envelope.setOutputSoapObject(request);
@@ -300,7 +302,7 @@ public class Main extends Activity {
 {% endhighlight %}
 
 
-[Axis2]: http://axis.apache.org/axis2/java/core/ 
-[POJO]: http://axis.apache.org/axis2/java/core/docs/pojoguide.html 
-[Ksoap2]: http://code.google.com/p/ksoap2-android/ 
-[SOAP]: http://en.wikipedia.org/wiki/SOAP 
+[Axis2]: http://axis.apache.org/axis2/java/core/
+[POJO]: http://axis.apache.org/axis2/java/core/docs/pojoguide.html
+[Ksoap2]: http://code.google.com/p/ksoap2-android/
+[SOAP]: http://en.wikipedia.org/wiki/SOAP

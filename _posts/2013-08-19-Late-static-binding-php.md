@@ -1,8 +1,10 @@
 ---
-layout  : post
-title   : Late static binding en PHP
-summary : Resolver referencias estáticas en tiempo de ejecución (PHP)
-tags    : php late-static-binding
+layout   : post
+title    : Late static binding en PHP
+summary  : Resolver referencias estáticas en tiempo de ejecución (PHP)
+tags     : PHP late-static-binding
+category : note
+permalink: /blog/Late-static-binding-php
 ---
 
 Si has programado un poco en PHP te habrás dado cuenta de que su lado
@@ -19,7 +21,7 @@ Singleton para poner de manifiesto el problema y su solución.
 **Nota:**
 los ejemplos siguientes son solo ilustrativos, en general el uso
 del patrón Singleton [está desaconsejado][2], entre otras cosas porque
-incrementa el acoplamiento entre clases y hace difícil hacer 
+incrementa el acoplamiento entre clases y hace difícil hacer
 tests de unidad.
 
 ##Singleton
@@ -53,15 +55,15 @@ Singleton como el gestor de conexiones a una base de datos:
 ?>
 {% endhighlight %}
 
-Algunos detalles: usamos la variable `$instance` para guardar la única 
+Algunos detalles: usamos la variable `$instance` para guardar la única
 instancia de la clase `DBManager`. Es una *variable de clase* porque
 está precedida del modificador `static`.
-El constructor de la clase es privado, luego nadie puede usar el constructor 
+El constructor de la clase es privado, luego nadie puede usar el constructor
 para crear instancias de la clase (de otra manera no tendríamos un Singleton).
 
-Es con el método `getInstance()` con el que obtenemos la única instancia 
+Es con el método `getInstance()` con el que obtenemos la única instancia
 de la clase.
-El método `count()` lo he incluido solamente para demostrar que el 
+El método `count()` lo he incluido solamente para demostrar que el
 Singleton funciona:
 
 {% highlight php %}
@@ -75,7 +77,7 @@ Singleton funciona:
 
 ##Late Static Binding
 
-Pero esto empieza a complicarse si decides especializar el Singleton para dar soporte 
+Pero esto empieza a complicarse si decides especializar el Singleton para dar soporte
 a múltiples bases de datos:
 
 {% highlight php %}
@@ -123,7 +125,7 @@ La solución es reemplazar `self` por `static` (disponible a partir de la versi�
    }
 
    $mysqldb = MySQLManager::getInstance();
-   assert (get_class($mysqldb) == 'MySQLManager'); // Ok  
+   assert (get_class($mysqldb) == 'MySQLManager'); // Ok
 ?>
 {% endhighlight %}
 

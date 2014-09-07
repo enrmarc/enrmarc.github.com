@@ -1,8 +1,11 @@
 ---
-layout:  post
-title:   A los miembros del Consejo de presupuestos (Traducción)
-summary: A los miembros del Consejo de presupuestos
-tags:    traducción Edsger Dijkstra ewd
+layout     : post
+title      : A los miembros del Consejo de presupuestos (Traducción)
+summary    : A los miembros del Consejo de presupuestos
+tags       : traducción Edsger-Dijkstra
+category   : note
+permalink  : /blog/A-los-miembros-encargados-del-presupuesto
+scheme-code: "#000"
 ---
 
 (*Ésta es una traducción del original [To the members of the

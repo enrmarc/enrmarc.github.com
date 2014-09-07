@@ -1,8 +1,10 @@
 ---
-layout  : post
-title   : Depurar SQLite en Android sin ser root
-summary : Leer y escribir una base de datos SQLite en Android sin ser root
-tags    : android sqlite debugging root
+layout   : post
+title    : Depurar SQLite en Android sin ser root
+summary  : Leer y escribir una base de datos SQLite en Android sin ser root
+tags     : Android SQLite debugging root
+category : note
+permalink: /blog/depurar-sqlite-android-sin-ser-root
 ---
 
 Si tenéis un nuevo y reluciente dispositivo Android que no queréis rootear
@@ -37,7 +39,7 @@ fi
 {% endhighlight %}
 
 Dale permisos de ejecución y cópialo en tu directorio bin personal. El script
-lanza `adb` usando `run-as` bajo los permisos del nombre del paquete que 
+lanza `adb` usando `run-as` bajo los permisos del nombre del paquete que
 le pases como primer argumento (o el especificado por defecto en `DEFAULT_APP`).
 De esta manera tiene permisos sobre la base de datos (`DEFAULT_DB` o
 lo que especifiques como segundo argumento) para copiarla a un
@@ -69,7 +71,7 @@ adb shell "$cmd2"
 
 El script de escritura es parecido, usa `run-as` con el mismo
 propósito. Aunque para escribir en el directorio de la aplicación
-antes hay que cambiar los permisos. Una vez escrita la base 
+antes hay que cambiar los permisos. Una vez escrita la base
 de datos, los permisos se restauran.
 
 De esta manera, si depuras una base de datos puedes usar `pull` para

@@ -1,13 +1,15 @@
 ---
-layout  : post
-title   : GitHub Pages
-summary : Sitio estático para un repositorio de GitHub
-tags    : github github-pages
+layout   : post
+title    : GitHub Pages
+summary  : Sitio estático para un repositorio de GitHub
+tags     : github github-pages
+category : note
+permalink: /blog/github-pages
 ---
 
 Lo que sigue es un recordatorio sobre cómo crear un sitio estático
 para un repositorio en [GitHub].
-Suponiendo que ya se tiene alojado un repositorio en y que está clonado, 
+Suponiendo que ya se tiene alojado un repositorio en y que está clonado,
 lo siguiente es crear la rama gh-pages :
 
 {% highlight bash %}
@@ -30,5 +32,5 @@ github.com).
 
 **Nota**: a partir de la versión 1.7.2 de GitHub se puede utilizar
 `git checkout --orphan gh-pages`
- 
-[GitHub]: https://github.com/ 
+
+[GitHub]: https://github.com/
