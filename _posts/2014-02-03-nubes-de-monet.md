@@ -1,25 +1,27 @@
 ---
-layout  : post
-title   : Nubes de Monet usando el Ruido Perlin
-summary : Generación de texturas de nubes usando el Ruido Perlin
-tags    : javascript processing.js nubes monet perlin
+layout   : post
+title    : Nubes de Monet usando el Ruido Perlin
+summary  : Generación de texturas de nubes usando el Ruido Perlin
+tags     : JavaScript Processing.js nubes monet perlin
+category : note
+permalink: /blog/nubes-de-monet
 ---
 
 En la naturaleza muchas estructuras parecen surgir del caos,
-de la aleatoriedad. Si observas las nubes seguramente no 
+de la aleatoriedad. Si observas las nubes seguramente no
 distingirás ningún patrón recurrente que te ayude a predecir
 su forma o estructura. Podríamos pensar que son simplemente
 agrupaciones al azar de partículas de agua o hielo suspendidas
 en la atmósfera.
 
-Como siempre, la realidad es un poco más complicada. Si 
+Como siempre, la realidad es un poco más complicada. Si
 quisiéramos simular nubes en un ordenador y nos valiésemos
 por el azar que puede darnos la típica función `random`, no
 quedaríamos muy satisfechos.
 
 Vamos a generar nubes en dos dimensiones (texturas) usando
 la función `Math.random` de JavaScript.
-Esta función sigue una distribución uniforme, es decir, 
+Esta función sigue una distribución uniforme, es decir,
 todos los valores que genera tienen la misma
 probabilidad de aparecer.
 
@@ -41,7 +43,7 @@ void draw() {
    for (int x = 0; x < width; x++) {
       for (int y = 0; y < height; y++) {
          float bright = Math.random() * 255;
-         pixels[x + y * width] = color(bright, 127, 255);         
+         pixels[x + y * width] = color(bright, 127, 255);
          t += 0.1;
       }
    }
@@ -53,13 +55,13 @@ Iteramos todos los pixeles que forman la pantalla a pintar y
 les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.
 Y el resultado:
 
-<div class="row-fluid text-center">
-   <img src="/assets/img/monet-random.jpg"/>
+<div class="img-center">
+   <img src="/assets/projects/ruido-perlin/monet-random.jpg"/>
 </div><br>
 
 
 Como véis, no tiene aspecto de nube. Veamos por qué.
-Un generador de números aleatorios (como la función `Math.random`) 
+Un generador de números aleatorios (como la función `Math.random`)
 produce números que no guardan relación alguna y no muestran ningún
 patrón distinguible. Para simular la naturaleza de las nubes, es
 necesario un poco menos de aleatoriedad en nuestros cálculos;
@@ -67,7 +69,7 @@ un caos coherente.
 
 ¿Cómo generar un poco menos de aleatoriedad? Podemos usar
 la función [Perlin Noise] (Ruido Perlin). Los detalles de esta
-función los podéis consultar en la [web de Ken Perlin]. 
+función los podéis consultar en la [web de Ken Perlin].
 Perlin desarrolló este algoritmo en los
 ochenta para generar las texturas de la película Tron.
 Lo que nos interesa es que
@@ -106,16 +108,16 @@ void draw() {
 {% endhighlight %}
 
 
-El código es casi el mismo. Lo único que varía es la 
+El código es casi el mismo. Lo único que varía es la
 utilización de la función `noise` en lugar de `Math.random`.
 El resultado:
 
-<div class="row-fluid text-center">
-   <img src="/assets/img/monet-perlin.jpg"/>
+<div class="img-center">
+   <img src="/assets/projects/ruido-perlin/monet-perlin.jpg"/>
 </div><br>
 
 Bueno, quizá no se parezcan demasiado a las nubes de los
-cuadros de Monet, pero esta es la primera vez que 
+cuadros de Monet, pero esta es la primera vez que
 genero algo con aspecto "natural" y me siento ... entusiasmado.
 
 

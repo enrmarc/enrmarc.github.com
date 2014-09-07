@@ -1,8 +1,10 @@
 ---
-layout  : post
-title   : Instalar Scheme en Ubuntu
-summary : Instalar un intérprete de Scheme en Ubuntu (10.04)
-tags    : ubuntu scheme racket
+layout   : post
+title    : Instalar Scheme en Ubuntu
+summary  : Instalar un intérprete de Scheme en Ubuntu (10.04)
+tags     : Ubuntu Scheme Racket
+category : note
+permalink: /blog/instalar-scheme-en-ubuntu
 ---
 
 Resulta mas cómodo tener instalado un intérprete de [Scheme]
@@ -10,7 +12,7 @@ y usar la línea de comandos que tener que usar alguna de esas
 [webs] que compilan/interpretan un montón de lenguajes.
 
 Una opción es instalar [Racket]. Con `apt-get` usando los
-[ppa]: 
+[ppa]:
 
 {% highlight bash %}
 sudo add-apt-repository ppa:plt/racket
@@ -26,7 +28,7 @@ Un ejemplo para comprobar que todo ha ido bien:
    (+ (square a) (square b))
 )
 
-(define (square a) 
+(define (square a)
    (* a a)
 )
 

@@ -1,8 +1,11 @@
 ---
-layout : post
-title  : Elige programar
-summary: Elige programar
-tags   : trainspotting
+layout     : post
+title      : Elige programar
+summary    : Elige programar
+tags       : Trainspotting
+category   : note
+permalink  : /blog/elige-programar
+scheme-code: "#000"
 ---
 
 <small>*Debe leerse como si sonara Lust for Life de Iggy Pop de fondo.*</small>

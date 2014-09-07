@@ -1,10 +1,10 @@
-title: "enrmarc"
+# Site settings
+name: Enrique
+description: I make things
 url: "http://enrmarc.github.io"
-author: "enrmarc"
-description: "Personal website"
-paginate: 7
-paginate_path: "page:num"
-permalink: /blog/:title
+github_username:  enrmarc
 
+# Build settings
 markdown: kramdown
-pygments: false
+feed: feed.xml
+highlighter: pygments

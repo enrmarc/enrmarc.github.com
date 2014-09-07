@@ -1,18 +1,20 @@
 ---
-layout    : post
-title     : Jekyll-tagcloud
-summary   : Tag cloud for Jekyll without plugins.
-tags      : jekyll proyectos javascript html tagcloud
+layout   : post
+title    : Jekyll-tagcloud
+summary  : Tag cloud for Jekyll without plugins.
+tags     : Jekyll proyectos JavaScript Html tagcloud
+category : project
+permalink: /blog/Jekyll-tagcloud
 ---
 
-jekyll-tagcloud is a little hack to create a tag cloud and their respective 
+jekyll-tagcloud is a little hack to create a tag cloud and their respective
 posts for your [Jekyll] generated site hosted in [GitHub Pages], using Liquid
 and JavaScript (jQuery); without plugins.
 jekyll-tagcloud uses a logarithmic assessment (very simple) in order to weight tags.
 
-You can do the same using Jekyll plugins, but that means 
+You can do the same using Jekyll plugins, but that means
 you should have to run Jekyll locally and post the produced files into your repo
-(because GitHub Pages does not allow Jekyll plugins). I don't like that solution, 
+(because GitHub Pages does not allow Jekyll plugins). I don't like that solution,
 hence jekyll-tagcloud.
 
 Just include the next template `tags.html` :
@@ -25,7 +27,7 @@ title  : tags
 ---
 <div class="tag-cloud">
   {% for tag in site.tags %}
-    <a href="#posts-tag" 
+    <a href="#posts-tag"
       id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{tag[0]}}
     </a>
     <ul id="list_{{ forloop.index }}" style="display:none;">
@@ -44,14 +46,14 @@ title  : tags
         maxFont = 40.0,
         diffFont = maxFont - minFont,
         size = 0;
-       
+
     {% assign max = 1.0 %}
     {% for tag in site.tags %}
       {% if tag[1].size > max %}
         {% assign max = tag[1].size %}
       {% endif %}
     {% endfor %}
-            
+
     {% for tag in site.tags %}
       size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont
              + minFont;
@@ -69,7 +71,7 @@ title  : tags
 {% endraw %}
 {% endhighlight %}
 
-Replace 
+Replace
 {% highlight javascript %}
 {% raw %}
 ---
@@ -82,6 +84,6 @@ with your personal configuration.
 
 [Demo]
 
-[Jekyll]: https://github.com/mojombo/jekyll 
-[GitHub Pages]: http://pages.github.com/ 
-[Demo]: /tags.html 
+[Jekyll]: https://github.com/mojombo/jekyll
+[GitHub Pages]: http://pages.github.com/
+[Demo]: /tags.html

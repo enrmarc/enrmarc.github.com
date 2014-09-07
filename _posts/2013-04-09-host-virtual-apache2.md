@@ -1,12 +1,14 @@
 ---
-layout  : post
-title   : Host virtual en Apache
-summary : Configuración de un host virtual Apache2 en Linux
-tags    : apache linux virtualhost bash
+layout   : post
+title    : Host virtual en Apache
+summary  : Configuración de un host virtual Apache2 en Linux
+tags     : Apache Linux Virtualhost Bash
+category : note
+permalink: /blog/host-virtual-apache2
 ---
 
 Lo que sigue es un recordatorio de cómo configurar un host virtual bajo Apache. Siempre
-se me olvida, asi que por qué recordarlo si puedo anotarlo. El hecho de usar un 
+se me olvida, asi que por qué recordarlo si puedo anotarlo. El hecho de usar un
 host virtual permite desplegar varios proyectos web en directorios diferentes
 al usual `/var/www/`.
 
@@ -22,7 +24,7 @@ sudo touch /etc/apache2/sites-available/fichero-host
     ServerName nombreDelSitio
     DocumentRoot /home/enrmarc/tmp/app/webroot
     SetEnv APPLICATION_ENV "development"
-    <Directory /home/enrmarc/tmp/app/webroot > 
+    <Directory /home/enrmarc/tmp/app/webroot >
         AllowOverride All
         Order allow,deny
         Allow from all
@@ -40,7 +42,7 @@ Añade el nuevo host al fichero `/etc/hosts` :
 127.0.0.1 nombreDelSitio
 {% endhighlight %}
 
-Reinicia apache: 
+Reinicia apache:
 {% highlight bash %}
 sudo service apache2 restart
 {% endhighlight %}
