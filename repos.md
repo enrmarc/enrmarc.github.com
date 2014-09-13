@@ -5,5 +5,5 @@ permalink: /repos/
 desc     : Código
 ---
 
-Algunos proyectos los tengo alojados en
+Algunos proyectos que tengo alojados en
 [GitHub](https://github.com/enrmarc).
