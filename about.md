@@ -18,8 +18,9 @@ desc: TL;DR
 >
 > -- Holden Caulfield
 
-Me llamo Enrique, trabajo como desarrollador y actualmente JavaScript
-paga mis facturas. Siempre que te interese puedes ponerte en contacto
+Me llamo Enrique, trabajo como desarrollador y actualmente <strike>Android</strike>
+JavaScript paga mis facturas.
+Siempre que te interese puedes ponerte en contacto
 conmigo enviándome un mensaje a `enrmarc@gmail.com`.
 Suelo leer mi correspondencia casi a diario.
 Si aun sigues leyendo, puede que te interese mi
