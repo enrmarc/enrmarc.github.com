@@ -1,6 +1,6 @@
 ---
 layout     : post
-title      : A los miembros del Consejo de presupuestos (Traducción)
+title      : A los miembros del Consejo de presupuestos [T]
 summary    : A los miembros del Consejo de presupuestos
 tags       : traducción Edsger-Dijkstra
 category   : note
