@@ -558,7 +558,6 @@ article .list .external:focus,article .list .external:hover {
         font-size: 4vw;
         padding-right: 4%;
         padding-left: 4%;
-        padding: 0 16% !important;
     }
 
     article h2 img,article h2 svg {
