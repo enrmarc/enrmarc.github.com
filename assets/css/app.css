@@ -40,7 +40,7 @@ body:before {
 }
 
 .heading {
-    font-family: 'Helvetica Neue',Arial,'Hiragino Sans GB',sans-serif;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
     font-size: 330%;
     font-weight: 700;
     letter-spacing: -.06em;
@@ -48,7 +48,7 @@ body:before {
 }
 
 .sub-heading {
-    font-family: 'Helvetica Neue',Arial,'Hiragino Sans GB',sans-serif;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
     font-size: 72%;
     font-weight: 400;
     letter-spacing: .08em;
@@ -220,7 +220,7 @@ body:hover .latest {
 }
 
 .content header h2 {
-    font-family: 'Helvetica Neue',Arial,'Hiragino Sans GB',sans-serif;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
     font-size: 330%;
     font-weight: 700;
     line-height: 1.1;
@@ -264,7 +264,7 @@ body:hover .latest {
 }
 
 .content h3,.content h4,.content h5,.content h6 {
-    font-family: 'Helvetica Neue',Arial,'Hiragino Sans GB',sans-serif;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
     font-size: 72%;
     font-weight: 400;
     margin: 10vmin 0 1rem;
@@ -405,7 +405,7 @@ body:hover .latest {
 }
 
 .largetype {
-    font-family: 'Helvetica Neue',Arial,'Hiragino Sans GB',sans-serif;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
     font-size: 330%;
     font-size: 200%;
     font-weight: 700;
@@ -558,6 +558,7 @@ article .list .external:focus,article .list .external:hover {
         font-size: 4vw;
         padding-right: 4%;
         padding-left: 4%;
+        padding: 0 16% !important;
     }
 
     article h2 img,article h2 svg {
