@@ -37,7 +37,9 @@ Un ejemplo para comprobar que todo ha ido bien:
 
 Y desde la terminal:
 
-`$ racket -t test.lisp`
+{% highlight bash %}
+$ racket -t test.lisp
+{% endhighlight bash %}
 
 Ahora ya puedes seguir leyendo el SICP.
 
