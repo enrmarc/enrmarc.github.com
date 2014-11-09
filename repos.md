@@ -5,5 +5,5 @@ permalink: /repos/
 desc     : Código
 ---
 
-Algunos proyectos que tengo alojados en
+Suelo escribir código. A veces lo subo a
 [GitHub](https://github.com/enrmarc).

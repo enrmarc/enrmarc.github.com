@@ -2,27 +2,31 @@
 layout: index
 title: Acerca de
 permalink: /about/
-desc: TL;DR
+desc: TL;DR ・ Developer
 ---
 
-> Si realmente les interesa lo que voy a contarles, probablemente
-> lo primero que querrán saber es dónde nací y lo asquerosa que
-> fue mi infancia, y qué hacían mis padres antes de tenerme a mí, y
-> todas esas gilipolleces estilo David Copperfield, pero si quieren
-> saber la verdad no tengo ganas de hablar de eso. Primero porque
-> me aburre y, segundo, porque a mis padres les darían dos ataques
-> por cabeza si les dijera algo personal acerca de ellos. Para esas
-> cosas son muy susceptibles, sobre todo mi padre. Son <em>buena
-> gente</em> y todo eso, no digo que no, pero también son más
-> susceptibles que el demonio.
->
-> -- Holden Caulfield
+<blockquote >
+  <p>
+   If you really want to hear about it, the first thing you’ll
+   probably want to know is where I was born, an what my lousy
+   childhood was like, and how my parents were occupied and all
+   before they had me, and all that David Copperfield kind of crap,
+   but I don’t feel like going into it, if you want to know the
+   truth. In the first place, that stuff bores me, and in the
+   second place, my parents would have about two hemorrhages
+   apiece if I told anything pretty personal about them. They’re
+   quite touchy about anything like that, especially my father.
+   They’re nice and all —I’m not saying that—but they’re also touchy as hell.
+  </p>
+  <footer>
+    <cite>Holden Caulfield</cite>
+  </footer>
+</blockquote>
 
 Me llamo Enrique, trabajo como desarrollador y actualmente <strike>Android</strike>
 JavaScript paga mis facturas.
 Siempre que te interese puedes ponerte en contacto
 conmigo enviándome un mensaje a `enrmarc@gmail.com`.
-Suelo leer mi correspondencia casi a diario.
 Si aun sigues leyendo, puede que te interese mi
 [CV](/data/resume.pdf).
 
