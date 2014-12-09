@@ -33,7 +33,7 @@ body:before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1vmax;
+    height: 10px;
     content: '';
     pointer-events: none;
     opacity: .2;
@@ -100,7 +100,7 @@ del {
 .logo {
     display: block;
     width: 100%;
-    height: 1vmax;
+    height: 10px;
     margin: 0 0 1.4vmax;
     opacity: 1;
 /*    background: #a212d1;*/
@@ -212,7 +212,7 @@ body:hover .latest {
 }
 
 .content p {
-    line-height: 1.71428571;
+/*    line-height: 1.71428571;*/
     margin: 0 0 1.1em;
 }
 
