@@ -20,11 +20,11 @@ body {
     line-height: 1.42857143;*/
     margin: 0 auto;
     padding: 0 20%;
-    color: #000;
+    /*color: #000;*/
     background: #fff;
     text-rendering: optimizelegibility;
     image-rendering: optimizequality;
-    font: 18px/24px Georgia, serif;
+    /*font: 18px/24px Georgia, serif;*/
 
 
     background-color: #fdfdfc;
@@ -558,7 +558,7 @@ article .list .external:focus,article .list .external:hover {
 @media (max-width:1000px) {
     body {
         /*font-size: 2.8vw;*/
-        font: 18px/24px Georgia, serif;
+        /*font: 18px/24px Georgia, serif;*/
         padding-right: 8%;
         padding-left: 8%;
     }
@@ -567,7 +567,7 @@ article .list .external:focus,article .list .external:hover {
 @media (max-width:640px) {
     body {
         /*font-size: 4vw;*/
-        font: 18px/24px Georgia, serif;
+        /*font: 18px/24px Georgia, serif;*/
         padding-right: 4%;
         padding-left: 4%;
     }
@@ -585,7 +585,7 @@ article .list .external:focus,article .list .external:hover {
 @media (max-width:400px) {
     body {
         /*font-size: 5.6vw;*/
-        font: 18px/24px Georgia, serif;
+        /*font: 18px/24px Georgia, serif;*/
     }
 }
 
