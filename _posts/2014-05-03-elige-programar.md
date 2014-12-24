@@ -6,6 +6,7 @@ tags       : Trainspotting
 category   : note
 permalink  : /blog/elige-programar
 scheme-code: "#000"
+disqus     : true
 ---
 
 <small>*Debe leerse como si sonara Lust for Life de Iggy Pop de fondo.*</small>

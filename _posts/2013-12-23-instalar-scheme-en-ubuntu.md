@@ -5,6 +5,7 @@ summary  : Instalar un intérprete de Scheme en Ubuntu (10.04)
 tags     : Ubuntu Scheme Racket
 category : note
 permalink: /blog/instalar-scheme-en-ubuntu
+disqus   : true
 ---
 
 Resulta mas cómodo tener instalado un intérprete de [Scheme]

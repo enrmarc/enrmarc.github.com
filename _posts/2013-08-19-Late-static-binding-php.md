@@ -5,6 +5,7 @@ summary  : Resolver referencias estáticas en tiempo de ejecución (PHP)
 tags     : PHP late-static-binding
 category : note
 permalink: /blog/Late-static-binding-php
+disqus   : true
 ---
 
 Si has programado un poco en PHP te habrás dado cuenta de que su lado

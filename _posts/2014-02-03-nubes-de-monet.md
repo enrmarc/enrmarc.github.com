@@ -5,6 +5,7 @@ summary  : Generación de texturas de nubes usando el Ruido Perlin
 tags     : JavaScript Processing.js nubes monet perlin
 category : note
 permalink: /blog/nubes-de-monet
+disqus   : true
 ---
 
 En la naturaleza muchas estructuras parecen surgir del caos,

@@ -5,6 +5,7 @@ summary  : Python y la Streaming API de Twitter
 tags     : Python API Twitter streaming OAuth Http
 category : note
 permalink: /blog/Python-y-la-Streaming-API-de-Twitter
+disqus   : true
 ---
 
 *Este y los siguientes posts estarán dirigidos al futuro Enrique.

@@ -5,6 +5,7 @@ summary  : Tag cloud for Jekyll without plugins.
 tags     : Jekyll proyectos JavaScript Html tagcloud
 category : project
 permalink: /blog/Jekyll-tagcloud
+disqus   : true
 ---
 
 jekyll-tagcloud is a little hack to create a tag cloud and their respective
