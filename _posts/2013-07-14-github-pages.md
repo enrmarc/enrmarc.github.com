@@ -5,6 +5,7 @@ summary  : Sitio estático para un repositorio de GitHub
 tags     : github github-pages
 category : note
 permalink: /blog/github-pages
+disqus   : true
 ---
 
 Lo que sigue es un recordatorio sobre cómo crear un sitio estático

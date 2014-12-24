@@ -19,6 +19,8 @@ layout: default
       </header>
       {{ content }}
 
-      {% include disqus.html  %}
+      {% if page.disqus %}
+         {% include disqus.html  %}
+      {% endif %}
    </article>
 </main>

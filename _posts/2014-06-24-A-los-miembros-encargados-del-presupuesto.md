@@ -6,6 +6,7 @@ tags       : traducción Edsger-Dijkstra
 category   : note
 permalink  : /blog/A-los-miembros-encargados-del-presupuesto
 scheme-code: "#000"
+disqus     : true
 ---
 
 (*Ésta es una traducción del original [To the members of the

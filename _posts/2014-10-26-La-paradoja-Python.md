@@ -5,7 +5,7 @@ summary    : La paradoja Python (traducción al español de The Python Paradox d
 tags       : paul graham python traduccion
 category   : note
 permalink  : /blog/La-paradoja-Python
-scheme-code: "#00034"
+disqus     : true
 ---
 
 *(Ésta es una traducción del original [The Python Paradox][original]

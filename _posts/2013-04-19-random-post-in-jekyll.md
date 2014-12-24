@@ -7,6 +7,7 @@ category : project
 permalink: /blog/random-post-in-jekyll
 scripts  :
   - src  : js/jquery.min.js
+disqus   : true
 ---
 
 <script>

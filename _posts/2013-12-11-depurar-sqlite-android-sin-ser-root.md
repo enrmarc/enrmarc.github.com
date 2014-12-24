@@ -5,6 +5,7 @@ summary  : Leer y escribir una base de datos SQLite en Android sin ser root
 tags     : Android SQLite debugging root
 category : note
 permalink: /blog/depurar-sqlite-android-sin-ser-root
+disqus   : true
 ---
 
 Si tenéis un nuevo y reluciente dispositivo Android que no queréis rootear

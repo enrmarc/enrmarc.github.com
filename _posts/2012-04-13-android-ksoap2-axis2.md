@@ -5,6 +5,7 @@ summary   : Enviar y recibir objetos complejos utilizando la librería KSoap2 pa
 tags      : Axis2 Android Ksoap2 WebServices Java Http
 category  : note
 permalink : /blog/android-ksoap2-axis2
+disqus      : true
 ---
 
 Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
