@@ -2,7 +2,7 @@
 layout      : post
 title       : The difference between mathematics and engineering
 summary     : The difference between mathematics and engineering
-tags        : SICP books
+tags        : SICP books Structure and interpretation of computer programs The difference between mathematics and engineering
 category    : note
 permalink   : /blog/the-difference-between-mathematics-and-engineering
 disqus      : false
