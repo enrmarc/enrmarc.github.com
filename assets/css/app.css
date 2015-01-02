@@ -304,15 +304,19 @@ body:hover .latest {
     /*margin: 0 0 4vmin;*/
 }
 
+
 .content blockquote {
     position: relative;
     margin-bottom: 2em;
 }
 
+/*
 .content blockquote>p {
     padding-left: .8em;
     border-left: 2px solid;
 }
+*/
+
 
 .content blockquote footer:after,.content blockquote footer:before {
     display: table;
@@ -329,9 +333,10 @@ body:hover .latest {
     float: right;
 }
 
+/*
 .content blockquote cite:before {
     content: '\2500\2500\00a0';
-}
+}*/
 
 .content sup {
     font-size: 75%;
