@@ -6,11 +6,11 @@
    <title>{{ page.title }} | {{ site.name }}</title>
 
    {% if page.summary %}
-      <meta name="description" content="{{ site.description }}. {{page.summary}}"/>
+      <meta name="description" content="{{page.summary}}"/>
    {% endif %}
 
    {% if page.tags %}
-      <meta name="keywords" content="enrmarc, Enrique Marcos, source, code, {{page.tags | join: ','}}"/>
+      <meta name="keywords" content="enrmarc, Enrique Marcos, {{page.tags | join: ','}}"/>
    {% endif %}
 
    <link rel="stylesheet" href="/assets/css/app.css"/>
