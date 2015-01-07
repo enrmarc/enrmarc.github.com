@@ -1,26 +1,22 @@
----
-layout: default
----
-
-<main class="content">
-   <article>
-      <header>
-         <h2>
-            {{ page.title }}
-         </h2>
-            <small>
-               <small>
-                  <time datetime="{{ page.date }}">
-                     {{ page.date | date: "%b %d, %Y" }}
-                  </time>
-               </small>
-               {{ page.desc }}
-            </small>
-      </header>
-      {{ content }}
-
-      {% if page.disqus %}
-         {% include disqus.html  %}
-      {% endif %}
-   </article>
-</main>
+<!DOCTYPE html>
+<html>
+   {% include head.html %}
+   <body>
+      <main class="content" role="main">
+         <article class="post">
+            {% if page.image %}
+               {% include article-with-image.html %}
+            {% else %}
+               {% include article-without-image.html %}
+            {% endif %}
+            <section class="post-content">
+               {{content}}
+            </section>
+           {% include extra-content.html %}
+           {% include prefooter.html %}
+         </article>
+       </main>
+       {% include footer.html %}
+   </body>
+</html>
+<!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->

@@ -4,8 +4,21 @@ title: Notas
 desc: "Noto un desespero enfermizo en tu risa"
 ---
 
-<h3>Notas</h3>
-<ul class="list">
+
+<main class="notes" >
+   <section _layout="p1-2">
+      {% for post in site.categories.note %}
+         <a class="notelink" href="{{post.url}}">
+            <h5>{{post.title}}</h5>
+            <span _type="small3 italic">{{post.summary}}
+               <span _type="unbroken">{{ post.date | date: "%b %d, %Y" }}</span>
+            </span>
+         </a>
+      {% endfor %}
+   </section>
+</main>
+
+<!--ul class="list">
   {% for post in site.categories.note %}
     {% include post-item.html %}
   {% endfor %}
@@ -16,4 +29,4 @@ desc: "Noto un desespero enfermizo en tu risa"
   {% for post in site.categories.project %}
     {% include post-item.html %}
   {% endfor %}
-</ul>
+</ul-->

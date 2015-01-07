@@ -4,14 +4,16 @@
    {% include styles.html %}
    <body {{ bg_color }}>
 
-      {% include header.html %}
-      {% include navigation.html %}
-      {{ content }}
+      <div class="page-content">
+         <div class="wrapper">
+            {{ content }}
+         </div>
+      </div>
+
+      {% include footer.html %}
+
       {% for script in page.scripts %}
          <script type="text/javascript" src="/assets/{{ script.src }}"></script>
       {% endfor %}
-      {% include footer.html %}
-      <!--script type="text/javascript" src="/assets/js/highlight.min.js"></script-->
-      <!--script>hljs.initHighlightingOnLoad();</script-->
    </body>
 </html>
