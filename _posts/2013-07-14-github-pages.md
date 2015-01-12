@@ -10,7 +10,7 @@ disqus   : true
 
 Lo que sigue es un recordatorio sobre cómo crear un sitio estático
 para un repositorio en [GitHub].
-Suponiendo que ya se tiene alojado un repositorio en y que está clonado,
+Suponiendo que ya se tiene alojado un repositorio y que está clonado,
 lo siguiente es crear la rama gh-pages :
 
 {% highlight bash %}

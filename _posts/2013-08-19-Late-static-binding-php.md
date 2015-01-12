@@ -1,7 +1,7 @@
 ---
 layout   : post
 title    : Late static binding en PHP
-summary  : Resolver referencias estáticas en tiempo de ejecución (PHP)
+summary  : Resolver referencias estáticas en tiempo de ejecución
 tags     : PHP late-static-binding
 category : note
 permalink: /blog/Late-static-binding-php
@@ -19,11 +19,13 @@ como `self::` o `__CLASS__`, se resuelven empleando
 el nombre de la clase, en tiempo de compilación. Usaré el patrón
 Singleton para poner de manifiesto el problema y su solución.
 
-**Nota:**
-los ejemplos siguientes son solo ilustrativos, en general el uso
-del patrón Singleton [está desaconsejado][2], entre otras cosas porque
-incrementa el acoplamiento entre clases y hace difícil hacer
-tests de unidad.
+<em>
+   Los ejemplos siguientes son solo ilustrativos, en general el uso
+   del patrón Singleton [está desaconsejado][2], entre otras cosas porque
+   incrementa el acoplamiento entre clases y hace difícil hacer
+   tests de unidad (o al menos eso he leído, tampoco estoy del
+   todo convencido).
+</em>
 
 ##Singleton
 
@@ -88,14 +90,13 @@ a múltiples bases de datos:
    }
 
    $mysqldb = MySQLManager::getInstance();
-   assert (get_class($mysqldb) == 'MySQLManager'); // Falla
+   assert (get_class($mysqldb) == 'MySQLManager'); // Nop
 ?>
 {% endhighlight %}
 
 La clase `DBManager` declara la variable
 `$klass` con la ilusión de que las clases que hereden de ella puedan sobreescribirla.
 Esto es lo que hace `MySQLManager`: provee su propia definición de `$klass`.
-
 El funcionamiento ideal sería que una vez instanciada `MySQLManager`, la variable
 `$klass` tomase el valor "MySQLManager". Pero esto no
 pasa, la última aserción falla porque `get_class($mysqldb)` devuelve "DBManager".
@@ -105,7 +106,8 @@ y toma el valor de la clase en la que se define. De modo que da igual si alguna
 subclase sobreescribe `$klass` porque `DBManager` siempre usa `self::$klass`, es decir,
 `DBManager::$klass`.
 
-La solución es reemplazar `self` por `static` (disponible a partir de la versión 5.3):
+La solución es reemplazar `self` por `static` cuando creamos
+la instancia (disponible a partir de la versión 5.3):
 {% highlight php %}
 <?php
    class DBManager {

@@ -1,8 +1,8 @@
 ---
-layout: index
-title: Arte
+layout   : post
+title    : Arte
 permalink: /art/
-desc: for(;;) draw()
+summary  : for(;;) draw()
 ---
 
 Coming soon.

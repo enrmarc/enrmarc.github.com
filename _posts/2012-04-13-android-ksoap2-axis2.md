@@ -1,11 +1,11 @@
 ---
 layout    : post
 title     : Android, Axis2 y Ksoap2
-summary   : Enviar y recibir objetos complejos utilizando la librería KSoap2 para Android.
+summary   : Enviar y recibir objetos complejos
 tags      : Axis2 Android Ksoap2 WebServices Java Http
 category  : note
 permalink : /blog/android-ksoap2-axis2
-disqus      : true
+disqus    : true
 ---
 
 Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
@@ -85,7 +85,7 @@ objetos/
 
 ##Cliente
 El código Android utiliza la librería [Ksoap2] para poder gestionar los mensajes
-[SOAP]. Para que un objeto complejo pueda ser enviado en un mensaje SOAP, debe
+[SOAP]. Para que un objeto complejo pueda ser enviado en un mensaje SOAP debe
 implementar la interfaz `KvmSerializable`.
 {% highlight java %}
 package com.objetos;

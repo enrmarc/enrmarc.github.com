@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html >
    {% include head.html %}
-   {% include styles.html %}
-   <body {{ bg_color }}>
-
-      {% include header.html %}
+   <body _layout="p1 small:p0">
       {% include navigation.html %}
       {{ content }}
       {% for script in page.scripts %}
          <script type="text/javascript" src="/assets/{{ script.src }}"></script>
       {% endfor %}
       {% include footer.html %}
-      <!--script type="text/javascript" src="/assets/js/highlight.min.js"></script-->
-      <!--script>hljs.initHighlightingOnLoad();</script-->
    </body>
 </html>

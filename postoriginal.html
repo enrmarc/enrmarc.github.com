@@ -1,0 +1,68 @@
+<html lang="en" class="breakpoint-large">
+   <head>
+      <meta charset="UTF-8"><title>JavaScript in 2015 - Glen Maddern: Internet Pro</title><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimal-ui"><meta name="breakpoint" content="small" media="(max-width: 520px)"><meta name="breakpoint" content="medium" media="(min-width: 521px) and (max-width: 900px)"><meta name="breakpoint" content="large" media="(min-width: 901px)"><script async="" src="//www.google-analytics.com/analytics.js"></script><link rel="stylesheet" href="/main.css">
+   </head>
+
+   <body _layout="p1 small:p0">
+      <nav _flex="align-center" _layout="p1 max960" _type="upcase small2 lh1.4"><h1 _flex-child="grow1" _type="semibold"><a href="/" _link="invisible">Glen Maddern</a></h1><ul _flex="align-center wrap justify-end"><li _layout="pl1"><a href="/articles" _link="subtle">Articles</a></li><li _layout="pl1"><a href="/projects" _link="subtle">Projects</a></li><li _layout="pl1"><a href="/talks" _link="subtle">Talks</a></li><li _layout="pl1"><a href="/work" _link="subtle">Work</a></li></ul></nav>
+
+      <main _layout="p1">
+         <header _layout="p3-0" _type="lh1.2">
+            <h1 _type="h3 small:h4 black center">JavaScript in 2015</h1>
+            <h2 _type="h5 italic center" _layout="pt1">A whole new world</h2>
+            <time datetime="2015-01-07" _layout="block pt0.5" _type="small3 center">2015-01-07</time>
+         </header>
+         <article _markdown="_Markdown">
+            <p>In the last few days of 2014, I resurrected my long-neglected GIF-beatmatching project <a href="https://github.com/geelen/djgif" target="_blank">DJGif</a> to throw a New Year's party on my rooftop:
+            </p>
+            <figure>
+               <img src="/assets/images/djgif.jpg" alt="DJGif in full flight on NYE">
+               <figcaption>
+                  <a href="https://soundcloud.com/jetaimeabelard" target="_blank">Ʌbelard</a> playing his first set of 2015
+               </figcaption>
+            </figure>
+
+            <p>A DJ using Ableton Live, a huge bundle of MaxMSP emitting a UDP stream of beat information (courtesy of the immensely pro <a href="http://cade.io" target="_blank">Cade</a>), a UDP&nbsp;➝&nbsp;WebSockets server, and DJGif pulling hundreds of GIFs off various Tumblrs to beatmatch <a href="http://geelen.github.io/x-gif/" target="_blank">&lt;x-gif&gt;</a> on two projectors makes for a hell of a good show.</p>
+
+            <p>But that's a topic for another time (soon!), because along the way I discovered some new things about JavaScript that really surprised me.</p>
+
+            <h2>JavaScript got good</h2>
+            <p>I don't just mean that JavaScript of 2015 is <em>better</em>, I mean it's <strong>good</strong>. Good modules, good syntax, a great package ecosystem, a sensible development workflow. This isn't the JS I knew and loved despite its flaws. This is something else.</p>
+
+            <p>Take a look at the <a href="http://kangax.github.io/compat-table/es6/" target="_blank">ES6 Compatibility Table</a> by <a href="https://twitter.com/kangax" target="_blank">@kangax</a> for a sense of the sheer number of new features that make up the <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="_blank">ES6 spec</a> as well as the impressive progress of ES6 compilers such as <a href="https://github.com/google/traceur-compiler" target="_blank">Traceur</a> and <a href="https://6to5.org/" target="_blank">6to5</a>. Arrow functions, classes, destructuring, template strings, symbols &amp; promises are all there and usable today. They've actually been usable for a while, actually, and I was vaguely familiar with most of them, but for DJGif I added the final missing piece — modules.</p>
+
+            <h2>JSPM + SystemJS - a new in-browser workflow</h2>
+            <p>
+               <a href="https://github.com/systemjs/systemjs" target="_blank">SystemJS</a> is a "universal dynamic module loader" that works with files using ES6, CommonJS, AMD or those exporting global variables. It's effectively a backwards-compatible version of the <a href="https://github.com/ModuleLoader/es6-module-loader" target="_blank">ES6 Loader Polyfill</a>, which tracks the <a href="http://whatwg.github.io/loader/" target="_blank">JavaScript Loader Spec</a>.
+            </p>
+
+            <p><a href="http://jspm.io/" target="_blank">JSPM</a> is a package manager with a CLI intended to replace the need for NPM or Bower for front-end projects, but, because SystemJS works with pretty much anything, happily works with code from NPM or Github. It's pretty much exactly like what the NPM team recommended as <a href="http://blog.npmjs.org/post/101775448305/npm-and-front-end-packaging" target="_blank">a solution to front-end dependency management</a> on their blog.</p>
+
+            <p>They're both incredible pieces of open-source work with burgeoning communities, but it's worth mentioning that they owe their existence largely to the tireless efforts of <a href="https://twitter.com/guybedford" target="_blank">Guy Bedford</a>. Damn fine work, Mr Bedford.</p>
+
+            <h2>Action!</h2>
+            <p>Rather than go on in detail about how this all hangs together, I thought I'd try my hand at a screencast that shows you, in 10-and-a-half minutes, what using JSPM, SystemJS and ES6 is like. We're going to build something that scrapes the top GIFs from <a href="http://www.reddit.com/r/perfectloops" target="_blank">/r/perfectloops</a> and displays them.</p>
+            <figure>
+               <div am-youtube="screencast">
+                  <iframe src="//www.youtube.com/embed/iukBMY4apvI" frameborder="0" allowfullscreen=""></iframe>
+               </div>
+            </figure>
+
+            <p>The resulting <a href="https://github.com/geelen/loopgifs" target="_blank">source code</a> and <a href="http://geelen.github.io/loopgifs" target="_blank">live version</a> are up on GitHub, but the interesting bit is the process in getting there, so watch the vid.</p>
+
+            <p _before="hr" _layout="p2-0"></p>
+
+            <h4>Call for Feedback</h4>
+            <p>This is my first serious attempt at a screencast, so if you watched it and have some thoughts, get in touch! And if you'd like to hear about when the next one launches, pop your email in here:</p>
+
+            <form _form="" action="http://glenmaddern.createsend.com/t/t/s/hyshd/" method="post">
+              <input id="fieldEmail" name="cm-hyshd-hyshd" type="email" required="" placeholder="Email">
+              <button type="submit">Subscribe</button>
+            </form>
+         </article>
+      </main>
+
+      <!-- footer aqui -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script>
+   </body>
+</html>

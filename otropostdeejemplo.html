@@ -1,0 +1,157 @@
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Introducing AM - Attribute Modules for CSS - Glen Maddern: Internet Pro</title><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimal-ui"><meta name="breakpoint" content="small" media="(max-width: 520px)"><meta name="breakpoint" content="medium" media="(min-width: 521px) and (max-width: 900px)"><meta name="breakpoint" content="large" media="(min-width: 901px)"><script type="text/javascript">
+!function(a,b){"use strict";var c={breakpoints:{},_isTicking:!1,_debounceLastTime:0,_namedEvents:{},_eventMatchCache:{},_globalEvents:[],onBreakpointChange:function(){var a=Array.prototype.slice.call(arguments),b=a.pop(),d=a.pop();"undefined"==typeof d?c._globalEvents.push(b):(c._namedEvents[d]=[]).push(b),k()}},d=function(c){/in/.test(b.readyState)?a.setTimeout(function(){d(c)},9):c()},e=function(a,b){var c=a.className.split(" "),d=c.indexOf(b);d>-1&&(c.splice(d,1),a.className=c.join(" "))},f=function(a,b){-1===a.className.indexOf(b)&&(a.className=""!==a.className?a.className+" "+b:b)},g=function(a,c){var d="breakpoint-"+c,g=b.documentElement;a?f(g,d):e(g,d)},h=function(a){c._globalEvents.forEach(function(b){"function"==typeof b&&b(a)})},i=function(){c._isTicking||j(k),c._isTicking=!0},j=function(b,d){if(!a.requestAnimationFrame){var e=(new Date).getTime(),f=Math.max(0,16-(e-c._debounceLastTime)),g=a.setTimeout(function(){b(e+f)},f);return c._debounceLastTime=e+f,g}a.requestAnimationFrame(b,d)},k=function(){c._isTicking=!1;var b=[];for(var d in c.breakpoints){var e=c.breakpoints[d],f=a.matchMedia(e).matches;if(c._namedEvents[d]&&c._eventMatchCache[d]!==f){c._eventMatchCache[d]=f;for(var i=0;i<c._namedEvents[d].length;i++){var j=c._namedEvents[d][i];"function"==typeof j&&j(f)}}f&&b.push(d),g(f,d)}0!==b.length&&h(b)},l=function(){for(var a=b.getElementsByTagName("meta"),d=0;d<a.length;d++)if("breakpoint"===a[d].name){var e=a[d].getAttribute("content"),f=a[d].getAttribute("media");c.breakpoints[e]=f}},m=function(){l(),k()},n=function(){l(),k(),a.addEventListener("resize",i)};"undefined"!=typeof module&&module.exports?module.exports=c:a.metaQuery=c,m(),d(n)}(window,document);</script><link rel="stylesheet" href="/main.css"></head><body _layout="p1 small:p0"><nav _flex="align-center" _layout="p1 max960" _type="upcase small2 lh1.4"><h1 _flex-child="grow1" _type="semibold"><a href="/" _link="invisible">Glen Maddern</a></h1><ul _flex="align-center wrap justify-end"><li _layout="pl1"><a href="/articles" _link="subtle">Articles</a></li><li _layout="pl1"><a href="/projects" _link="subtle">Projects</a></li><li _layout="pl1"><a href="/talks" _link="subtle">Talks</a></li><li _layout="pl1"><a href="/work" _link="subtle">Work</a></li></ul></nav><main _layout="p1"><header _layout="p3-0" _type="lh1.2"><h1 _type="h3 small:h4 black center">Introducing AM - Attribute Modules for CSS</h1><h2 _type="h5 italic center" _layout="pt1">Moving beyond class-based styling</h2><time datetime="2014-09-05" _layout="block pt0.5" _type="small3 center">2014-09-05</time></header><article _Markdown="_Markdown"><p>A few months ago, I read an <a href="http://csswizardry.com/2014/05/grouping-related-classes-in-your-markup/">article by Harry Roberts</a> where he introduced an interesting concept for working with related classes in CSS. In his article, he describes the use of the <code>[]</code> characters in class attributes to help understand their purpose at a quick glance. He presents this example, arguing that it makes the class declaration more <em>scannable</em> - that is, more understandable at a glance:</p>
+<pre><code class="language-markup">&lt;div class=&quot;[ foo  foo--bar ]  [ baz  baz--foo ]&quot;&gt;</code></pre>
+<p>I must admit, I was initially extremely uncomfortable with the technique. The idea of classes with names like <code>[</code> and <code>]</code>, that match no CSS, that are repeated within a single class attribute, that are purely designed for <em>humans</em> rather than the browser seemed, well, wrong. I still think that, actually, but it got me thinking about markup &amp; semantics much more deeply, so thanks Harry!</p>
+<p>As I looked into it, several people were suggesting similar approaches, such as using <code>/</code>&nbsp;(<a href="http://beneverard.co.uk/blog/using-slashes-within-the-html-class-attribute/">Ben Everard</a>), or <code>|</code>&nbsp;(<a href="https://twitter.com/sn0lan/status/439384690680942592">Stephen Nolan</a>), but the feeling of unnaturalness persisted. All I could think was:</p>
+<blockquote>
+<p><span _type='h5 semibold'>How do you have so many classes that you need <em>more</em> classes to make things readable?</span></p>
+</blockquote>
+<p>Because, let&#39;s be clear, <strong>this is madness</strong>. Readable, scannable HTML is a worthy goal, but these kinds of techniques show that there&#39;s something fundamentally broken with class-based styling.</p>
+<h2>More vs fewer classes - a brief aside</h2>
+<p>The surprising thing was, while the presence of so many classes in the markup was unsettling to me, people like Harry were just so damn <em>persuasive</em>. Appealing to things like OOCSS and the <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">Single Responsibility Principle</a>, and from my own experience building a series of sites of increasing complexity, I could tell there was value in the <em>decomposition</em> of styling behaviour, but it wasn&#39;t until recently that I found a way to implement it that I was happy with.</p>
+<p>I had previously adopted a version of BEM that emphasised <strong>isolation over reuse</strong> &dash; each new block inherits no styling by default, allowing components to be developed separately and avoids the risk of breaking something elsewhere on the site. But the tradeoff there is <em>fragmentation</em> &dash; when you find yourself with 10 different link styles, 12 shades of blue, 18 subtly different button styles etc. Nicole Sullivan, the creator of OOCSS, gave a fantastic <a href="https://www.youtube.com/watch?v=0NDyopLKE1w">presentation</a> last year in Melbourne that spoke about how common that problem was, and how to recover from it.</p>
+<p>For me, it felt like the accepted solution was to dive into the capabilities of CSS pre-processors in order to have the isolation of BEM but the consistency of OOCSS. For example, instead of this:</p>
+<pre><code class="language-markup">&lt;a class=&#39;btn large rounded&#39;&gt;</code></pre>
+<pre><code class="language-css">.btn { /* button styles */ }
+.large { /* global large-type modifier */ }
+.rounded { /* global rounded-border modifier */ }</code></pre>
+<p>you would have:</p>
+<pre><code class="language-markup">&lt;a class=&#39;btn btn--large btn--rounded&#39;&gt;</code></pre>
+<pre><code class="language-scss">.btn { /* button styles */ }
+.btn--large {
+  @extend %large-type;
+}
+.btn--rounded {
+  @extend %rounded-borders;
+}</code></pre>
+<p>I ended up with files full of mixins and placeholders like <code>_typography.scss</code> and <code>_brand.scss</code>, which allowed me to keep a handle on fragmentation, but also maintain by-default style isolation for each new component. And so things were ok, for a while.</p>
+<h2>Modifiers: how the M breaks BEM</h2>
+<p>Doing any research on the topic of CSS class naming &amp; maintainability, you&#39;re bound to come across Nicolas Gallagher&#39;s excellent article <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">&quot;About HTML semantics and front-end architecture&quot;</a>. One part in particular caught my attention, which he calls &#39;single-class&#39; vs &#39;multi-class&#39; patterns for modifiers. To summarize, the two potential versions of your HTML look like this:</p>
+<pre><code class="language-markup">&lt;a class=&#39;btn--large&#39;&gt; &lt;!-- Single class --&gt;
+&lt;a class=&#39;btn btn--large&#39;&gt; &lt;!-- Multi class --&gt;</code></pre>
+<p>That&#39;s facilitated through two alternative CSS patterns:</p>
+<pre><code class="language-css">/* Single class */
+.btn, .btn--large { /* base button styles */ }
+.btn--large { /* large button styles */ }
+
+/* Multi class */
+.btn { /* base button styles */ }
+.btn--large { /* large button styles */ }</code></pre>
+<p>The difference here is whether <code>btn--large</code> is sufficient <em>on its own</em>, or whether it depends on the class <code>btn</code> being present. The single-class pattern says yes, it feels simpler and avoids the case where someone forgets to include <code>btn</code>. It&#39;s also less repetitious, and with SASS&#39;s <code>@extend</code> functionality it doesn&#39;t feel like much of a burden on the CSS side, but it has a truly fatal flaw.</p>
+<h2>Contextual overrides</h2>
+<p>Let&#39;s say all your buttons have a background colour, except for those in your top navigation bar. With the multi-class pattern, all buttons, large or small, rounded or square, etc, still include the class <code>btn</code>, so you can target them like so:</p>
+<pre><code class="language-css">header &gt; nav &gt; .btn { background: none; }</code></pre>
+<p>With the single-class pattern, we don&#39;t know which variant of button we might be overriding, so we&#39;re forced to do:</p>
+<pre><code class="language-css">header &gt; nav {
+  .btn, .btn--large, .btn--rounded { background: none; }
+}</code></pre>
+<p>Obviously, this is not ideal - adding another button variant means checking anywhere that overrides button styles and adding another class. This is a bit of a deal breaker, so most people simply argue for a return to the multiple-class style (<a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Nicholas Gallagher</a>, <a href="http://bensmithett.com/bem-modifiers-multiple-classes-vs-extend/">Ben Smithett</a>). I&#39;ve seen some alternative proposals, such as <a href="http://viget.com/extend/bem-multiple-modifiers-and-experimenting-with-attribute-selectors">Tommy Marshall&#39;s</a> or <a href="http://benfrain.com/multiple-classes-ui-component-variations-wrong/">Ben Frain&#39;s</a>, that use the <em>attribute prefix selector</em> <code>^=</code> which allows you to test whether an attribute value <strong>starts with</strong> a certain string, e.g.:</p>
+<pre><code class="language-markup">&lt;a class=&#39;btn--large&#39;&gt;</code></pre>
+<pre><code class="language-css">[class^=&#39;btn&#39;] { /* base button styles */ }
+.btn--large { /* large button styles */ }
+header &gt; nav &gt; [class^=&#39;btn&#39;] { /* Overrides for all buttons */ }</code></pre>
+<p>This achieves easy contextual overrides for a single-class pattern, but it&#39;s too brittle to be a serious option. Most damningly, if <em>another</em> class appears before <code>btn--large</code>, the prefix selector doesn&#39;t match, and everything breaks. Also, there&#39;s no obvious way of permitting multiple variants such as <code>btn--large--rounded</code>.</p>
+<p>I appreciate the inventiveness of this approach, but it&#39;s a dead end. And it&#39;s where I got stuck, too, until something occurred to me.</p>
+<h2>Why the fuck are we using classes?</h2>
+<p>Forgive my bluntness, but can anyone give me a good reason why classes are the <em>only</em> place we add styling information? Here&#39;s what the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#classes">HTML living standard</a> has to say: </p>
+<blockquote>
+<p><strong>3.2.5.7 The class attribute</strong></p>
+<p>The attribute, if specified, must have a value that is a set of space-separated tokens representing the various classes that the element belongs to.</p>
+<p>There are no additional restrictions on the tokens authors can use in the class attribute, but authors are encouraged to use values that describe the nature of the content, rather than values that describe the desired presentation of the content.</p>
+</blockquote>
+<p>So yes, it makes perfect sense that we use classes to describe &#39;the nature of the content&#39;, but it feels like we&#39;re asking more of the humble class attribute than it can give us. This one attribute holds everything, from enormous BEM-style names like <code>primary-nav__sub-nav--current</code> to utilities like <code>u-textTruncate</code> or <code>left</code> or <code>clearfix</code>, to JavaScript hooks like <code>js-whatevs</code>, and so we spend a lot of time coming up with names that don&#39;t conflict with any others but are still vaguely readable. </p>
+<p>It&#39;s manageable through convention &amp; discipline, and even helped by techniques like Harry&#39;s at the top of this article, but the truth is we&#39;re operating in a <strong>global namespace</strong>, and no amount of conventions can change that. Which is what makes AM different.</p>
+<p>But before we can talk about that, we need to brush up on a lesser-known feature of CSS.</p>
+<h2>Welcome ~=, the magic selector</h2>
+<p>It turns out browsers since IE7 have had a particularly powerful CSS rule called the <strong>space-separated attribute selector</strong>, described <a href="http://css-tricks.com/attribute-selectors/#rel-space">here on CSS Tricks</a>. It matches arbitrary attribute values, separated by spaces, just like they were classes. So the following two lines of CSS are equivalent:</p>
+<pre><code class="language-css">.dat-class { /* dem styles */ };
+[class~=&#39;dat-class&#39;] { /* dem styles */ };</code></pre>
+<p>In the same way that <code>&lt;div class=&#39;a b c&#39;&gt;</code> doesn&#39;t care which order the <code>a</code>, <code>b</code> and <code>c</code> are in, or what else is present, neither does the <code>~=</code> selector. But <code>~=</code> isn&#39;t limited to the <code>class</code> attribute, it can work on any attribute. And it&#39;s the key to a whole new approach.</p>
+<h1>Attribute Modules</h1>
+<p>Attribute Modules, or AM, at its core is about <em>defining namespaces</em> for your styles to live in. Let&#39;s begin with a simple example, a grid, first as classes:</p>
+<pre><code class="language-markup">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;column-12&quot;&gt;Full&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;column-4&quot;&gt;Thirds&lt;/div&gt;
+    &lt;div class=&quot;column-4&quot;&gt;Thirds&lt;/div&gt;
+    &lt;div class=&quot;column-4&quot;&gt;Thirds&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<pre><code class="language-css">.row { /* max-width, clearfixes */ }
+.column-1 { /* 1/12th width, floated */ }
+.column-2 { /* 1/6th width, floated */ }
+.column-3 { /* 1/4th width, floated */ }
+.column-4 { /* 1/3rd width, floated */ }
+.column-5 { /* 5/12th width, floated */ }
+/* etc */
+.column-12 { /* 100% width, floated */ }</code></pre>
+<p>Now let&#39;s build it with <em>attribute modules</em>. We have two modules, <strong>rows</strong> and <strong>columns</strong>. Rows, so far, have no variations. Columns have 12.</p>
+<pre><code class="language-markup">&lt;div am-Row&gt;
+    &lt;div am-Column=&quot;12&quot;&gt;Full&lt;/div&gt;
+&lt;/div&gt;
+&lt;div am-Row&gt;
+    &lt;div am-Column=&quot;4&quot;&gt;Thirds&lt;/div&gt;
+    &lt;div am-Column=&quot;4&quot;&gt;Thirds&lt;/div&gt;
+    &lt;div am-Column=&quot;4&quot;&gt;Thirds&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<pre><code class="language-css">[am-Row] { /* max-width, clearfixes */ }
+[am-Column~=&quot;1&quot;] { /* 1/12th width, floated */ }
+[am-Column~=&quot;2&quot;] { /* 1/6th width, floated */ }
+[am-Column~=&quot;3&quot;] { /* 1/4th width, floated */ }
+[am-Column~=&quot;4&quot;] { /* 1/3rd width, floated */ }
+[am-Column~=&quot;5&quot;] { /* 5/12th width, floated */ }
+/* etc */
+[am-Column~=&quot;12&quot;] { /* 100% width, floated */ }</code></pre>
+<p>The first thing you will notice is the <code>am-</code> prefix. This is a core part of AM, and ensures that attribute modules <em>do not conflict with existing attributes</em>. You can use any prefix you like &dash; I&#39;ve experimented with <code>ui-</code>, <code>css-</code> and others, but settled on <code>am-</code> for these examples. If HTML validity is important to you or your project, simply choose a prefix that begins with <code>data-</code>, the idea is the same.</p>
+<p>The second thing you might notice is that values like <code>&quot;1&quot;</code>, <code>&quot;4&quot;</code> or <code>&quot;12&quot;</code> would make <em>terrible</em> class names &dash; they&#39;re far too generic and the chances of collisions would be high. But because we&#39;ve defined our own namespace, in effect carving off a little place for us to work, we are free to use the most concise, meaningful tokens we choose.</p>
+<h2>Flexibility with attribute values</h2>
+<p>So far, the differences are pretty minor. But since each module defines its own namespace, let&#39;s try a slightly different scheme for our values:</p>
+<pre><code class="language-markup">&lt;div am-Row&gt;
+    &lt;div am-Column&gt;Full&lt;/div&gt;
+&lt;/div&gt;
+&lt;div am-Row&gt;
+    &lt;div am-Column=&quot;1/3&quot;&gt;Thirds&lt;/div&gt;
+    &lt;div am-Column=&quot;1/3&quot;&gt;Thirds&lt;/div&gt;
+    &lt;div am-Column=&quot;1/3&quot;&gt;Thirds&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<pre><code class="language-css">[am-Row] { /* max-width, clearfixes */ }
+[am-Column] { /* 100% width, floated */ }
+[am-Column~=&quot;1/12&quot;] { /* 1/12th width */ }
+[am-Column~=&quot;1/6&quot;] { /* 1/6th width */ }
+[am-Column~=&quot;1/4&quot;] { /* 1/4th width */ }
+[am-Column~=&quot;1/3&quot;] { /* 1/3rd width */ }
+[am-Column~=&quot;5/12&quot;] { /* 5/12ths width */ }
+/* etc */</code></pre>
+<p>Now we&#39;re able to use naming that makes sense for our domain &dash; a width of <code>1/3</code> makes immediate sense whereas <code>4</code> needs us to remember we&#39;re using a 12-column grid. But we&#39;ve also been able to define a <strong>default</strong> style for all columns &dash; that is, the attribute <code>column</code> with no value is treated as a full-width column. And as a bonus, we&#39;ve also been able to move repeated logic (the fact that columns are floated left) into this attribute rule.</p>
+<h2>Styling both attributes and values</h2>
+<p>This is one of the key benefits of this approach. The <em>presence</em> of an attribute, e.g. <code>am-Button</code>, can and should be styled. The particular <em>values</em> of each attribute then alter and adapt these base styles.</p>
+<p>In the grid example above, we&#39;re doing exactly that: the markup <code>am-Column=&quot;1/3&quot;</code> matches <em>both</em> <code>[am-Column]</code> and <code>[am-Column~=&quot;1/3&quot;]</code>, so the result is the base styles + variations. It gives us a way to capture the fact that <em>all columns are columns</em> without needing to duplicate classes or use SASS&#39;s <code>@extend</code> functionality.</p>
+<h2>The zero-class approach to BEM modifiers</h2>
+<p>Back to our single-class vs multi-class patterns for BEM modifiers, AM gives us a zero-class option. For our button examples above, this is how the markup looks:</p>
+<pre><code class="language-markup">&lt;a am-Button&gt;Normal button&lt;/a&gt;
+&lt;a am-Button=&#39;large&#39;&gt;Large button&lt;/a&gt;
+&lt;a am-Button=&#39;rounded&#39;&gt;Rounded button&lt;/a&gt;
+&lt;a am-Button=&#39;large rounded&#39;&gt;Large rounded button&lt;/a&gt;</code></pre>
+<pre><code class="language-css">[am-Button] { /* base button styles */ }
+[am-Button~=&quot;large&quot;] { /* large button styles */ }
+[am-Button~=&quot;rounded&quot;] { /* round button styles */ }</code></pre>
+<p>By creating a new Attribute Module <code>am-Button</code>, we can separate out the styles that are common to all buttons, to those that make a button large, to those that round a button&#39;s corners. Not only can we then freely combine these variations (e.g. <code>am-Button=&#39;large rounded&#39;</code>), we can also target the <em>attribute itself</em> for any contextual overrides:</p>
+<pre><code class="language-css">header &gt; nav &gt; [am-Button] { background: none; }</code></pre>
+<p>Now it doesn&#39;t matter what variant of button we choose to use, or how many variants we choose to define, the point is that  <em>all buttons</em> will match the selector <code>[am-Button]</code>, so we know our override will be valid.</p>
+<h2>The AMCSS Project</h2>
+<p>Myself, <a href="http://germanforblack.com/">Ben Schwarz</a> and <a href="http://bensmithett.com/">Ben Smithett</a> have begun work on a <a href="https://github.com/amcss/attribute-module-specification">formal specification</a> for AM. If you&#39;d like to read more about how these techniques extend to blocks, elements, breakpoints &amp; more, head there, and if you have questions, please <a href="https://github.com/amcss/attribute-module-specification/issues">raise an issue</a>.</p>
+<p>We&#39;ve also started a documentation site with a wider range of AM examples at <a href="http://amcss.github.io/">amcss.github.io</a>. If you&#39;re interesting in contributing feedback, examples, edge-cases or would like us to point to your own AM libraries, please reach out to us <a href="https://github.com/amcss/amcss.github.io">on GitHub</a>.</p>
+</article></main><footer _layout="p2 small:p1 mb2 max840" _before="hr"><figure _layout="max600" _flex="justify-center align-center"><img _flex-child="shrink0" src="/assets/images/me_160.jpg" _border="round polaroid" _size="4" _layout="mr1"/><figcaption _type="small1 center lh1.4"><span _type="bold">Glen Maddern</span> is an independent Web Developer from Melbourne, Australia.<div _layout="pt0.5">You should <span _type="semibold">get in touch</span> using one of the following useful internet services:</div><div _flex="justify-center align-center" _layout="pt0.5"><a href="https://twitter.com/glenmaddern" _link="inline"><svg _size="1.5*1.5" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path style="opacity:1;fill:currentColor;" d="M512,97.209c-18.838,8.354-39.082,14.001-60.33,16.54c21.687-13,38.343-33.585,46.187-58.115 c-20.299,12.039-42.778,20.78-66.705,25.49c-19.16-20.415-46.461-33.17-76.674-33.17c-58.011,0-105.043,47.029-105.043,105.039 c0,8.233,0.929,16.25,2.72,23.939c-87.3-4.382-164.701-46.2-216.509-109.753c-9.042,15.514-14.223,33.558-14.223,52.809 c0,36.444,18.544,68.596,46.73,87.433c-17.219-0.546-33.416-5.271-47.577-13.139c-0.01,0.438-0.01,0.878-0.01,1.321 c0,50.894,36.209,93.348,84.261,103c-8.813,2.399-18.094,3.686-27.674,3.686c-6.769,0-13.349-0.66-19.764-1.887 c13.368,41.73,52.16,72.104,98.126,72.949c-35.95,28.175-81.243,44.967-130.458,44.967c-8.479,0-16.84-0.497-25.058-1.471 c46.486,29.806,101.701,47.197,161.021,47.197c193.211,0,298.868-160.062,298.868-298.872c0-4.554-0.103-9.084-0.305-13.59 C480.11,136.773,497.918,118.273,512,97.209z" class="inner-shape"></path></svg></a><a href="https://github.com/geelen" _link="inline"><svg _size="1.5*1.5" _layout="m0-1" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path style="opacity:1;fill:currentColor;" d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M408.028,408.028 c-19.76,19.758-42.756,35.266-68.354,46.093c-6.503,2.75-13.106,5.164-19.8,7.246V423c0-20.167-6.917-35-20.75-44.5 c8.667-0.833,16.625-2,23.875-3.5s14.917-3.667,23-6.5s15.333-6.208,21.75-10.125s12.583-9,18.5-15.25s10.875-13.333,14.875-21.25 s7.167-17.417,9.5-28.5s3.5-23.292,3.5-36.625c0-25.833-8.417-47.833-25.25-66c7.667-20,6.833-41.75-2.5-65.25l-6.25-0.75 c-4.333-0.5-12.125,1.333-23.375,5.5s-23.875,11-37.875,20.5c-19.833-5.5-40.417-8.25-61.75-8.25c-21.5,0-42,2.75-61.5,8.25 c-8.833-6-17.208-10.958-25.125-14.875s-14.25-6.583-19-8s-9.167-2.292-13.25-2.625s-6.708-0.417-7.875-0.25s-2,0.333-2.5,0.5 c-9.333,23.667-10.167,45.417-2.5,65.25c-16.833,18.167-25.25,40.167-25.25,66c0,13.333,1.167,25.542,3.5,36.625 s5.5,20.583,9.5,28.5s8.958,15,14.875,21.25s12.083,11.333,18.5,15.25s13.667,7.292,21.75,10.125s15.75,5,23,6.5 s15.208,2.667,23.875,3.5c-13.667,9.333-20.5,24.167-20.5,44.5v39.115c-7.549-2.247-14.99-4.902-22.3-7.994 c-25.597-10.827-48.594-26.335-68.353-46.093c-19.758-19.759-35.267-42.757-46.093-68.354C46.679,313.195,41,285.043,41,256 s5.679-57.195,16.879-83.675c10.827-25.597,26.335-48.594,46.093-68.353c19.758-19.759,42.756-35.267,68.353-46.093 C198.805,46.679,226.957,41,256,41s57.195,5.679,83.675,16.879c25.599,10.827,48.595,26.335,68.354,46.093 c19.758,19.758,35.266,42.756,46.093,68.353C465.321,198.805,471,226.957,471,256s-5.679,57.195-16.879,83.675 C443.294,365.271,427.786,388.27,408.028,408.028z"></path></svg></a><a href="/cdn-cgi/l/email-protection#533b3a13343f363d3e32373736213d7d303c3e" _link="invisible inline" _layout="block"><svg _size="1.5*1.5" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path style="opacity:1;fill:currentColor;" d="M464,64H48C21.6,64,0,85.6,0,112v320c0,26.4,21.6,48,48,48h416c26.4,0,48-21.6,48-48V112C512,85.6,490.4,64,464,64z  M199.37,275.186L64,380.632V129.811L199.37,275.186z M88.19,128h335.62L256,254L88.19,128z M204.644,280.85L256,336l51.355-55.15 L412.632,416H99.368L204.644,280.85z M312.63,275.186L448,129.811v250.821L312.63,275.186z"></path></svg></a></div></figcaption></figure></footer><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script>[].forEach.call(document.querySelectorAll('[_Markdown] a[href^=http]'), function(el) {
+  el.setAttribute('target', '_blank');
+})</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-32408977-4', 'auto');
+ga('send', 'pageview');</script><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body></html>

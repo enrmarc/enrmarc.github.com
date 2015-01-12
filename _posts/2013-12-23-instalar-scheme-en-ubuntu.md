@@ -1,7 +1,7 @@
 ---
 layout   : post
 title    : Instalar Scheme en Ubuntu
-summary  : Instalar un intérprete de Scheme en Ubuntu (10.04)
+summary  : Scheme en Ubuntu (10.04)
 tags     : Ubuntu Scheme Racket
 category : note
 permalink: /blog/instalar-scheme-en-ubuntu
@@ -29,9 +29,7 @@ Un ejemplo para comprobar que todo ha ido bien:
    (+ (square a) (square b))
 )
 
-(define (square a)
-   (* a a)
-)
+(define (square a) (* a a))
 
 (sum-of-squares 5 5)
 {% endhighlight %}

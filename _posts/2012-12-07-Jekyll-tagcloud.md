@@ -83,8 +83,6 @@ title  : tags
 {% endhighlight %}
 with your personal configuration.
 
-[Demo]
 
 [Jekyll]: https://github.com/mojombo/jekyll
 [GitHub Pages]: http://pages.github.com/
-[Demo]: /tags.html

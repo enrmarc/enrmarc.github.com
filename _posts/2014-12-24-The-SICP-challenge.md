@@ -1,7 +1,7 @@
 ---
 layout      : post
 title       : The SICP challenge
-summary     : The Structure and Interpretation of Computer Programs challenge
+summary     : Read the book
 tags        : SICP books
 category    : note
 permalink   : /blog/the-sicp-challenge
@@ -15,4 +15,10 @@ disqus      : false
 
 Empieza el SICP challenge.
 
-![Alt text](http://drive.google.com/uc?export=view&id=0BzZHR_rFeOGWdlBRbnpnUl9LSTA)
+<figure>
+   <img src="http://drive.google.com/uc?export=view&id=0BzZHR_rFeOGWdlBRbnpnUl9LSTA" alt="SICP cover">
+   <figcaption>
+      Cubierta del libro
+      <a href="http://mitpress.mit.edu/sicp/" target="_blank">SICP</a>.
+   </figcaption>
+</figure>
