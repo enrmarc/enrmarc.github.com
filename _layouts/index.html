@@ -1,22 +1,16 @@
 ---
 layout: default
+scripts  :
+  - src  : js/notes.js
 ---
 
-<main class="content">
-   <article>
-      <header>
-         <h2>
-            {{ page.title }}
-         </h2>
-            <small>
-               <small>
-                  <time datetime="{{ page.date }}">
-                     {{ page.date | date: "%b %d, %Y" }}
-                  </time>
-               </small>
-               {{ page.desc }}
-            </small>
-      </header>
+<header _layout="max600 pt4">
+   <h2 _type="h3 semibold center">Notas</h2>
+   <h6 id="notas" _after="hr" _type="h6 italic center" _layout="pt1">{{page.summary}}</h6>
+</header>
+
+<main _layout="max960 p1" _type="center">
+   <section _layout="p1-2">
       {{ content }}
-   </article>
+   </section>
 </main>

@@ -25,7 +25,7 @@ disqus   : true
 
 I've been looking for an easy way to get a random post using [Jekyll], but I have found nothing.
 So here is a code snippet that does the trick.
-Try it: <a href="javascript:void(0)" id="random">random post</a>
+Try it: <a href="javascript:void(0)" onclick="goToRandom()" id="random">random post</a>
 
 {% highlight html %}
 {% raw %}
@@ -37,9 +37,9 @@ Try it: <a href="javascript:void(0)" id="random">random post</a>
    {% endfor %}
 
    $(function() {
-      $('#random').click(function() {
+      var goToRandom = function() {}
          window.location = posts[Math.floor(Math.random() * posts.length)];
-      });
+      }
    });
 </script>
 

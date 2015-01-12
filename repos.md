@@ -1,8 +1,8 @@
 ---
-layout   : index
-title    : Repos
+layout   : post
+title    : Repositorios de código
 permalink: /repos/
-desc     : Código
+summary  :
 ---
 
 Suelo escribir código. A veces lo subo a

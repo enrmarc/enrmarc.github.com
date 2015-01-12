@@ -1,7 +1,7 @@
 ---
 layout   : post
 title    : Nubes de Monet usando el Ruido Perlin
-summary  : Generación de texturas de nubes usando el Ruido Perlin
+summary  : Generación de texturas de nubes
 tags     : JavaScript Processing.js nubes monet perlin
 category : note
 permalink: /blog/nubes-de-monet
@@ -17,17 +17,15 @@ en la atmósfera.
 
 Como siempre, la realidad es un poco más complicada. Si
 quisiéramos simular nubes en un ordenador y nos valiésemos
-por el azar que puede darnos la típica función `random`, no
-quedaríamos muy satisfechos.
-
-Vamos a generar nubes en dos dimensiones (texturas) usando
+por el azar que puede darnos la ubicua función `random`, no
+quedaríamos muy satisfechos. Para comprobarlo vamos a generar
+nubes en dos dimensiones (texturas) usando
 la función `Math.random` de JavaScript.
 Esta función sigue una distribución uniforme, es decir,
 todos los valores que genera tienen la misma
 probabilidad de aparecer.
 
-Éste es el código que genera la textura usando la librería
-[Processing.js]:
+Éste es el código ([Processing.js]) que genera la textura:
 
 {% highlight javascript %}
 void setup() {
@@ -39,8 +37,8 @@ t = 100;
 
 void draw() {
    background(0);
-
    loadPixels();
+
    for (int x = 0; x < width; x++) {
       for (int y = 0; y < height; y++) {
          float bright = Math.random() * 255;
@@ -52,20 +50,17 @@ void draw() {
 }
 {% endhighlight %}
 
-Iteramos todos los pixeles que forman la pantalla a pintar y
+Iteramos sobre todos los píxeles que forman la región a pintar y
 les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.
 Y el resultado:
 
-<div class="img-center">
-   <img src="/assets/projects/ruido-perlin/monet-random.jpg"/>
-</div><br>
+{% include picture.html pic="/assets/projects/ruido-perlin/monet-random.jpg" alt="Monet random" caption="¿Una tele mal sintonizada?" %}
 
-
-Como véis, no tiene aspecto de nube. Veamos por qué.
-Un generador de números aleatorios (como la función `Math.random`)
+Como véis, no tiene aspecto de nube debido a que
+un generador de números aleatorios (como la función `Math.random`)
 produce números que no guardan relación alguna y no muestran ningún
 patrón distinguible. Para simular la naturaleza de las nubes, es
-necesario un poco menos de aleatoriedad en nuestros cálculos;
+necesario un poco menos de aleatoriedad en nuestros cálculos,
 un caos coherente.
 
 ¿Cómo generar un poco menos de aleatoriedad? Podemos usar
@@ -79,7 +74,7 @@ una secuencia de números pseudo-aleatorios menos "brusca" que
 la que podría producir la función `Math.random`.
 
 Usaremos el Ruido Perlin como generador de números pseudo-aleatorios.
-Processing.js tiene una función `noise` que implementa este algoritmo.
+[Processing.js] tiene una función `noise` que implementa este algoritmo.
 El código para generar las nubes:
 
 {% highlight javascript %}
@@ -89,11 +84,12 @@ void setup() {
 }
 
 float toff = 0;
+
 void draw() {
    background(0);
-
    loadPixels();
    float xoff = 0.0;
+
    for (int x = 0; x < width; x++) {
       float yoff = 0.0;
       for (int y = 0; y < height; y++) {
@@ -109,13 +105,11 @@ void draw() {
 {% endhighlight %}
 
 
-El código es casi el mismo. Lo único que varía es la
-utilización de la función `noise` en lugar de `Math.random`.
+El código es casi el mismo. Lo único que varía es el
+uso de la función `noise` en lugar de `Math.random`.
 El resultado:
 
-<div class="img-center">
-   <img src="/assets/projects/ruido-perlin/monet-perlin.jpg"/>
-</div><br>
+{% include picture.html pic="/assets/projects/ruido-perlin/monet-perlin.jpg" alt="Nubes de monet" caption="Nubes de Monet, o casi" %}
 
 Bueno, quizá no se parezcan demasiado a las nubes de los
 cuadros de Monet, pero esta es la primera vez que

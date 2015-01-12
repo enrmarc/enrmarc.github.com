@@ -1,7 +1,7 @@
 ---
 layout   : post
 title    : Depurar SQLite en Android sin ser root
-summary  : Leer y escribir una base de datos SQLite en Android sin ser root
+summary  : Unos scripts
 tags     : Android SQLite debugging root
 category : note
 permalink: /blog/depurar-sqlite-android-sin-ser-root
@@ -15,7 +15,7 @@ común.
 Lo siguiente son dos scripts para leer y escribir una base de datos sin
 la necesidad de ser root.
 
-`pull.bash`
+##Lectura
 {% highlight bash%}
 #! /usr/bin/env bash
 
@@ -50,7 +50,7 @@ Luego con `adb pull` se copia la base de datos a tu disco duro.
 Necesitarás `sqlite3` en tu ordenador para leer el fichero. Si lo tienes,
 el script abre directamente el fichero recién descargado.
 
-`push.bash`
+##Escritura
 {% highlight bash %}
 #! /usr/bin/env bash
 
@@ -75,7 +75,8 @@ propósito. Aunque para escribir en el directorio de la aplicación
 antes hay que cambiar los permisos. Una vez escrita la base
 de datos, los permisos se restauran.
 
-De esta manera, si depuras una base de datos puedes usar `pull` para
+Nombra los scripts como `pull` y `push` y cuando
+depures una base de datos puedes hacer `pull` para
 abrirla, editarla de la manera usual, salir de sqlite3 (Ctrl-D) y
 ejecutar `push` para escribir los cambios (todo esto suponiendo
 que sobreescribas las variables por defecto del script).

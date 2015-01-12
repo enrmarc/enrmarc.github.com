@@ -1,7 +1,7 @@
 ---
 layout     : post
-title      : A los miembros del Consejo de presupuestos [T]
-summary    : A los miembros del Consejo de presupuestos
+title      : A los miembros del Consejo de presupuestos
+summary    : Traducción de To the members of the Budget Council de E. W. Dijkstra
 tags       : traducción Edsger-Dijkstra
 category   : note
 permalink  : /blog/A-los-miembros-encargados-del-presupuesto
@@ -25,10 +25,10 @@ del estado a menudo se preguntan (¡aún!) cómo puedo sobrevivir
 en un lugar como Austin, Texas, asumiendo automáticamente que
 el conservadurismo sólido de Texas garantiza una mediocridad
 igualmente sólida. Mi respuesta habitual es algo así
-como *no se preocupen. El departamento de ciencias de la
+como --no se preocupen, el departamento de ciencias de la
 computación es un lugar ilustrado;
 por ejemplo a nuestros estudiantes de primer año les enseñamos
-Haskell*; reaccionan, primero, casi con
+Haskell-- reaccionan, primero, casi con
 incredulidad, y luego con envidia --resulta que
 su plan de estudios de licenciatura no se ha recuperado
 de la transición de Pascal a algo como C++ o Java.
@@ -36,20 +36,19 @@ de la transición de Pascal a algo como C++ o Java.
 Una razón práctica para preferir un lenguaje funcional
 en una asignatura introductoria es que la mayoría de estudiantes
 ya están familiarizados con la programación imperativa.
-Exponerlos a la novedad de la programación funcional,
+Exponerlos a la novedad de la programación funcional
 inmediatamente lanza el mensaje de que hay más acerca de la programación
 de lo que ellos pensaban. Y rápidamente se darán cuenta
 de que la programación funcional ofrece soluciones elegantes que
 son muy difíciles (o imposibles) de formular con sus conocimientos
-de programación de sus dias de secundaria.
+de programación de sus días de secundaria.
 
 Una razón fundamental para preferir un lenguaje funcional es que los programas
 funcionales son apreciados más fácilmente como objetos matemáticos
 que los imperativos, de modo que te permiten enseñar a qué pueden aspirar
 los programas con un razonamiento riguroso.
 La ventaja adicional de la programación funcional con su *evaluación perezosa*
-es que ofrece en entorno que desalienta el razonamiento operacional.
-
+es que ofrece un entorno que desalienta el razonamiento operacional.
 Por último, comparando específicamente Haskell y Java, Haskell,
 aunque no es perfecto, es de una calidad que es varios órdenes
 de magnitud superior a Java, el cual es un desastre (y necesita

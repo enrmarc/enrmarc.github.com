@@ -1,7 +1,7 @@
 ---
 layout     : post
 title      : Elige programar
-summary    : Elige programar
+summary    : Just kidding
 tags       : Trainspotting
 category   : note
 permalink  : /blog/elige-programar
@@ -9,7 +9,7 @@ scheme-code: "#000"
 disqus     : true
 ---
 
-<small>*Debe leerse como si sonara Lust for Life de Iggy Pop de fondo.*</small>
+<em>Debe leerse como si sonara Lust for Life de Iggy Pop de fondo.</em>
 
 Elige programar. Elige un empleo.<br/>
 Elige un proyecto. Elige un equipo.<br/>
@@ -22,14 +22,14 @@ Elige pagar servidores caros y nombres de dominio para tus proyectos
 personales.<br/>
 Elige SICP. Elige Clean Code.<br/>
 Elige mejorar tu inglés con los vídeos subtitulados de Google I/O.<br/>
-Elige un nombre molón para darte de alta en una amplia
+Elige un alias para darte de alta en una amplia
 gama de putas redes sociales.<br/>
 Elige la programación funcional y preguntarte qué coño es
 el combinador Y.<br/>
 Elige un framework que resuelva todos tus problemas
 mientras te preguntas por qué coño no habrán resuelto el último *issue*.<br/>
-Elige no hacer tests de unidad siendo una carga para los incautos
-programadores que mantendrán tu código.<br/>
+Elige no comentar tu código siendo una carga para los incautos
+programadores que lo mantendrán.<br/>
 
 Elige tu futuro. Elige programar.<br/>
 Pero, ¿por qué iba yo a querer hacer algo así?<br/>
