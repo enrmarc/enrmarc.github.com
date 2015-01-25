@@ -6,13 +6,13 @@ summary: "Noto un desespero enfermizo en tu risa"
 
 {% for post in site.posts %}
    {% if post.ext_url %}
-      <a href="{{post.ext_url}}" _layout="block pb1" _link="subtle" _type="lh1.2">
+      <a class="entry" href="{{post.ext_url}}" _layout="block pb1" _link="subtle" _type="lh1.2">
    {% else %}
-      <a href="{{post.url}}" _layout="block pb1" _link="subtle" _type="lh1.2">
+      <a class="entry" href="{{post.url}}" _layout="block pb1" _link="subtle" _type="lh1.2">
    {% endif %}
-      <h5 class="post-title" _type="h6 bold">{{post.title}}</h5>
-      <span class="post-summary" _type="small3 italic" _link="invisible">{{post.summary}}
-         <span _type="unbroken">- {{ post.date | date: "%b %d, %Y" }}</span>
-      </span>
-   </a>
+         <h5 class="post-title" _type="h6 bold">{{post.title}}</h5>
+         <span class="post-summary" _type="small3 italic" _link="invisible">{{post.summary}}
+            <span _type="unbroken">- {{ post.date | date: "%b %d, %Y" }}</span>
+         </span>
+      </a>
 {% endfor %}
