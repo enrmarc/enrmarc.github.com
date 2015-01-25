@@ -678,7 +678,7 @@ table {
   font-family:  Georgia, serif; }
 
 [_type~="mono"], .breakpoint-small [_type~="small:mono"], .breakpoint-medium [_type~="medium:mono"], .breakpoint-large [_type~="large:mono"], [_Markdown] code {
-  font-family: "Consolas", "Menlo", "Courier", monospace; }
+  font-family: "Ubuntu Mono", monospace; }
 
 /*
     FONT WEIGHTS
@@ -1502,9 +1502,23 @@ sub {bottom: -0.25em;}
 
 
 [_link~="inline"], .breakpoint-small [_link~="small:inline"], .breakpoint-medium [_link~="medium:inline"], .breakpoint-large [_link~="large:inline"], [_Markdown] a, [_link~="inline"]:hover, .breakpoint-small [_link~="small:inline"]:hover, .breakpoint-medium [_link~="medium:inline"]:hover, .breakpoint-large [_link~="large:inline"]:hover, [_Markdown] a:hover, [_link~="inline"]:visited, .breakpoint-small [_link~="small:inline"]:visited, .breakpoint-medium [_link~="medium:inline"]:visited, .breakpoint-large [_link~="large:inline"]:visited, [_Markdown] a:visited {
-  color: #993333;
+  /*color: #993333;*/
+  color: #453399;
   text-decoration: none;}
 
 .article-title {
   letter-spacing: -2px;
 }
+
+body {
+  background: white !important;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: black !important;
+}
+
+.entry {
+  text-align: left !important;
+}
+
