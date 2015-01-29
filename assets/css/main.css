@@ -1522,10 +1522,11 @@ h1, h2, h3, h4, h5, p {
   text-align: left !important;
 }
 
+/*
 .navi {
   padding-left: 60px;
   padding-right: 60px;
-}
+}*/
 
 #maintitle {
   letter-spacing: -2px;
@@ -1535,3 +1536,5 @@ h1, h2, h3, h4, h5, p {
 .post-summary {
   color: #52468C;
 }
+
+
