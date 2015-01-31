@@ -1,6 +1,11 @@
 <head>
    <meta charset="UTF-8">
-   <title>{{page.title}} | {{site.author}}</title>
+   {% if page.title %}
+      <title>{{page.title}} | {{site.author}}</title>
+   {% else %}
+      <title>{{site.author}}</title>
+   {% endif %}
+   <meta name="description" content="{{site.description}}">
    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimal-ui">
    <meta name="breakpoint" content="small" media="(max-width: 520px)">
    <meta name="breakpoint" content="medium" media="(min-width: 521px) and (max-width: 900px)">
