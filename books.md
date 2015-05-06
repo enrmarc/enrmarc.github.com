@@ -14,10 +14,11 @@ pero voy a empezar a hacerlo ahora.
 - 1984\. *George Orwell*
 - Software Architecture Patterns. *Mark Richards*
 - Structure and Interpretation of Computer Programs. *Abelson, Jerry & Julie Sussman*
+- La revolución electrónica. *William Burroughs*
 
-#### *Anteriormente...*
+#### *Anteriormente*
 
-- ... unos cuantos (no me apetece escribirlos todos)...
+- Unos cuantos... y no me apetece escribirlos todos.
 
 
 
