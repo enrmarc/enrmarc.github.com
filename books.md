@@ -5,7 +5,7 @@ permalink: /books/
 summary  : Fuck
 ---
 
-No suelo anotar qué libros leo y no sé por qué pero voy a empezar a hacerlo ahora.
+Una lista como cualquier otra.
 
 #### *2015*
 
