@@ -5,8 +5,7 @@ permalink: /books/
 summary  : Fuck
 ---
 
-Me gusta leer. No suelo anotar qué libros leo y no sé por qué
-pero voy a empezar a hacerlo ahora.
+No suelo anotar qué libros leo y no sé por qué pero voy a empezar a hacerlo ahora.
 
 #### *2015*
 
@@ -15,10 +14,8 @@ pero voy a empezar a hacerlo ahora.
 - Software Architecture Patterns. *Mark Richards*
 - Structure and Interpretation of Computer Programs. *Abelson, Jerry & Julie Sussman*
 - La revolución electrónica. *William Burroughs*
+- Code. *Charles Petzold*
 
 #### *Anteriormente*
 
 - Unos cuantos... y no me apetece escribirlos todos.
-
-
-
