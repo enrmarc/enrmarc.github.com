@@ -15,7 +15,7 @@ Una lista como cualquier otra.
 - Structure and Interpretation of Computer Programs. *Abelson, Jerry & Julie Sussman*
 - La revolución electrónica. *William Burroughs*
 - Code. *Charles Petzold*
-- La importancia de llamarse Enesto. *Oscar Wilde*
+- La importancia de llamarse Ernesto. *Oscar Wilde*
 
 #### *Anteriormente*
 
