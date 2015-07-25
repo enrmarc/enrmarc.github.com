@@ -2,3 +2,4 @@ _site/
 _ignore/
 *.swp
 .DS_Store
+assets/fonts

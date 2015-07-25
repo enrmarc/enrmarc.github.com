@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html >
-   {% include head.html %}
-   <body _layout="p1 small:p0 max720">
-      {% include navigation.html %}
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include navigation.html %}
+    <div id="site">
       {{ content }}
-      {% for script in page.scripts %}
-         <script type="text/javascript" src="/assets/{{ script.src }}"></script>
-      {% endfor %}
+
       {% include footer.html %}
-   </body>
+    </div>
+
+    {% for script in page.scripts %}
+      <script type="text/javascript" src="/assets/{{ script.src }}"></script>
+    {% endfor %}
+  </body>
+
 </html>
