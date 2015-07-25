@@ -5023,3 +5023,7 @@ a {
 a:visited {
   color: #676767;
 }
+
+#post time {
+  color: #9B9B9B;
+}
