@@ -6,6 +6,9 @@ tags     : JavaScript Processing.js nubes monet perlin
 category : note
 permalink: /blog/nubes-de-monet
 disqus   : true
+images:
+  - /assets/projects/ruido-perlin/monet-random.jpg
+  - /assets/projects/ruido-perlin/monet-perlin.jpg
 ---
 
 En la naturaleza muchas estructuras parecen surgir del caos,
@@ -54,7 +57,8 @@ Iteramos sobre todos los píxeles que forman la región a pintar y
 les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.
 Y el resultado:
 
-{% include picture.html pic="/assets/projects/ruido-perlin/monet-random.jpg" alt="Monet random" caption="¿Una tele mal sintonizada?" %}
+{% capture image1 %}{{page.images[0]}}{% endcapture %}
+{% include picture.html pic=image1 klass="small" alt="Ruido Monet" caption="¿Una tele mal sintonizada?" %}
 
 Como véis, no tiene aspecto de nube debido a que
 un generador de números aleatorios (como la función `Math.random`)
@@ -109,7 +113,8 @@ El código es casi el mismo. Lo único que varía es el
 uso de la función `noise` en lugar de `Math.random`.
 El resultado:
 
-{% include picture.html pic="/assets/projects/ruido-perlin/monet-perlin.jpg" alt="Nubes de monet" caption="Nubes de Monet, o casi" %}
+{% capture image2 %}{{page.images[1]}}{% endcapture %}
+{% include picture.html pic=image2 klass="small" alt="Nubes de monet" caption="Nubes de Monet, o casi" %}
 
 Bueno, quizá no se parezcan demasiado a las nubes de los
 cuadros de Monet, pero esta es la primera vez que
