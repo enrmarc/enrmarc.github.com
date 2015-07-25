@@ -5015,3 +5015,11 @@ small {
   box-shadow: 0 0 0 1px #eee, 0 0 0 7px white, 0 0 0 8px #ddd;
   border-radius: 50%;
 }
+
+a {
+  color: #676767;
+}
+
+a:visited {
+  color: #676767;
+}
