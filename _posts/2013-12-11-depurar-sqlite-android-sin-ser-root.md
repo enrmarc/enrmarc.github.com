@@ -15,7 +15,7 @@ común.
 Lo siguiente son dos scripts para leer y escribir una base de datos sin
 la necesidad de ser root.
 
-##Lectura
+####Lectura
 {% highlight bash%}
 #! /usr/bin/env bash
 
@@ -50,7 +50,7 @@ Luego con `adb pull` se copia la base de datos a tu disco duro.
 Necesitarás `sqlite3` en tu ordenador para leer el fichero. Si lo tienes,
 el script abre directamente el fichero recién descargado.
 
-##Escritura
+####Escritura
 {% highlight bash %}
 #! /usr/bin/env bash
 
