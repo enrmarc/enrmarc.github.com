@@ -2,15 +2,19 @@
 layout: default
 ---
 
-<main _layout="p1">
-   <header _layout="p3-0 max960" _type="lh1.2">
-      <h1 class="article-title" _type="h3 small:h4 black center">{{page.title}}</h1>
-      <h2 _type="h5 italic center" _layout="pt1">{{page.summary}}</h2>
-      <time datetime="{{page.date}}" _layout="block pt0.5" _type="small3 center">
-         {{ page.date | date: "%b %d, %Y" }}
-      </time>
-   </header>
-   <article _markdown="_Markdown">
-      {{content}}
-   </article>
-</main>
+{% if page.images %}
+  <article id="post" class="is-post" role="main">
+{% else %}
+  <article id="post" class="is-post" role="main">
+{% endif %}
+    <header class="entry-title">
+      <h1>{{ page.title }}</h1>
+    </header>
+
+    <div class="entrecot">
+      <small class="post-summary">{{page.summary}}</small>
+    </div>
+
+    {{ content }}
+    <small><time>{{page.date | date: '%b %d, %Y'}}</time></small>
+  </article>

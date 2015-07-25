@@ -27,7 +27,7 @@ Singleton para poner de manifiesto el problema y su solución.
    todo convencido).
 </em>
 
-##Singleton
+####Singleton
 
 Es considerado un patrón *creacional* ya que interviene
 en la creación de objetos. Su utilidad consiste básicamente en garantizar
@@ -78,7 +78,7 @@ Singleton funciona:
 ?>
 {% endhighlight %}
 
-##Late Static Binding
+####Late Static Binding
 
 Pero esto empieza a complicarse si decides especializar el Singleton para dar soporte
 a múltiples bases de datos:

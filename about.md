@@ -5,8 +5,7 @@ summary  : TL;DR ・ Developer
 permalink: /about/
 ---
 
-<em>
-  &ldquo;
+<blockquote>
   If you really want to hear about it, the first thing you’ll
   probably want to know is where I was born, an what my lousy
   childhood was like, and how my parents were occupied and all
@@ -17,8 +16,7 @@ permalink: /about/
   apiece if I told anything pretty personal about them. They’re
   quite touchy about anything like that, especially my father.
   They’re nice and all —I’m not saying that—but they’re also touchy as hell.
-  &rdquo;
-</em> &mdash;Holden Caulfield.
+</blockquote> &mdash;Holden Caulfield.
 
 Me llamo Enrique, trabajo como desarrollador y actualmente <strike>Android</strike> JavaScript paga mis facturas. Siempre que te interese puedes ponerte en contacto
 conmigo enviándome un mensaje a `enrmarc@gmail.com`.
@@ -28,13 +26,11 @@ Si aún sigues leyendo esto, puede que te interese mi [CV](/data/resume.pdf).
 - [Stackoverflow](http://stackoverflow.com/users/434171/enrmarc)
 - [Coyotev](http://coyotev.org)
 
-### Acerca de este sitio
+#### Acerca de este sitio
 
-<p>
-  <a href="http://jekyllrb.com/">Jekyll</a> &mdash;
-  <a href="http://github.com/">GitHub</a> &mdash;
-  <a href="http://www.sublimetext.com/">Sublime Text</a>
-</p>
+<a href="http://jekyllrb.com/">Jekyll</a> &mdash;
+<a href="http://github.com/">GitHub</a> &mdash;
+<a href="https://atom.io/">Atom</a>
 
 Lo uso como repositorio de cosas que suelo consultar: fragmentos de código,
 archivos de configuración, proyectos, artículos, etc.

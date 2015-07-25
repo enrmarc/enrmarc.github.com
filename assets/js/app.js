@@ -1,15 +1,22 @@
-var app = app || {};
+document.addEventListener('DOMContentLoaded', function(event) {
+  var notes = [
+    'Noto un desespero enfermizo en tu risa.',
+    'Go ahead HQ.',
+    'Esto no debería presentar ningún problema significativo.',
+    'Sick Boy: Para ser vegetariano, Rents, eres un tirador de lo más sanguinario.',
+    'Enviad más paramédicos.',
+    'In the pipe, 5 by 5.',
+  ];
+  var el = document.querySelector('.paramedics');
+  if (el) {
+    el.innerHTML = notes[Math.floor(Math.random() * notes.length)];
+  }
 
-app.topColorBars = function() {
-   var el = document.getElementsByClassName('color-bars')[0];
+  [].forEach.call(document.querySelectorAll('#headernav li a'), function(el) {
+    el.classList.remove('selected');
 
-   var base = Math.round(Math.random() * 360);
-   var mul = 10 + Math.round(Math.random() * 30);
-
-   for (var i = 0; i < 6; i++) {
-      var bar = document.createElement('div');
-      bar.className = 'bar';
-      bar.style.backgroundColor = 'hsl(' + (base + (i * mul)) % 360 + ', 70%, 60%)';
-      el.appendChild(bar);
-   }
-};
+    if (window.location.pathname == el.pathname) {
+      el.classList.add('selected');
+    }
+  });
+});
