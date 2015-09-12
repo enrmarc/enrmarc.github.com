@@ -17,6 +17,7 @@ Una lista como cualquier otra.
 - Code. *Charles Petzold*
 - La importancia de llamarse Ernesto. *Oscar Wilde*
 - El abanico de Lady Windermere. *Oscar Wilde*
+- Practical Object-Oriented Design in Ruby. *Sandi Metz*
 
 #### *Anteriormente*
 
