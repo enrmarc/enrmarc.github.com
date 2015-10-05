@@ -6,7 +6,7 @@ tags     : Jekyll proyectos JavaScript Html
 category : project
 permalink: /blog/random-post-in-jekyll
 scripts  :
-  - src  : js/jquery.min.js
+  - src  : assets/js/jquery.min.js
 disqus   : true
 ---
 
