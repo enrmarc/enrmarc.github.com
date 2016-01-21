@@ -7,6 +7,10 @@ summary  : Fuck
 
 Una lista como cualquier otra.
 
+#### *2016*
+
+- Probabilistic Graphical Models. Principles and Techniques. *Daphne Koller & Nir Friedman*
+
 #### *2015*
 
 - Un mundo feliz. *Aldous Huxley*
