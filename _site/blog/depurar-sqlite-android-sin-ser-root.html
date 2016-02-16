@@ -88,14 +88,14 @@
       <small class="post-summary">Unos scripts</small>
     </div>
 
-    <p>Si tenéis un nuevo y reluciente dispositivo Android que no queréis rootear
-(un Nexus 5 por ejemplo) y sois desarrolladores, seguramente leer y escribir
-en una base de datos <a href="http://www.sqlite.org/">SQLite</a> de una de vuestras aplicaciones sea tarea
-común.
-Lo siguiente son dos scripts para leer y escribir una base de datos sin
+    <p>Si tenéis un nuevo y reluciente dispositivo Android que no queréis rootear<br />
+(un Nexus 5 por ejemplo) y sois desarrolladores, seguramente leer y escribir<br />
+en una base de datos <a href="http://www.sqlite.org/">SQLite</a> de una de vuestras aplicaciones sea tarea<br />
+común.<br />
+Lo siguiente son dos scripts para leer y escribir una base de datos sin<br />
 la necesidad de ser root.</p>
 
-<h4 id="lectura">Lectura</h4>
+<p>####Lectura</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#! /usr/bin/env bash</span>
 
@@ -118,18 +118,18 @@ sqlite3 --version &amp;&gt; /dev/null
    </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$DB</span><span class="s2"> ok"</span>
 <span class="k">fi</span></code></pre></figure>
 
-<p>Dale permisos de ejecución y cópialo en tu directorio bin personal. El script
-lanza <code class="highlighter-rouge">adb</code> usando <code class="highlighter-rouge">run-as</code> bajo los permisos del nombre del paquete que
-le pases como primer argumento (o el especificado por defecto en <code class="highlighter-rouge">DEFAULT_APP</code>).
-De esta manera tiene permisos sobre la base de datos (<code class="highlighter-rouge">DEFAULT_DB</code> o
-lo que especifiques como segundo argumento) para copiarla a un
-directorio público (<code class="highlighter-rouge">DEFAULT_OUTPUT</code> o lo que especifiques como tercer argumento).
+<p>Dale permisos de ejecución y cópialo en tu directorio bin personal. El script<br />
+lanza <code class="highlighter-rouge">adb</code> usando <code class="highlighter-rouge">run-as</code> bajo los permisos del nombre del paquete que<br />
+le pases como primer argumento (o el especificado por defecto en <code class="highlighter-rouge">DEFAULT_APP</code>).<br />
+De esta manera tiene permisos sobre la base de datos (<code class="highlighter-rouge">DEFAULT_DB</code> o<br />
+lo que especifiques como segundo argumento) para copiarla a un<br />
+directorio público (<code class="highlighter-rouge">DEFAULT_OUTPUT</code> o lo que especifiques como tercer argumento).<br />
 Luego con <code class="highlighter-rouge">adb pull</code> se copia la base de datos a tu disco duro.</p>
 
-<p>Necesitarás <code class="highlighter-rouge">sqlite3</code> en tu ordenador para leer el fichero. Si lo tienes,
+<p>Necesitarás <code class="highlighter-rouge">sqlite3</code> en tu ordenador para leer el fichero. Si lo tienes,<br />
 el script abre directamente el fichero recién descargado.</p>
 
-<h4 id="escritura">Escritura</h4>
+<p>####Escritura</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#! /usr/bin/env bash</span>
 
@@ -148,15 +148,15 @@ adb push <span class="nv">$DB</span> /data/data/<span class="nv">$APP</span>/dat
 <span class="nv">cmd2</span><span class="o">=</span><span class="s2">"run-as </span><span class="nv">$APP</span><span class="s2"> chmod 660 /data/data/</span><span class="nv">$APP</span><span class="s2">/databases/</span><span class="nv">$DB</span><span class="s2">"</span>
 adb shell <span class="s2">"</span><span class="nv">$cmd2</span><span class="s2">"</span></code></pre></figure>
 
-<p>El script de escritura es parecido, usa <code class="highlighter-rouge">run-as</code> con el mismo
-propósito. Aunque para escribir en el directorio de la aplicación
-antes hay que cambiar los permisos. Una vez escrita la base
+<p>El script de escritura es parecido, usa <code class="highlighter-rouge">run-as</code> con el mismo<br />
+propósito. Aunque para escribir en el directorio de la aplicación<br />
+antes hay que cambiar los permisos. Una vez escrita la base<br />
 de datos, los permisos se restauran.</p>
 
-<p>Nombra los scripts como <code class="highlighter-rouge">pull</code> y <code class="highlighter-rouge">push</code> y cuando
-depures una base de datos puedes hacer <code class="highlighter-rouge">pull</code> para
-abrirla, editarla de la manera usual, salir de sqlite3 (Ctrl-D) y
-ejecutar <code class="highlighter-rouge">push</code> para escribir los cambios (todo esto suponiendo
+<p>Nombra los scripts como <code class="highlighter-rouge">pull</code> y <code class="highlighter-rouge">push</code> y cuando<br />
+depures una base de datos puedes hacer <code class="highlighter-rouge">pull</code> para<br />
+abrirla, editarla de la manera usual, salir de sqlite3 (Ctrl-D) y<br />
+ejecutar <code class="highlighter-rouge">push</code> para escribir los cambios (todo esto suponiendo<br />
 que sobreescribas las variables por defecto del script).</p>
 
 

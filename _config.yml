@@ -6,5 +6,8 @@ url: "http://enrmarc.github.io"
 github_username:  enrmarc
 
 # Build settings
-markdown: kramdown
 excerpt_separator: ""
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM

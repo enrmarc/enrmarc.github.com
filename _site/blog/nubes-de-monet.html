@@ -88,21 +88,21 @@
       <small class="post-summary">Generación de texturas de nubes</small>
     </div>
 
-    <p>En la naturaleza muchas estructuras parecen surgir del caos,
-de la aleatoriedad. Si observas las nubes seguramente no
-distingirás ningún patrón recurrente que te ayude a predecir
-su forma o estructura. Podríamos pensar que son simplemente
-agrupaciones al azar de partículas de agua o hielo suspendidas
+    <p>En la naturaleza muchas estructuras parecen surgir del caos,<br />
+de la aleatoriedad. Si observas las nubes seguramente no<br />
+distingirás ningún patrón recurrente que te ayude a predecir<br />
+su forma o estructura. Podríamos pensar que son simplemente<br />
+agrupaciones al azar de partículas de agua o hielo suspendidas<br />
 en la atmósfera.</p>
 
-<p>Como siempre, la realidad es un poco más complicada. Si
-quisiéramos simular nubes en un ordenador y nos valiésemos
-por el azar que puede darnos la ubicua función <code class="highlighter-rouge">random</code>, no
-quedaríamos muy satisfechos. Para comprobarlo vamos a generar
-nubes en dos dimensiones (texturas) usando
-la función <code class="highlighter-rouge">Math.random</code> de JavaScript.
-Esta función sigue una distribución uniforme, es decir,
-todos los valores que genera tienen la misma
+<p>Como siempre, la realidad es un poco más complicada. Si<br />
+quisiéramos simular nubes en un ordenador y nos valiésemos<br />
+por el azar que puede darnos la ubicua función <code class="highlighter-rouge">random</code>, no<br />
+quedaríamos muy satisfechos. Para comprobarlo vamos a generar<br />
+nubes en dos dimensiones (texturas) usando<br />
+la función <code class="highlighter-rouge">Math.random</code> de JavaScript.<br />
+Esta función sigue una distribución uniforme, es decir,<br />
+todos los valores que genera tienen la misma<br />
 probabilidad de aparecer.</p>
 
 <p>Éste es el código (<a href="http://processing.org/">Processing.js</a>) que genera la textura:</p>
@@ -128,8 +128,8 @@ probabilidad de aparecer.</p>
    <span class="nx">updatePixels</span><span class="p">();</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Iteramos sobre todos los píxeles que forman la región a pintar y
-les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.
+<p>Iteramos sobre todos los píxeles que forman la región a pintar y<br />
+les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.<br />
 Y el resultado:</p>
 
 <figure>
@@ -141,25 +141,25 @@ Y el resultado:</p>
    
 </figure>
 
-<p>Como véis, no tiene aspecto de nube debido a que
-un generador de números aleatorios (como la función <code class="highlighter-rouge">Math.random</code>)
-produce números que no guardan relación alguna y no muestran ningún
-patrón distinguible. Para simular la naturaleza de las nubes, es
-necesario un poco menos de aleatoriedad en nuestros cálculos,
+<p>Como véis, no tiene aspecto de nube debido a que<br />
+un generador de números aleatorios (como la función <code class="highlighter-rouge">Math.random</code>)<br />
+produce números que no guardan relación alguna y no muestran ningún<br />
+patrón distinguible. Para simular la naturaleza de las nubes, es<br />
+necesario un poco menos de aleatoriedad en nuestros cálculos,<br />
 un caos coherente.</p>
 
-<p>¿Cómo generar un poco menos de aleatoriedad? Podemos usar
-la función <a href="http://en.wikipedia.org/wiki/Perlin_noise">Perlin Noise</a> (Ruido Perlin). Los detalles de esta
-función los podéis consultar en la <a href="http://www.mrl.nyu.edu/~perlin/doc/oscar.html">web de Ken Perlin</a>.
-Perlin desarrolló este algoritmo en los
-ochenta para generar las texturas de la película Tron.
-Lo que nos interesa es que
-el Ruido Perlin tiene un comportamiento más “natural”. Produce
-una secuencia de números pseudo-aleatorios menos “brusca” que
+<p>¿Cómo generar un poco menos de aleatoriedad? Podemos usar<br />
+la función <a href="http://en.wikipedia.org/wiki/Perlin_noise">Perlin Noise</a> (Ruido Perlin). Los detalles de esta<br />
+función los podéis consultar en la <a href="http://www.mrl.nyu.edu/~perlin/doc/oscar.html">web de Ken Perlin</a>.<br />
+Perlin desarrolló este algoritmo en los<br />
+ochenta para generar las texturas de la película Tron.<br />
+Lo que nos interesa es que<br />
+el Ruido Perlin tiene un comportamiento más “natural”. Produce<br />
+una secuencia de números pseudo-aleatorios menos “brusca” que<br />
 la que podría producir la función <code class="highlighter-rouge">Math.random</code>.</p>
 
-<p>Usaremos el Ruido Perlin como generador de números pseudo-aleatorios.
-<a href="http://processing.org/">Processing.js</a> tiene una función <code class="highlighter-rouge">noise</code> que implementa este algoritmo.
+<p>Usaremos el Ruido Perlin como generador de números pseudo-aleatorios.<br />
+<a href="http://processing.org/">Processing.js</a> tiene una función <code class="highlighter-rouge">noise</code> que implementa este algoritmo.<br />
 El código para generar las nubes:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">void</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
@@ -187,8 +187,8 @@ El código para generar las nubes:</p>
    <span class="nx">toff</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>El código es casi el mismo. Lo único que varía es el
-uso de la función <code class="highlighter-rouge">noise</code> en lugar de <code class="highlighter-rouge">Math.random</code>.
+<p>El código es casi el mismo. Lo único que varía es el<br />
+uso de la función <code class="highlighter-rouge">noise</code> en lugar de <code class="highlighter-rouge">Math.random</code>.<br />
 El resultado:</p>
 
 <figure>
@@ -200,8 +200,8 @@ El resultado:</p>
    
 </figure>
 
-<p>Bueno, quizá no se parezcan demasiado a las nubes de los
-cuadros de Monet, pero esta es la primera vez que
+<p>Bueno, quizá no se parezcan demasiado a las nubes de los<br />
+cuadros de Monet, pero esta es la primera vez que<br />
 genero algo con aspecto “natural” y me siento … entusiasmado.</p>
 
 
