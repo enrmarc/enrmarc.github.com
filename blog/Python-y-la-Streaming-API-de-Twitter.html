@@ -88,31 +88,31 @@
       <small class="post-summary">Leyendo tweets</small>
     </div>
 
-    <p>Me he apuntado al curso online <a href="https://www.coursera.org/course/datasci">Introduction to
-Data Science</a> de [Coursera] y me ha gustado mucho
-el ejercicio sobre el análisis semántico de tweets.
-En esta entrada solo hablaré sobre cómo bajar tweets de
-la <a href="https://dev.twitter.com/">API de Twitter</a>, quizá más adelante hable sobre el
+    <p>Me he apuntado al curso online <a href="https://www.coursera.org/course/datasci">Introduction to<br />
+Data Science</a> de [Coursera] y me ha gustado mucho<br />
+el ejercicio sobre el análisis semántico de tweets.<br />
+En esta entrada solo hablaré sobre cómo bajar tweets de<br />
+la <a href="https://dev.twitter.com/">API de Twitter</a>, quizá más adelante hable sobre el<br />
 análisis semántico.</p>
 
-<p>Bien, la API de Twitter tiene muchas cosas interesantes,
-puedes buscar tweets, usuarios, hashtags; puedes hasta publicarlos
-y quien sabe qué demonios más (no me he leído toda la documentación).
-También tiene ese que llaman la <a href="https://dev.twitter.com/docs/api/streaming">Streaming API</a>, que es como abrir
-el grifo de Twitter: puedes descargar tweets en tiempo real.
-Se puede usar cualquier lenguaje para conectarte. Yo usaré
+<p>Bien, la API de Twitter tiene muchas cosas interesantes,<br />
+puedes buscar tweets, usuarios, hashtags; puedes hasta publicarlos<br />
+y quien sabe qué demonios más (no me he leído toda la documentación).<br />
+También tiene ese que llaman la <a href="https://dev.twitter.com/docs/api/streaming">Streaming API</a>, que es como abrir<br />
+el grifo de Twitter: puedes descargar tweets en tiempo real.<br />
+Se puede usar cualquier lenguaje para conectarte. Yo usaré<br />
 Python, porque estoy fuertemente enganchado a él.</p>
 
-<h4 id="autenticacin">Autenticación</h4>
-<p>La API de Twitter es <em>gratis</em>, pero debes pedir permiso. Twitter usa <a href="http://oauth.net/">OAuth</a>
-para proveer acceso autorizado a su API.
-Lo primero que hay que hacer es obtener los <em>tokens de acceso</em> desde
-<a href="https://apps.twitter.com/app/new">la consola</a> y eligir  <em>Create New App</em>.
-Sigue los pasos y listo ya tienes tus tókens.
-Twitter tiene algunas librerías para tratar con
-OAuth, pero en esta ocasión tiraré de Python plano porque
-lo único que Twitter requiere es que se añada
-la cabecera <code class="highlighter-rouge">Authorization</code> a cada petición que se envíe especificando
+<p>####Autenticación<br />
+La API de Twitter es <em>gratis</em>, pero debes pedir permiso. Twitter usa <a href="http://oauth.net/">OAuth</a><br />
+para proveer acceso autorizado a su API.<br />
+Lo primero que hay que hacer es obtener los <em>tokens de acceso</em> desde<br />
+<a href="https://apps.twitter.com/app/new">la consola</a> y eligir  <em>Create New App</em>.<br />
+Sigue los pasos y listo ya tienes tus tókens.<br />
+Twitter tiene algunas librerías para tratar con<br />
+OAuth, pero en esta ocasión tiraré de Python plano porque<br />
+lo único que Twitter requiere es que se añada<br />
+la cabecera <code class="highlighter-rouge">Authorization</code> a cada petición que se envíe especificando<br />
 los tókens necesarios. Algo así:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">api_key</span> <span class="o">=</span> <span class="s">'TU_API_KEY'</span>
@@ -127,12 +127,12 @@ los tókens necesarios. Algo así:</p>
 <span class="n">http_handler</span>  <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">(</span><span class="n">debuglevel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">https_handler</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">HTTPSHandler</span><span class="p">(</span><span class="n">debuglevel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre></figure>
 
-<p>Algo de terminología. En el mundo OAuth, los tókens (el <em>access token</em> y
-la parte secreta) son usados en lugar de los usuales usuario y
-contraseña. Las <em>consumer credentials</em> son la forma en la que
-Twitter tiene de identificar tu aplicación.
-HMAC-SHA1 es el método que soporta Twitter para generar la firma.
-El resto es la inicialización de los handlers para HTTP.
+<p>Algo de terminología. En el mundo OAuth, los tókens (el <em>access token</em> y<br />
+la parte secreta) son usados en lugar de los usuales usuario y<br />
+contraseña. Las <em>consumer credentials</em> son la forma en la que<br />
+Twitter tiene de identificar tu aplicación.<br />
+HMAC-SHA1 es el método que soporta Twitter para generar la firma.<br />
+El resto es la inicialización de los handlers para HTTP.<br />
 Ahora solo queda construir la petición y autenticarla con OAuth.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">build_req</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
@@ -146,11 +146,11 @@ Ahora solo queda construir la petición y autenticarla con OAuth.</p>
   <span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">to_url</span><span class="p">(),</span> <span class="bp">None</span><span class="p">)</span>
   <span class="k">return</span> <span class="n">response</span></code></pre></figure>
 
-<p>La petición se crea añadiendo las credenciales y firmándola
+<p>La petición se crea añadiendo las credenciales y firmándola<br />
 con HMAC-SHA1.</p>
 
-<h4 id="leyendo-tweets">Leyendo tweets</h4>
-<p>La API devuelve una muestra aleatoria
+<p>####Leyendo tweets<br />
+La API devuelve una muestra aleatoria<br />
 de tweets en formato JSON. Solo hay que imprimir tweet a tweet:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">fetch</span><span class="p">():</span>
