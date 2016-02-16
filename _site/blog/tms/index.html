@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+     <title>Simulador de Máquina de Turing | Enrique Marcos</title>
+  
+
+  <meta name="description" content="TL;DR - Programador">
+  <meta name="author" content="Enrique Marcos">
+  <meta name="copyright" content="© Copyright 2012 to Present">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="cleartype" content="on">
+
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+
+  
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35072506-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+ </script>
+
+  <script src="/assets/js/app.js"></script>
+</head>
+
+  <body>
+    <div id="cover_wrap" class="fadeInDown animated clearfix">
+  <header id="masthead" class="clearfix">
+    <hgroup class="intro">
+      <h1>
+        <a href="/" class="home">Enrique Marcos</a>
+        <span>
+          <!--a href="http://twitter.com/?" rel="me" target="_blank">@?</a-->
+        </span>
+      </h1>
+    </hgroup>
+
+    <nav id="cover">
+      <ul id="headernav" class="list-none">
+        <li>
+          <a href="/" title="Posts" class="posts selected"><span>Posts</span></a>
+        </li>
+        <li>
+          <a href="/repos/" title="Repos" class="about"><span>Repos</span></a>
+        </li>
+        <li>
+          <a href="/art/" title="Arte" class="photos "><span>Arte</span></a>
+        </li>
+        <li>
+          <a href="/about/" title="Acerca de" class="about"><span>Acerca de</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+    <div id="site">
+      
+  <article id="post" class="is-post" role="main">
+
+    <header class="entry-title">
+      <h1>Simulador de Máquina de Turing</h1>
+    </header>
+
+    <div class="entrecot">
+      <small class="post-summary">En Java</small>
+    </div>
+
+    <p>Este simulador de <a href="http://en.wikipedia.org/wiki/Turing_machine">Máquina de Turing</a> surgió a raíz de las clases de Teoría
+de Autómatas y Lenguajes Formales. Solo es una MT básica, no es universal.</p>
+
+<p>Usa la terminal para ejecutarlo:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>java tm.Simulator input.txt</code></pre></div>
+
+<p>donde <code>input.txt</code> tiene el siguiente formato:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">aaabbb
+q1, a -&gt; q2, <span class="c">#, R</span>
+q2, a -&gt; q2, a, R
+q2, b -&gt; q2, b, R
+q2, <span class="c"># -&gt; q3, #, L</span>
+q3, b -&gt; q4, <span class="c">#, L</span>
+q4, a -&gt; q4, a, L
+q4, b -&gt; q4, b, L
+q4, <span class="c"># -&gt; q1, #, R</span>
+q1, <span class="c"># -&gt; qf, #, R</span></code></pre></div>
+
+<p>La primera línea es la cadena de entrada que será almacenada en la cinta.
+Las siguientes líneas indican las transiciones: los estados están etiquetados
+empezando desde <code>q1</code> (el estado inicial). El estado final se etiqueta como <code>qf</code> y
+el símbolo blanco como <code>#</code>.
+Con el ejemplo anterior la máquina de Turing aceptaría cadenas del tipo a<sup>n</sup>b<sup>n</sup>.</p>
+
+<p>Por defecto el simulador ejecuta todas las transiciones de una vez. Para ejecutarlo
+paso a paso hay que añadir la opción <code>s</code>:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> java tm.Simulator input.txt s</code></pre></div>
+
+<p><a href="https://github.com/enrmarc/tms">Código fuente</a>.</p>
+
+
+    <small><time>Mar 03, 2012</time></small>
+  </article>
+
+      <footer id="darkfooter" class="clearfix">
+  <div class="content_wrap">
+    <div class="clearfix about-col">
+        <img src="/assets/img/160.jpg">
+        <p>
+          Trabajo como desarrollador y actualmente <strike>Ruby, Android</strike>
+          JavaScript paga mis facturas. Puedes <em>contactar</em>
+          conmigo mediante:
+          <a href="https://github.com/enrmarc">GitHub</a>&nbsp;&mdash;&nbsp;<a href="mailto:enrmarc@gmail.com">Correo</a>
+        </p>
+    </div>
+  </div>
+</footer>
+    </div>
+
+    
+  </body>
+
+</html>

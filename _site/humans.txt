@@ -1,0 +1,11 @@
+# TEAM
+
+  Enrique Marcos
+
+# TECHNOLOGY COLOPHON
+
+  Jekyll
+  GitHub site hosting
+  Git
+  Ruby
+  Atom
