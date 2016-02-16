@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+     <title>Late static binding en PHP | Enrique Marcos</title>
+  
+
+  <meta name="description" content="TL;DR - Programador">
+  <meta name="author" content="Enrique Marcos">
+  <meta name="copyright" content="© Copyright 2012 to Present">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="cleartype" content="on">
+
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+
+  
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35072506-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+ </script>
+
+  <script src="/assets/js/app.js"></script>
+</head>
+
+  <body>
+    <div id="cover_wrap" class="fadeInDown animated clearfix">
+  <header id="masthead" class="clearfix">
+    <hgroup class="intro">
+      <h1>
+        <a href="/" class="home">Enrique Marcos</a>
+        <span>
+          <!--a href="http://twitter.com/?" rel="me" target="_blank">@?</a-->
+        </span>
+      </h1>
+    </hgroup>
+
+    <nav id="cover">
+      <ul id="headernav" class="list-none">
+        <li>
+          <a href="/" title="Posts" class="posts selected"><span>Posts</span></a>
+        </li>
+        <li>
+          <a href="/repos/" title="Repos" class="about"><span>Repos</span></a>
+        </li>
+        <li>
+          <a href="/art/" title="Arte" class="photos "><span>Arte</span></a>
+        </li>
+        <li>
+          <a href="/about/" title="Acerca de" class="about"><span>Acerca de</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+    <div id="site">
+      
+  <article id="post" class="is-post" role="main">
+
+    <header class="entry-title">
+      <h1>Late static binding en PHP</h1>
+    </header>
+
+    <div class="entrecot">
+      <small class="post-summary">Resolver referencias estáticas en tiempo de ejecución</small>
+    </div>
+
+    <p>Si has programado un poco en PHP te habrás dado cuenta de que su lado
+orientado a objetos difiere un poco de lo que cabría esperar en cuanto
+al uso de variables y métodos estáticos. Afortunadamente, los chicos
+de PHP arreglaron muchas de esas inconsistencias en el lanzamiento de
+la versión <a href="http://php.net/releases/5_3_0.php">5.3</a> (hace ya más de 4 años).</p>
+
+<p>Una de ellas era que las referencias estáticas dentro de una clase,
+como <code class="highlighter-rouge">self::</code> o <code class="highlighter-rouge">__CLASS__</code>, se resuelven empleando
+el nombre de la clase, en tiempo de compilación. Usaré el patrón
+Singleton para poner de manifiesto el problema y su solución.</p>
+
+<p><em>
+   Los ejemplos siguientes son solo ilustrativos, en general el uso
+   del patrón Singleton <a href="http://www.ibm.com/developerworks/webservices/library/co-single/index.html">está desaconsejado</a>, entre otras cosas porque
+   incrementa el acoplamiento entre clases y hace difícil hacer
+   tests de unidad (o al menos eso he leído, tampoco estoy del
+   todo convencido).
+</em></p>
+
+<h4 id="singleton">Singleton</h4>
+
+<p>Es considerado un patrón <em>creacional</em> ya que interviene
+en la creación de objetos. Su utilidad consiste básicamente en garantizar
+que una clase solo tenga una instancia. El ejemplo típico es utilizar un
+Singleton como el gestor de conexiones a una base de datos:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+   <span class="k">class</span> <span class="nc">DBManager</span> <span class="p">{</span>
+      <span class="k">private</span> <span class="k">static</span> <span class="nv">$instance</span><span class="p">;</span>
+      <span class="k">protected</span> <span class="k">static</span> <span class="nv">$klass</span> <span class="o">=</span> <span class="nx">__CLASS__</span><span class="p">;</span>
+      <span class="k">private</span> <span class="k">static</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+      <span class="k">private</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{}</span>
+
+      <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getInstance</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$klass</span><span class="p">;</span>
+            <span class="nx">self</span><span class="o">::</span><span class="nv">$count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+         <span class="p">}</span>
+         <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">count</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$count</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<p>Algunos detalles: usamos la variable <code class="highlighter-rouge">$instance</code> para guardar la única
+instancia de la clase <code class="highlighter-rouge">DBManager</code>. Es una <em>variable de clase</em> porque
+está precedida del modificador <code class="highlighter-rouge">static</code>.
+El constructor de la clase es privado, luego nadie puede usar el constructor
+para crear instancias de la clase (de otra manera no tendríamos un Singleton).</p>
+
+<p>Es con el método <code class="highlighter-rouge">getInstance()</code> con el que obtenemos la única instancia
+de la clase.
+El método <code class="highlighter-rouge">count()</code> lo he incluido solamente para demostrar que el
+Singleton funciona:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+   <span class="nv">$db</span> <span class="o">=</span> <span class="nx">DBManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+   <span class="nb">assert</span> <span class="p">(</span><span class="nx">DBManager</span><span class="o">::</span><span class="na">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">);</span>
+   <span class="nv">$db2</span> <span class="o">=</span> <span class="nx">DBManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+   <span class="nb">assert</span> <span class="p">(</span><span class="nx">DBManager</span><span class="o">::</span><span class="na">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// Siempre es 1
+</span><span class="cp">?&gt;</span></code></pre></figure>
+
+<h4 id="late-static-binding">Late Static Binding</h4>
+
+<p>Pero esto empieza a complicarse si decides especializar el Singleton para dar soporte
+a múltiples bases de datos:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+   <span class="k">class</span> <span class="nc">MySQLManager</span> <span class="k">extends</span> <span class="nx">DBManager</span> <span class="p">{</span>
+      <span class="k">protected</span> <span class="k">static</span> <span class="nv">$klass</span> <span class="o">=</span> <span class="nx">__CLASS__</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="nv">$mysqldb</span> <span class="o">=</span> <span class="nx">MySQLManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+   <span class="nb">assert</span> <span class="p">(</span><span class="nb">get_class</span><span class="p">(</span><span class="nv">$mysqldb</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'MySQLManager'</span><span class="p">);</span> <span class="c1">// Nop
+</span><span class="cp">?&gt;</span></code></pre></figure>
+
+<p>La clase <code class="highlighter-rouge">DBManager</code> declara la variable
+<code class="highlighter-rouge">$klass</code> con la ilusión de que las clases que hereden de ella puedan sobreescribirla.
+Esto es lo que hace <code class="highlighter-rouge">MySQLManager</code>: provee su propia definición de <code class="highlighter-rouge">$klass</code>.
+El funcionamiento ideal sería que una vez instanciada <code class="highlighter-rouge">MySQLManager</code>, la variable
+<code class="highlighter-rouge">$klass</code> tomase el valor “MySQLManager”. Pero esto no
+pasa, la última aserción falla porque <code class="highlighter-rouge">get_class($mysqldb)</code> devuelve “DBManager”.</p>
+
+<p>El problema es la palabra reservada <code class="highlighter-rouge">self</code>. <code class="highlighter-rouge">self</code> se resuelve en <strong>tiempo de compilación</strong>
+y toma el valor de la clase en la que se define. De modo que da igual si alguna
+subclase sobreescribe <code class="highlighter-rouge">$klass</code> porque <code class="highlighter-rouge">DBManager</code> siempre usa <code class="highlighter-rouge">self::$klass</code>, es decir,
+<code class="highlighter-rouge">DBManager::$klass</code>.</p>
+
+<p>La solución es reemplazar <code class="highlighter-rouge">self</code> por <code class="highlighter-rouge">static</code> cuando creamos
+la instancia (disponible a partir de la versión 5.3):</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+   <span class="k">class</span> <span class="nc">DBManager</span> <span class="p">{</span>
+      <span class="k">private</span> <span class="k">static</span> <span class="nv">$instance</span><span class="p">;</span>
+      <span class="k">protected</span> <span class="k">static</span> <span class="nv">$klass</span> <span class="o">=</span> <span class="nx">__CLASS__</span><span class="p">;</span>
+      <span class="k">private</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{}</span>
+
+      <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getInstance</span><span class="p">()</span> <span class="p">{</span>
+         <span class="k">if</span> <span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">=</span> <span class="k">new</span> <span class="k">static</span><span class="o">::</span><span class="nv">$klass</span><span class="p">;</span>
+         <span class="p">}</span>
+         <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+
+   <span class="k">class</span> <span class="nc">MySQLManager</span> <span class="k">extends</span> <span class="nx">DBManager</span> <span class="p">{</span>
+      <span class="k">protected</span> <span class="k">static</span> <span class="nv">$klass</span> <span class="o">=</span> <span class="nx">__CLASS__</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="nv">$mysqldb</span> <span class="o">=</span> <span class="nx">MySQLManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+   <span class="nb">assert</span> <span class="p">(</span><span class="nb">get_class</span><span class="p">(</span><span class="nv">$mysqldb</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'MySQLManager'</span><span class="p">);</span> <span class="c1">// Ok
+</span><span class="cp">?&gt;</span></code></pre></figure>
+
+<p>La palabra reservada <code class="highlighter-rouge">static</code> se resuelve en <strong>tiempo de ejecución</strong>.
+De esta manera cuando instanciemos <code class="highlighter-rouge">MySQLManager</code> el valor de <code class="highlighter-rouge">static::$klass</code>
+se resuelve lo más tarde posible (tomando el valor definido en la subclase).</p>
+
+
+    <small><time>Aug 19, 2013</time></small>
+  </article>
+
+      <footer id="darkfooter" class="clearfix">
+  <div class="content_wrap">
+    <div class="clearfix about-col">
+        <img src="/assets/img/160.jpg">
+        <p>
+          Trabajo como desarrollador y actualmente <strike>Ruby, Android</strike>
+          JavaScript paga mis facturas. Puedes <em>contactar</em>
+          conmigo mediante:
+          <a href="https://github.com/enrmarc">GitHub</a>&nbsp;&mdash;&nbsp;<a href="mailto:enrmarc@gmail.com">Correo</a>
+        </p>
+    </div>
+  </div>
+</footer>
+    </div>
+
+    
+  </body>
+
+</html>

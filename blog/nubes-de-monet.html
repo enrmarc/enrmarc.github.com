@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+     <title>Nubes de Monet usando el Ruido Perlin | Enrique Marcos</title>
+  
+
+  <meta name="description" content="TL;DR - Programador">
+  <meta name="author" content="Enrique Marcos">
+  <meta name="copyright" content="© Copyright 2012 to Present">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="cleartype" content="on">
+
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+
+  
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35072506-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+ </script>
+
+  <script src="/assets/js/app.js"></script>
+</head>
+
+  <body>
+    <div id="cover_wrap" class="fadeInDown animated clearfix">
+  <header id="masthead" class="clearfix">
+    <hgroup class="intro">
+      <h1>
+        <a href="/" class="home">Enrique Marcos</a>
+        <span>
+          <!--a href="http://twitter.com/?" rel="me" target="_blank">@?</a-->
+        </span>
+      </h1>
+    </hgroup>
+
+    <nav id="cover">
+      <ul id="headernav" class="list-none">
+        <li>
+          <a href="/" title="Posts" class="posts selected"><span>Posts</span></a>
+        </li>
+        <li>
+          <a href="/repos/" title="Repos" class="about"><span>Repos</span></a>
+        </li>
+        <li>
+          <a href="/art/" title="Arte" class="photos "><span>Arte</span></a>
+        </li>
+        <li>
+          <a href="/about/" title="Acerca de" class="about"><span>Acerca de</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+    <div id="site">
+      
+  <article id="post" class="is-post" role="main">
+
+    <header class="entry-title">
+      <h1>Nubes de Monet usando el Ruido Perlin</h1>
+    </header>
+
+    <div class="entrecot">
+      <small class="post-summary">Generación de texturas de nubes</small>
+    </div>
+
+    <p>En la naturaleza muchas estructuras parecen surgir del caos,
+de la aleatoriedad. Si observas las nubes seguramente no
+distingirás ningún patrón recurrente que te ayude a predecir
+su forma o estructura. Podríamos pensar que son simplemente
+agrupaciones al azar de partículas de agua o hielo suspendidas
+en la atmósfera.</p>
+
+<p>Como siempre, la realidad es un poco más complicada. Si
+quisiéramos simular nubes en un ordenador y nos valiésemos
+por el azar que puede darnos la ubicua función <code class="highlighter-rouge">random</code>, no
+quedaríamos muy satisfechos. Para comprobarlo vamos a generar
+nubes en dos dimensiones (texturas) usando
+la función <code class="highlighter-rouge">Math.random</code> de JavaScript.
+Esta función sigue una distribución uniforme, es decir,
+todos los valores que genera tienen la misma
+probabilidad de aparecer.</p>
+
+<p>Éste es el código (<a href="http://processing.org/">Processing.js</a>) que genera la textura:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">void</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nx">size</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
+   <span class="nx">noLoop</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">t</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="k">void</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nx">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+   <span class="nx">loadPixels</span><span class="p">();</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="kr">float</span> <span class="nx">bright</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">255</span><span class="p">;</span>
+         <span class="nx">pixels</span><span class="p">[</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">*</span> <span class="nx">width</span><span class="p">]</span> <span class="o">=</span> <span class="nx">color</span><span class="p">(</span><span class="nx">bright</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+         <span class="nx">t</span> <span class="o">+=</span> <span class="mf">0.1</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="nx">updatePixels</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Iteramos sobre todos los píxeles que forman la región a pintar y
+les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.
+Y el resultado:</p>
+
+<figure>
+   <img class="small" src="/assets/projects/ruido-perlin/monet-random.jpg" alt="Ruido Monet" />
+   
+      <figcaption>
+         ¿Una tele mal sintonizada?
+      </figcaption>
+   
+</figure>
+
+<p>Como véis, no tiene aspecto de nube debido a que
+un generador de números aleatorios (como la función <code class="highlighter-rouge">Math.random</code>)
+produce números que no guardan relación alguna y no muestran ningún
+patrón distinguible. Para simular la naturaleza de las nubes, es
+necesario un poco menos de aleatoriedad en nuestros cálculos,
+un caos coherente.</p>
+
+<p>¿Cómo generar un poco menos de aleatoriedad? Podemos usar
+la función <a href="http://en.wikipedia.org/wiki/Perlin_noise">Perlin Noise</a> (Ruido Perlin). Los detalles de esta
+función los podéis consultar en la <a href="http://www.mrl.nyu.edu/~perlin/doc/oscar.html">web de Ken Perlin</a>.
+Perlin desarrolló este algoritmo en los
+ochenta para generar las texturas de la película Tron.
+Lo que nos interesa es que
+el Ruido Perlin tiene un comportamiento más “natural”. Produce
+una secuencia de números pseudo-aleatorios menos “brusca” que
+la que podría producir la función <code class="highlighter-rouge">Math.random</code>.</p>
+
+<p>Usaremos el Ruido Perlin como generador de números pseudo-aleatorios.
+<a href="http://processing.org/">Processing.js</a> tiene una función <code class="highlighter-rouge">noise</code> que implementa este algoritmo.
+El código para generar las nubes:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">void</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nx">size</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+   <span class="nx">noLoop</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kr">float</span> <span class="nx">toff</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="k">void</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nx">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+   <span class="nx">loadPixels</span><span class="p">();</span>
+   <span class="kr">float</span> <span class="nx">xoff</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">float</span> <span class="nx">yoff</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="kr">float</span> <span class="nx">bright</span> <span class="o">=</span> <span class="nx">noise</span><span class="p">(</span><span class="nx">xoff</span><span class="p">,</span> <span class="nx">yoff</span><span class="p">)</span> <span class="o">*</span> <span class="mi">255</span><span class="p">;</span>
+         <span class="nx">pixels</span><span class="p">[</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">*</span> <span class="nx">width</span><span class="p">]</span> <span class="o">=</span> <span class="nx">color</span><span class="p">(</span><span class="nx">bright</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+         <span class="nx">yoff</span> <span class="o">+=</span> <span class="mf">0.01</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">xoff</span> <span class="o">+=</span> <span class="mf">0.01</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="nx">updatePixels</span><span class="p">();</span>
+   <span class="nx">toff</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>El código es casi el mismo. Lo único que varía es el
+uso de la función <code class="highlighter-rouge">noise</code> en lugar de <code class="highlighter-rouge">Math.random</code>.
+El resultado:</p>
+
+<figure>
+   <img class="small" src="/assets/projects/ruido-perlin/monet-perlin.jpg" alt="Nubes de monet" />
+   
+      <figcaption>
+         Nubes de Monet, o casi
+      </figcaption>
+   
+</figure>
+
+<p>Bueno, quizá no se parezcan demasiado a las nubes de los
+cuadros de Monet, pero esta es la primera vez que
+genero algo con aspecto “natural” y me siento … entusiasmado.</p>
+
+
+    <small><time>Feb 03, 2014</time></small>
+  </article>
+
+      <footer id="darkfooter" class="clearfix">
+  <div class="content_wrap">
+    <div class="clearfix about-col">
+        <img src="/assets/img/160.jpg">
+        <p>
+          Trabajo como desarrollador y actualmente <strike>Ruby, Android</strike>
+          JavaScript paga mis facturas. Puedes <em>contactar</em>
+          conmigo mediante:
+          <a href="https://github.com/enrmarc">GitHub</a>&nbsp;&mdash;&nbsp;<a href="mailto:enrmarc@gmail.com">Correo</a>
+        </p>
+    </div>
+  </div>
+</footer>
+    </div>
+
+    
+  </body>
+
+</html>
