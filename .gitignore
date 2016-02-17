@@ -1,5 +1,4 @@
 _site/
-.nojekyll
 _ignore/
 *.swp
 .DS_Store

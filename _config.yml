@@ -5,6 +5,7 @@ name: enrmarc
 url: "http://enrmarc.github.io"
 github_username:  enrmarc
 
+
 # Build settings
 excerpt_separator: ""
 highlighter: rouge
