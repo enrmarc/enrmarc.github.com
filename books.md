@@ -7,17 +7,17 @@ summary  : Fuck
 
 Una lista como cualquier otra.
 
-#### *2016*
 
-- Probabilistic Graphical Models. Principles and Techniques. *Daphne Koller & Nir Friedman*
--
+#### *2016*
+
+- Probabilistic Graphical Models. Principles and Techniques. *Daphne Koller & Nir Friedman* (35%)
 
 #### *2015*
 
 - Un mundo feliz. *Aldous Huxley*
 - 1984\. *George Orwell*
 - Software Architecture Patterns. *Mark Richards*
-- Structure and Interpretation of Computer Programs. *Abelson, Jerry & Julie Sussman*
+- Structure and Interpretation of Computer Programs. *Abelson, Jerry & Julie Sussman* (75%)
 - La revolución electrónica. *William Burroughs*
 - Code. *Charles Petzold*
 - La importancia de llamarse Ernesto. *Oscar Wilde*
