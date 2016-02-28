@@ -1,2 +1,2 @@
 git push origin source
-git subtree push --prefix _site origin master
+git push origin `git subtree split --prefix _site master`:master --force
