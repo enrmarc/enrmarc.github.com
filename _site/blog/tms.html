@@ -88,7 +88,7 @@
       <small class="post-summary">En Java</small>
     </div>
 
-    <p>Este simulador de <a href="http://en.wikipedia.org/wiki/Turing_machine">Máquina de Turing</a> surgió a raíz de las clases de Teoría<br />
+    <p>Este simulador de <a href="http://en.wikipedia.org/wiki/Turing_machine">Máquina de Turing</a> surgió a raíz de las clases de Teoría
 de Autómatas y Lenguajes Formales. Solo es una MT básica, no es universal.</p>
 
 <p>Usa la terminal para ejecutarlo:</p>
@@ -108,13 +108,13 @@ q4, b -&gt; q4, b, L
 q4, <span class="c"># -&gt; q1, #, R</span>
 q1, <span class="c"># -&gt; qf, #, R</span></code></pre></figure>
 
-<p>La primera línea es la cadena de entrada que será almacenada en la cinta.<br />
-Las siguientes líneas indican las transiciones: los estados están etiquetados<br />
-empezando desde <code class="highlighter-rouge">q1</code> (el estado inicial). El estado final se etiqueta como <code class="highlighter-rouge">qf</code> y<br />
-el símbolo blanco como <code class="highlighter-rouge">#</code>.<br />
+<p>La primera línea es la cadena de entrada que será almacenada en la cinta.
+Las siguientes líneas indican las transiciones: los estados están etiquetados
+empezando desde <code class="highlighter-rouge">q1</code> (el estado inicial). El estado final se etiqueta como <code class="highlighter-rouge">qf</code> y
+el símbolo blanco como <code class="highlighter-rouge">#</code>.
 Con el ejemplo anterior la máquina de Turing aceptaría cadenas del tipo a<sup>n</sup>b<sup>n</sup>.</p>
 
-<p>Por defecto el simulador ejecuta todas las transiciones de una vez. Para ejecutarlo<br />
+<p>Por defecto el simulador ejecuta todas las transiciones de una vez. Para ejecutarlo
 paso a paso hay que añadir la opción <code class="highlighter-rouge">s</code>:</p>
 
 <figure class="highlight"><pre><code class="language-console" data-lang="console">$ java tm.Simulator input.txt s</code></pre></figure>
