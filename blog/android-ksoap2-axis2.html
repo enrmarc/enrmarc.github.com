@@ -88,13 +88,13 @@
       <small class="post-summary">Enviar y recibir objetos complejos</small>
     </div>
 
-    <p>Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo<br />
-si lo que quieres es enviar objetos complejos. Solo escribo una de tantas formas de hacerlo.<br />
+    <p>Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> de Dante, sobre todo
+si lo que quieres es enviar objetos complejos. Solo escribo una de tantas formas de hacerlo.
 (Es necesario tener instalado y configurado <a href="http://axis.apache.org/axis2/java/core/">Axis2</a> e incluir la librería <a href="http://code.google.com/p/ksoap2-android/">Ksoap2</a> en el directorio <code class="highlighter-rouge">libs/</code> del proyecto Android ).</p>
 
-<p>####Servidor<br />
-La manera más rápida de desplegar un servicio web en Axis2 es creando un<br />
-<a href="http://axis.apache.org/axis2/java/core/docs/pojoguide.html">POJO</a> (Plain Old Java Object). El POJO utilizado para ilustrar el ejemplo<br />
+<h4 id="servidor">Servidor</h4>
+<p>La manera más rápida de desplegar un servicio web en Axis2 es creando un
+<a href="http://axis.apache.org/axis2/java/core/docs/pojoguide.html">POJO</a> (Plain Old Java Object). El POJO utilizado para ilustrar el ejemplo
 representará a una persona.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">org</span><span class="o">.</span><span class="na">entidades</span><span class="o">;</span>
@@ -159,9 +159,9 @@ representará a una persona.</p>
         │   └── Persona.java
         └── Service.java</code></pre></figure>
 
-<p>####Cliente<br />
-El código Android utiliza la librería <a href="http://code.google.com/p/ksoap2-android/">Ksoap2</a> para poder gestionar los mensajes<br />
-<a href="http://en.wikipedia.org/wiki/SOAP">SOAP</a>. Para que un objeto complejo pueda ser enviado en un mensaje SOAP debe<br />
+<h4 id="cliente">Cliente</h4>
+<p>El código Android utiliza la librería <a href="http://code.google.com/p/ksoap2-android/">Ksoap2</a> para poder gestionar los mensajes
+<a href="http://en.wikipedia.org/wiki/SOAP">SOAP</a>. Para que un objeto complejo pueda ser enviado en un mensaje SOAP debe
 implementar la interfaz <code class="highlighter-rouge">KvmSerializable</code>.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">objetos</span><span class="o">;</span>
