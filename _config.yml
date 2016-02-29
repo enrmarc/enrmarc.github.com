@@ -5,10 +5,10 @@ name: enrmarc
 url: "http://enrmarc.github.io"
 github_username:  enrmarc
 
-
+permalink: /blog/:title/
 # Build settings
 excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown
-kramdown:
-  input: GFM
+#kramdown:
+#  input: GFM
