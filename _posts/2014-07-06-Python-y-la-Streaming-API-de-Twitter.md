@@ -8,26 +8,26 @@ permalink: /blog/Python-y-la-Streaming-API-de-Twitter
 disqus   : true
 ---
 
-Me he apuntado al curso online [Introduction to
-Data Science] de [Coursera] y me ha gustado mucho
+Me he apuntado al curso online [Introduction to Data Science][coursera] de
+Coursera y me ha gustado mucho
 el ejercicio sobre el análisis semántico de tweets.
 En esta entrada solo hablaré sobre cómo bajar tweets de
-la [API de Twitter], quizá más adelante hable sobre el
+la [API de Twitter][apitwitter], quizá más adelante hable sobre el
 análisis semántico.
 
 Bien, la API de Twitter tiene muchas cosas interesantes,
 puedes buscar tweets, usuarios, hashtags; puedes hasta publicarlos
 y quien sabe qué demonios más (no me he leído toda la documentación).
-También tiene ese que llaman la [Streaming API], que es como abrir
+También tiene ese que llaman la [Streaming API][streamingapi], que es como abrir
 el grifo de Twitter: puedes descargar tweets en tiempo real.
 Se puede usar cualquier lenguaje para conectarte. Yo usaré
 Python, porque estoy fuertemente enganchado a él.
 
 ####Autenticación
-La API de Twitter es *gratis*, pero debes pedir permiso. Twitter usa [OAuth]
+La API de Twitter es *gratis*, pero debes pedir permiso. Twitter usa [OAuth][oauth]
 para proveer acceso autorizado a su API.
 Lo primero que hay que hacer es obtener los *tokens de acceso* desde
-[la consola] y eligir  *Create New App*.
+[la consola][consoletwitter] y eligir  *Create New App*.
 Sigue los pasos y listo ya tienes tus tókens.
 Twitter tiene algunas librerías para tratar con
 OAuth, pero en esta ocasión tiraré de Python plano porque
@@ -85,11 +85,11 @@ def fetch():
      print line.strip()
 {% endhighlight %}
 
-El código en [GitHub].
+El código en [GitHub][github].
 
-[Introduction to Data Science]: https://www.coursera.org/course/datasci
-[API de Twitter]: https://dev.twitter.com/
-[Streaming API]: https://dev.twitter.com/docs/api/streaming
-[la consola]: https://apps.twitter.com/app/new
-[OAuth]: http://oauth.net/
-[GitHub]: https://github.com/enrmarc/twitter-api-python
+[coursera]: https://www.coursera.org/course/datasci
+[apitwitter]: https://dev.twitter.com/
+[streamingapi]: https://dev.twitter.com/docs/api/streaming
+[consoletwitter]: https://apps.twitter.com/app/new
+[oauth]: http://oauth.net/
+[github]: https://github.com/enrmarc/twitter-api-python

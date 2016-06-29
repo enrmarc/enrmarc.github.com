@@ -1,13 +1,14 @@
 ---
 layout   : post
-title    : Acerca de
+title    : About
 summary  : TL;DR ・ Developer
+extra    : TL;DR ・ Developer
 permalink: /about/
 ---
 
-<blockquote>
+<div class="author-note">
   If you really want to hear about it, the first thing you’ll
-  probably want to know is where I was born, an what my lousy
+  probably want to know is where I was born, and what my lousy
   childhood was like, and how my parents were occupied and all
   before they had me, and all that David Copperfield kind of crap,
   but I don’t feel like going into it, if you want to know the
@@ -16,26 +17,31 @@ permalink: /about/
   apiece if I told anything pretty personal about them. They’re
   quite touchy about anything like that, especially my father.
   They’re nice and all —I’m not saying that—but they’re also touchy as hell.
-</blockquote> &mdash;Holden Caulfield.
+  <br>
+  &mdash;&nbsp;Holden Caulfield.
+</div>
 
-Me llamo Enrique, trabajo como desarrollador y actualmente <strike>Android</strike> JavaScript paga mis facturas. Siempre que te interese puedes ponerte en contacto
-conmigo enviándome un mensaje a `enrmarc@gmail.com`.
-Si aún sigues leyendo esto, puede que te interese mi [CV](/data/resume.pdf).
+I'm Enrique, software developer based in Spain and currently <strike>Android</strike>, <strike>PHP</strike>, <strike>Ruby</strike>, JavaScript pays my bills. Ideally, this site should contain a collection of curated,
+beautifully written, inspiring and interesting posts, but in terms of writing,
+I'm just a <em>dilettante</em>.
 
-- [GitHub](http://github.com/enrmarc)
-- [Stackoverflow](http://stackoverflow.com/users/434171/enrmarc)
-- [Coyotev](http://coyotev.org)
+Apart from working and writing about technical stuff, I spend my spare time
+reading, watching movies, drawing, running and improving my guitar skills. If you
+want to know about my professional career, check out my [résumé](/data/resume.pdf).
 
-#### Acerca de este sitio
+Whenever you are interested, you can send me a message to `enrmarc@gmail.com`.
+I use that handle in some other sites like [GitHub](http://github.com/enrmarc)
+and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile).
 
-<a href="http://jekyllrb.com/">Jekyll</a> &mdash;
-<a href="http://github.com/">GitHub</a> &mdash;
-<a href="https://atom.io/">Atom</a>
+<div class="subhead">About this site</div>
 
-Lo uso como repositorio de cosas que suelo consultar: fragmentos de código,
-archivos de configuración, proyectos, artículos, etc.
-Los posts están bajo la licencia
-[Creative Commons](http://creativecommons.org/licenses/by-nc/3.0/us/), pero
-no te tomes muy en serio lo que digo.
+[Jekyll](http://jekyllrb.com/) &mdash;
+[GitHub](http://github.com/) &mdash;
+[Atom](https://atom.io)
+
+Built using Jekyll, Git, Atom (sometimes Vim) and hosted on GitHub.
+The design is strongly inspired by [Pollen](http://docs.racket-lang.org/pollen/).
+Posts are under the [Creative Commons](http://creativecommons.org/licenses/by-nc/3.0/us/)
+license.
 
 <small>(&lambda;)</small>
