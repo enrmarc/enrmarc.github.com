@@ -3,33 +3,34 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Enrique Marcos">
+  <meta name="description" content="TL;DR - Developer">
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="shortcut icon" href="/favicon.ico">
   
      <title>Simulador de Máquina de Turing | Enrique Marcos</title>
   
 
-  <meta name="description" content="TL;DR - Programador">
-  <meta name="author" content="Enrique Marcos">
-  <meta name="copyright" content="© Copyright 2012 to Present">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta http-equiv="cleartype" content="on">
 
-  <link type="text/plain" rel="author" href="/humans.txt">
-  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <!--[if (lt IE 9) & (!IEMobile)]>
-  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
+  <script type="text/javascript">
+    if (navigator.appVersion.indexOf("Win")!=-1) {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="fonts/equity-a.css" />');
+    } else if (navigator.appVersion.indexOf("Mac")!=-1) {
+        if (navigator.userAgent.match(/iPad/i) != null) {
+            document.write('<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="/assets/fonts/equity-b.css" type="text/css" />');
+            document.write('<link rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="/assets/fonts/equity-a.css" />');
+        } else {
+            document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css" />');
+        }
+    } else {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-a.css" />');
+    }
+  </script>
 
-  <link rel="stylesheet" href="/assets/css/fonts.css">
-
-  
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/1406-fonts.css">
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -44,51 +45,25 @@
  </script>
 
   <script src="/assets/js/app.js"></script>
+
 </head>
-
   <body>
-    <div id="cover_wrap" class="fadeInDown animated clearfix">
-  <header id="masthead" class="clearfix">
-    <hgroup class="intro">
-      <h1>
-        <a href="/" class="home">Enrique Marcos</a>
-        <span>
-          <!--a href="http://twitter.com/?" rel="me" target="_blank">@?</a-->
-        </span>
-      </h1>
-    </hgroup>
 
-    <nav id="cover">
-      <ul id="headernav" class="list-none">
-        <li>
-          <a href="/" title="Posts" class="posts selected"><span>Posts</span></a>
-        </li>
-        <li>
-          <a href="/repos/" title="Repos" class="about"><span>Repos</span></a>
-        </li>
-        <li>
-          <a href="/art/" title="Arte" class="photos "><span>Arte</span></a>
-        </li>
-        <li>
-          <a href="/about/" title="Acerca de" class="about"><span>Acerca de</span></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <div class="navigation">
+  <a href="/">Blog</a>
+  <a href="/art">Art</a>
+  <a href="/projects">Projects</a>
+  <a href="/about">About</a>
 </div>
-    <div id="site">
-      
-  <article id="post" class="is-post" role="main">
-
-    <header class="entry-title">
-      <h1>Simulador de Máquina de Turing</h1>
-    </header>
-
-    <div class="entrecot">
-      <small class="post-summary">En Java</small>
-    </div>
-
-    <p>Este simulador de <a href="http://en.wikipedia.org/wiki/Turing_machine">Máquina de Turing</a> surgió a raíz de las clases de Teoría<br />
+    <div class="content">
+      <div id="doc">
+        
+          <topic class="small">
+            Simulador de Máquina de Turing <span class="extra-topic"></span>
+            <div class="ddate">03.03.2012</div>
+          </topic>
+        
+        <p>Este simulador de <a href="http://en.wikipedia.org/wiki/Turing_machine">Máquina de Turing</a> surgió a raíz de las clases de Teoría
 de Autómatas y Lenguajes Formales. Solo es una MT básica, no es universal.</p>
 
 <p>Usa la terminal para ejecutarlo:</p>
@@ -108,13 +83,13 @@ q4, b -&gt; q4, b, L
 q4, <span class="c"># -&gt; q1, #, R</span>
 q1, <span class="c"># -&gt; qf, #, R</span></code></pre></figure>
 
-<p>La primera línea es la cadena de entrada que será almacenada en la cinta.<br />
-Las siguientes líneas indican las transiciones: los estados están etiquetados<br />
-empezando desde <code class="highlighter-rouge">q1</code> (el estado inicial). El estado final se etiqueta como <code class="highlighter-rouge">qf</code> y<br />
-el símbolo blanco como <code class="highlighter-rouge">#</code>.<br />
+<p>La primera línea es la cadena de entrada que será almacenada en la cinta.
+Las siguientes líneas indican las transiciones: los estados están etiquetados
+empezando desde <code class="highlighter-rouge">q1</code> (el estado inicial). El estado final se etiqueta como <code class="highlighter-rouge">qf</code> y
+el símbolo blanco como <code class="highlighter-rouge">#</code>.
 Con el ejemplo anterior la máquina de Turing aceptaría cadenas del tipo a<sup>n</sup>b<sup>n</sup>.</p>
 
-<p>Por defecto el simulador ejecuta todas las transiciones de una vez. Para ejecutarlo<br />
+<p>Por defecto el simulador ejecuta todas las transiciones de una vez. Para ejecutarlo
 paso a paso hay que añadir la opción <code class="highlighter-rouge">s</code>:</p>
 
 <figure class="highlight"><pre><code class="language-console" data-lang="console">$ java tm.Simulator input.txt s</code></pre></figure>
@@ -122,25 +97,16 @@ paso a paso hay que añadir la opción <code class="highlighter-rouge">s</code>:
 <p><a href="https://github.com/enrmarc/tms">Código fuente</a>.</p>
 
 
-    <small><time>Mar 03, 2012</time></small>
-  </article>
+      </div>
+    </div>
 
-      <footer id="darkfooter" class="clearfix">
-  <div class="content_wrap">
-    <div class="clearfix about-col">
-        <img src="/assets/img/160.jpg">
-        <p>
-          Trabajo como desarrollador y actualmente <strike>Ruby, Android</strike>
-          JavaScript paga mis facturas. Puedes <em>contactar</em>
-          conmigo mediante:
-          <a href="https://github.com/enrmarc">GitHub</a>&nbsp;&mdash;&nbsp;<a href="mailto:enrmarc@gmail.com">Correo</a>
-        </p>
-    </div>
-  </div>
-</footer>
-    </div>
+    <toc-topic>
+  <a class="toc" href="mailto:enrmarc@gmail.com">Contact</a>&nbsp;&nbsp;
+  <span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href="https://github.com/enrmarc">GitHub</a>&nbsp;&nbsp;
+  <!--span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href=""><span class="bottom-l">the</span> wut?</a-->
+  </toc-topic>
+<div class="paramedics"></div>
 
     
   </body>
-
 </html>

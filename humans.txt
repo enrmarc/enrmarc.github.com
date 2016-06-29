@@ -2,10 +2,6 @@
 
   Enrique Marcos
 
-# TECHNOLOGY COLOPHON
+# SOMETHING ELSE
 
-  Jekyll
-  GitHub site hosting
-  Git
-  Ruby
-  Atom
+  Go ahead HQ.

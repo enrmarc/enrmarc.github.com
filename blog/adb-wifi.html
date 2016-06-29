@@ -3,33 +3,34 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Enrique Marcos">
+  <meta name="description" content="TL;DR - Developer">
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="shortcut icon" href="/favicon.ico">
   
      <title>ADB sobre wifi | Enrique Marcos</title>
   
 
-  <meta name="description" content="TL;DR - Programador">
-  <meta name="author" content="Enrique Marcos">
-  <meta name="copyright" content="© Copyright 2012 to Present">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta http-equiv="cleartype" content="on">
 
-  <link type="text/plain" rel="author" href="/humans.txt">
-  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <!--[if (lt IE 9) & (!IEMobile)]>
-  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
+  <script type="text/javascript">
+    if (navigator.appVersion.indexOf("Win")!=-1) {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="fonts/equity-a.css" />');
+    } else if (navigator.appVersion.indexOf("Mac")!=-1) {
+        if (navigator.userAgent.match(/iPad/i) != null) {
+            document.write('<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="/assets/fonts/equity-b.css" type="text/css" />');
+            document.write('<link rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="/assets/fonts/equity-a.css" />');
+        } else {
+            document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css" />');
+        }
+    } else {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-a.css" />');
+    }
+  </script>
 
-  <link rel="stylesheet" href="/assets/css/fonts.css">
-
-  
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/1406-fonts.css">
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -44,83 +45,48 @@
  </script>
 
   <script src="/assets/js/app.js"></script>
+
 </head>
-
   <body>
-    <div id="cover_wrap" class="fadeInDown animated clearfix">
-  <header id="masthead" class="clearfix">
-    <hgroup class="intro">
-      <h1>
-        <a href="/" class="home">Enrique Marcos</a>
-        <span>
-          <!--a href="http://twitter.com/?" rel="me" target="_blank">@?</a-->
-        </span>
-      </h1>
-    </hgroup>
 
-    <nav id="cover">
-      <ul id="headernav" class="list-none">
-        <li>
-          <a href="/" title="Posts" class="posts selected"><span>Posts</span></a>
-        </li>
-        <li>
-          <a href="/repos/" title="Repos" class="about"><span>Repos</span></a>
-        </li>
-        <li>
-          <a href="/art/" title="Arte" class="photos "><span>Arte</span></a>
-        </li>
-        <li>
-          <a href="/about/" title="Acerca de" class="about"><span>Acerca de</span></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <div class="navigation">
+  <a href="/">Blog</a>
+  <a href="/art">Art</a>
+  <a href="/projects">Projects</a>
+  <a href="/about">About</a>
 </div>
-    <div id="site">
-      
-  <article id="post" class="is-post" role="main">
-
-    <header class="entry-title">
-      <h1>ADB sobre wifi</h1>
-    </header>
-
-    <div class="entrecot">
-      <small class="post-summary">Sin cables</small>
-    </div>
-
-    <p>Hay aplicaciones para esto, pero el proceso manual es<br />
-bastante simple.<br />
-Hay que conectar el dispositivo al ordenador mediante usb.<br />
+    <div class="content">
+      <div id="doc">
+        
+          <topic class="small">
+            ADB sobre wifi <span class="extra-topic"></span>
+            <div class="ddate">11.01.2013</div>
+          </topic>
+        
+        <p>Hay aplicaciones para esto, pero el proceso manual es
+bastante simple.
+Hay que conectar el dispositivo al ordenador mediante usb.
 Lo siguiente es establecer el puerto y hacer la conexión:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>adb tcpip 6666
 <span class="gp">$ </span>adb connect 192.168.0.101:6666</code></pre></figure>
 
-<p>La dirección ip es la que está actualmente asignada al<br />
+<p>La dirección ip es la que está actualmente asignada al
 dispositivo y el puerto puede ser cualquier otro.</p>
 
-<p>Listo. Ahora se puede desconectar el cable usb y seguir<br />
+<p>Listo. Ahora se puede desconectar el cable usb y seguir
 usando ADB.</p>
 
-    <small><time>Nov 01, 2013</time></small>
-  </article>
+      </div>
+    </div>
 
-      <footer id="darkfooter" class="clearfix">
-  <div class="content_wrap">
-    <div class="clearfix about-col">
-        <img src="/assets/img/160.jpg">
-        <p>
-          Trabajo como desarrollador y actualmente <strike>Ruby, Android</strike>
-          JavaScript paga mis facturas. Puedes <em>contactar</em>
-          conmigo mediante:
-          <a href="https://github.com/enrmarc">GitHub</a>&nbsp;&mdash;&nbsp;<a href="mailto:enrmarc@gmail.com">Correo</a>
-        </p>
-    </div>
-  </div>
-</footer>
-    </div>
+    <toc-topic>
+  <a class="toc" href="mailto:enrmarc@gmail.com">Contact</a>&nbsp;&nbsp;
+  <span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href="https://github.com/enrmarc">GitHub</a>&nbsp;&nbsp;
+  <!--span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href=""><span class="bottom-l">the</span> wut?</a-->
+  </toc-topic>
+<div class="paramedics"></div>
 
     
   </body>
-
 </html>

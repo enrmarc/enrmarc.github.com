@@ -4342,7 +4342,7 @@ time {
 /* custom */
 #post figure {
   margin: 1.5em 0;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 @media only screen and (min-width: 40.001em) {
@@ -4966,11 +4966,12 @@ small {
 
 #post figure figcaption {
   font-size: 0.85em;
-}
-
-#post figure {
   text-align: center;
 }
+
+/*#post figure {
+  text-align: center;
+}*/
 
 #post figure img, #postex figure img {
   width: 100%;

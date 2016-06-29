@@ -3,33 +3,34 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-     <title>Acerca de | Enrique Marcos</title>
-  
-
-  <meta name="description" content="TL;DR - Programador">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Enrique Marcos">
-  <meta name="copyright" content="© Copyright 2012 to Present">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta http-equiv="cleartype" content="on">
-
+  <meta name="description" content="TL;DR - Developer">
   <link type="text/plain" rel="author" href="/humans.txt">
-  <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
   <link rel="shortcut icon" href="/favicon.ico">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <!--[if (lt IE 9) & (!IEMobile)]>
-  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
-
-  <link rel="stylesheet" href="/assets/css/fonts.css">
-
   
+     <title>About | Enrique Marcos</title>
+  
+
+
+  <script type="text/javascript">
+    if (navigator.appVersion.indexOf("Win")!=-1) {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="fonts/equity-a.css" />');
+    } else if (navigator.appVersion.indexOf("Mac")!=-1) {
+        if (navigator.userAgent.match(/iPad/i) != null) {
+            document.write('<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="/assets/fonts/equity-b.css" type="text/css" />');
+            document.write('<link rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="/assets/fonts/equity-a.css" />');
+        } else {
+            document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css" />');
+        }
+    } else {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-a.css" />');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/1406-fonts.css">
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -44,53 +45,26 @@
  </script>
 
   <script src="/assets/js/app.js"></script>
+
 </head>
-
   <body>
-    <div id="cover_wrap" class="fadeInDown animated clearfix">
-  <header id="masthead" class="clearfix">
-    <hgroup class="intro">
-      <h1>
-        <a href="/" class="home">Enrique Marcos</a>
-        <span>
-          <!--a href="http://twitter.com/?" rel="me" target="_blank">@?</a-->
-        </span>
-      </h1>
-    </hgroup>
 
-    <nav id="cover">
-      <ul id="headernav" class="list-none">
-        <li>
-          <a href="/" title="Posts" class="posts selected"><span>Posts</span></a>
-        </li>
-        <li>
-          <a href="/repos/" title="Repos" class="about"><span>Repos</span></a>
-        </li>
-        <li>
-          <a href="/art/" title="Arte" class="photos "><span>Arte</span></a>
-        </li>
-        <li>
-          <a href="/about/" title="Acerca de" class="about"><span>Acerca de</span></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <div class="navigation">
+  <a href="/">Blog</a>
+  <a href="/art">Art</a>
+  <a href="/projects">Projects</a>
+  <a href="/about">About</a>
 </div>
-    <div id="site">
-      
-  <article id="post" class="is-post" role="main">
-
-    <header class="entry-title">
-      <h1>Acerca de</h1>
-    </header>
-
-    <div class="entrecot">
-      <small class="post-summary">TL;DR ・ Developer</small>
-    </div>
-
-    <blockquote>
+    <div class="content">
+      <div id="doc">
+        
+          <topic>
+            About <span class="extra-topic">TL;DR ・ Developer</span>
+          </topic>
+        
+        <div class="author-note">
   If you really want to hear about it, the first thing you’ll
-  probably want to know is where I was born, an what my lousy
+  probably want to know is where I was born, and what my lousy
   childhood was like, and how my parents were occupied and all
   before they had me, and all that David Copperfield kind of crap,
   but I don’t feel like going into it, if you want to know the
@@ -99,52 +73,45 @@
   apiece if I told anything pretty personal about them. They’re
   quite touchy about anything like that, especially my father.
   They’re nice and all —I’m not saying that—but they’re also touchy as hell.
-</blockquote>
-<p>—Holden Caulfield.</p>
+  <br />
+  &mdash;&nbsp;Holden Caulfield.
+</div>
 
-<p>Me llamo Enrique, trabajo como desarrollador y actualmente <strike>Android</strike> JavaScript paga mis facturas. Siempre que te interese puedes ponerte en contacto<br />
-conmigo enviándome un mensaje a <code class="highlighter-rouge">enrmarc@gmail.com</code>.<br />
-Si aún sigues leyendo esto, puede que te interese mi <a href="/data/resume.pdf">CV</a>.</p>
+<p>I’m Enrique, software developer based in Spain and currently <strike>Android</strike>, <strike>PHP</strike>, <strike>Ruby</strike>, JavaScript pays my bills. Ideally, this site should contain a collection of curated,
+beautifully written, inspiring and interesting posts, but in terms of writing,
+I’m just a <em>dilettante</em>.</p>
 
-<ul>
-  <li><a href="http://github.com/enrmarc">GitHub</a></li>
-  <li><a href="http://stackoverflow.com/users/434171/enrmarc">Stackoverflow</a></li>
-  <li><a href="http://coyotev.org">Coyotev</a></li>
-</ul>
+<p>Apart from working and writing about technical stuff, I spend my spare time
+reading, watching movies, drawing, running and improving my guitar skills. If you
+want to know about my professional career, check out my <a href="/data/resume.pdf">résumé</a>.</p>
 
-<h4 id="acerca-de-este-sitio">Acerca de este sitio</h4>
+<p>Whenever you are interested, you can send me a message to <code class="highlighter-rouge">enrmarc@gmail.com</code>.
+I use that handle in some other sites like <a href="http://github.com/enrmarc">GitHub</a>
+and <a href="http://stackoverflow.com/users/434171/enrique-marcos?tab=profile">Stackoverflow</a>.</p>
 
-<p><a href="http://jekyllrb.com/">Jekyll</a> —<br />
-<a href="http://github.com/">GitHub</a> —<br />
-<a href="https://atom.io/">Atom</a></p>
+<div class="subhead">About this site</div>
 
-<p>Lo uso como repositorio de cosas que suelo consultar: fragmentos de código,<br />
-archivos de configuración, proyectos, artículos, etc.<br />
-Los posts están bajo la licencia<br />
-<a href="http://creativecommons.org/licenses/by-nc/3.0/us/">Creative Commons</a>, pero<br />
-no te tomes muy en serio lo que digo.</p>
+<p><a href="http://jekyllrb.com/">Jekyll</a> —
+<a href="http://github.com/">GitHub</a> —
+<a href="https://atom.io">Atom</a></p>
+
+<p>Built using Jekyll, Git, Atom (sometimes Vim) and hosted on GitHub.
+The design is strongly inspired by <a href="http://docs.racket-lang.org/pollen/">Pollen</a>.
+Posts are under the <a href="http://creativecommons.org/licenses/by-nc/3.0/us/">Creative Commons</a>
+license.</p>
 
 <p><small>(λ)</small></p>
 
-    <small><time></time></small>
-  </article>
+      </div>
+    </div>
 
-      <footer id="darkfooter" class="clearfix">
-  <div class="content_wrap">
-    <div class="clearfix about-col">
-        <img src="/assets/img/160.jpg">
-        <p>
-          Trabajo como desarrollador y actualmente <strike>Ruby, Android</strike>
-          JavaScript paga mis facturas. Puedes <em>contactar</em>
-          conmigo mediante:
-          <a href="https://github.com/enrmarc">GitHub</a>&nbsp;&mdash;&nbsp;<a href="mailto:enrmarc@gmail.com">Correo</a>
-        </p>
-    </div>
-  </div>
-</footer>
-    </div>
+    <toc-topic>
+  <a class="toc" href="mailto:enrmarc@gmail.com">Contact</a>&nbsp;&nbsp;
+  <span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href="https://github.com/enrmarc">GitHub</a>&nbsp;&nbsp;
+  <!--span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href=""><span class="bottom-l">the</span> wut?</a-->
+  </toc-topic>
+<div class="paramedics"></div>
 
     
   </body>
-
 </html>
