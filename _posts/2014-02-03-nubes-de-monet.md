@@ -57,8 +57,10 @@ Iteramos sobre todos los píxeles que forman la región a pintar y
 les asignamos un color comprendido entre 0 y 255 con tonos de azul y rosa.
 Y el resultado:
 
+<p>
 {% capture image1 %}{{page.images[0]}}{% endcapture %}
-{% include picture.html pic=image1 klass="small" alt="Ruido Monet" caption="¿Una tele mal sintonizada?" %}
+{% include picture.html pic=image1 klass="small-pic" alt="Ruido Monet" caption="¿Una tele mal sintonizada?" %}
+</p>
 
 Como véis, no tiene aspecto de nube debido a que
 un generador de números aleatorios (como la función `Math.random`)
@@ -113,8 +115,10 @@ El código es casi el mismo. Lo único que varía es el
 uso de la función `noise` en lugar de `Math.random`.
 El resultado:
 
+<p>
 {% capture image2 %}{{page.images[1]}}{% endcapture %}
-{% include picture.html pic=image2 klass="small" alt="Nubes de monet" caption="Nubes de Monet, o casi" %}
+{% include picture.html pic=image2 klass="small-pic" alt="Nubes de monet" caption="Nubes de Monet, o casi" %}
+</p>
 
 Bueno, quizá no se parezcan demasiado a las nubes de los
 cuadros de Monet, pero esta es la primera vez que

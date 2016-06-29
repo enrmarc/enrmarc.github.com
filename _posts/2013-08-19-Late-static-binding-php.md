@@ -27,7 +27,7 @@ Singleton para poner de manifiesto el problema y su solución.
    todo convencido).
 </em>
 
-####Singleton
+<div class="subhead">Singleton</div>
 
 Es considerado un patrón *creacional* ya que interviene
 en la creación de objetos. Su utilidad consiste básicamente en garantizar
