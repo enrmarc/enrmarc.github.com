@@ -1,0 +1,19 @@
+# Site settings
+author: Enrique Marcos
+description: TL;DR - Desarrollador
+name: enrmarc
+url: "http://enrmarc.github.io"
+github_username:  enrmarc
+
+permalink: /blog/:title/
+# Build settings
+excerpt_separator: ""
+highlighter: rouge
+markdown: kramdown
+#kramdown:
+#  input: GFM
+
+defaults:
+  -
+    values:
+      is_post: true # automatically set is_post=true for all posts

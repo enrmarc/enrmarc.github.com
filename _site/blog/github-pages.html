@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Enrique Marcos">
+  <meta name="description" content="TL;DR - Developer">
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+     <title>GitHub Pages | Enrique Marcos</title>
+  
+
+
+  <script type="text/javascript">
+    if (navigator.appVersion.indexOf("Win")!=-1) {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="fonts/equity-a.css" />');
+    } else if (navigator.appVersion.indexOf("Mac")!=-1) {
+        if (navigator.userAgent.match(/iPad/i) != null) {
+            document.write('<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="/assets/fonts/equity-b.css" type="text/css" />');
+            document.write('<link rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="/assets/fonts/equity-a.css" />');
+        } else {
+            document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css" />');
+        }
+    } else {
+        document.write('<link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-a.css" />');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/equity-b.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/fonts/1406-fonts.css">
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35072506-1']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+ </script>
+
+  <script src="/assets/js/app.js"></script>
+
+</head>
+  <body>
+
+    <div class="navigation">
+  <a href="/">Blog</a>
+  <a href="/art">Art</a>
+  <a href="/projects">Projects</a>
+  <a href="/about">About</a>
+</div>
+    <div class="content">
+      <div id="doc">
+        
+          <topic class="small">
+            GitHub Pages <span class="extra-topic"></span>
+            <div class="ddate">07.14.2013</div>
+          </topic>
+        
+        <p>Lo que sigue es un recordatorio sobre cómo crear un sitio estático
+para un repositorio en <a href="https://github.com/">GitHub</a>.
+Suponiendo que ya se tiene alojado un repositorio y que está clonado,
+lo siguiente es crear la rama gh-pages :</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git checkout -b gh-pages</code></pre></figure>
+
+<p>Crear la página en esta rama y hacer un commit cuando
+todo esté listo (a menos que el contenido ya estuviera en
+la rama master, en ese caso hay que hacer <code class="highlighter-rouge">git merge master</code> para copiar
+la rama master en gh-pages).</p>
+
+<p>Al final hay que subirlo a GitHub:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git push origin gh-pages</code></pre></figure>
+
+<p>(Puede que haga falta la opción <code class="highlighter-rouge">-f</code> si ya se había creado la rama desde
+github.com).</p>
+
+<p><strong>Nota</strong>: a partir de la versión 1.7.2 de GitHub se puede utilizar
+<code class="highlighter-rouge">git checkout --orphan gh-pages</code></p>
+
+
+      </div>
+    </div>
+
+    <toc-topic>
+  <a class="toc" href="mailto:enrmarc@gmail.com">Contact</a>&nbsp;&nbsp;
+  <span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href="https://github.com/enrmarc">GitHub</a>&nbsp;&nbsp;
+  <!--span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href=""><span class="bottom-l">the</span> wut?</a-->
+  </toc-topic>
+<div class="paramedics"></div>
+
+    
+  </body>
+</html>

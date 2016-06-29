@@ -1,0 +1,31 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+
+    {% include navigation.html %}
+    <div class="content">
+      <div id="doc">
+        {% if page.date %}
+          <topic class="small">
+            {{ page.title }} <span class="extra-topic">{{ page.extra }}</span>
+            <div class="ddate">{{ page.date | date: "%m.%d.%Y" }}</div>
+          </topic>
+        {% else %}
+          <topic>
+            {{ page.title }} <span class="extra-topic">{{ page.extra }}</span>
+          </topic>
+        {% endif %}
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% for script in page.scripts %}
+      <script type="text/javascript" src="{{ script.src }}"></script>
+    {% endfor %}
+  </body>
+</html>
