@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     'Sick Boy: Para ser vegetariano, Rents, eres un tirador de lo más sanguinario.',
     'Enviad más paramédicos.',
     'In the pipe, 5 by 5.',
+    'Hold me now, I need assistance.'
   ];
   var el = document.querySelector('.paramedics');
   if (el) {
@@ -19,4 +20,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       el.classList.add('selected');
     }
   });
+
+  var h4 = document.getElementsByTagName('h4');
+  [].forEach.call(h4, function(el) {el.className = 'subhead';});
 });
