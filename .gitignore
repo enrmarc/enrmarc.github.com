@@ -2,3 +2,4 @@ _ignore/
 *.swp
 .DS_Store
 _site
+Gemfile.lock
