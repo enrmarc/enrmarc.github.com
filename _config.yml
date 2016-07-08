@@ -1,12 +1,13 @@
 
 # Site settings
 author: Enrique Marcos
-description: TL;DR - Desarrollador
+description: TL;DR - Developer
 name: enrmarc
 url: "http://enrmarc.github.io"
 github_username:  enrmarc
 
 permalink: /blog/:title/
+
 # Build settings
 excerpt_separator: ""
 highlighter: rouge
