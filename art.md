@@ -1,5 +1,5 @@
 ---
-layout   : post
+layout   : default
 title    : Arte
 permalink: /art/
 summary  : for(;;) draw()

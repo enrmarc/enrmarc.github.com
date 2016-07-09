@@ -1,5 +1,5 @@
 ---
-layout   : post
+layout   : default
 title    : About
 summary  : TL;DR ・ Developer
 extra    : TL;DR ・ Developer
