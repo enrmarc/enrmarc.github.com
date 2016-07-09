@@ -12,10 +12,11 @@ permalink: /blog/:title/
 #excerpt_separator: ""
 #highlighter: rouge
 markdown: kramdown
-#kramdown:
-#  input: GFM
+kramdown:
+  input: GFM
 
 #defaults:
 #  -
 #    values:
 #      is_post: true # automatically set is_post=true for all posts
+encoding: "utf-8"
