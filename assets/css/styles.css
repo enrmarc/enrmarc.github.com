@@ -646,8 +646,6 @@ ui:after {
     margin-right: 0.1rem;
 }
 
-
-
 a {
 text-decoration: none;
 color: inherit;
@@ -665,8 +663,6 @@ div.nav a:active div { background: #fdfdfd;
 }
 
 a:active { color: #777; }
-
-
 
 /*a:after {
     position: relative;
@@ -1494,5 +1490,6 @@ display:block;
 
 figcaption {
 text-align: center;
-font-size: 16px;
+font-size: 14px;
+padding: 5px;
 }

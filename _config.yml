@@ -2,14 +2,13 @@
 author: Enrique Marcos
 description: Developer
 name: enrmarc
-#url: "http://enrmarc.github.io"
-github_username:  enrmarc
-
+url: "http://enrmarc.github.io"
+github_username: enrmarc
 permalink: /blog/:title/
 
 # Build settings
 #excerpt_separator: ""
-#highlighter: rouge
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
