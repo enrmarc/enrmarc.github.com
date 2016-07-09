@@ -20,7 +20,7 @@ en el directorio `/etc/apache2/sites-available` :
 sudo touch /etc/apache2/sites-available/fichero-host
 {% endhighlight %}
 
-{% highlight apache %}
+{% highlight bash %}
 <VirtualHost *:80>
     ServerName nombreDelSitio
     DocumentRoot /home/enrmarc/tmp/app/webroot
