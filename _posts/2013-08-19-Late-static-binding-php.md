@@ -12,7 +12,7 @@ Si has programado un poco en PHP te habrás dado cuenta de que su lado
 orientado a objetos difiere un poco de lo que cabría esperar en cuanto
 al uso de variables y métodos estáticos. Afortunadamente, los chicos
 de PHP arreglaron muchas de esas inconsistencias en el lanzamiento de
-la versión [5.3][1] (hace ya más de 4 años).
+la [versión 5.3] (hace ya más de 4 años).
 
 Una de ellas era que las referencias estáticas dentro de una clase,
 como `self::` o `__CLASS__`, se resuelven empleando
@@ -21,7 +21,7 @@ Singleton para poner de manifiesto el problema y su solución.
 
 <em>
    Los ejemplos siguientes son solo ilustrativos, en general el uso
-   del patrón Singleton [está desaconsejado][2], entre otras cosas porque
+   del patrón Singleton [está desaconsejado], entre otras cosas porque
    incrementa el acoplamiento entre clases y hace difícil hacer
    tests de unidad (o al menos eso he leído, tampoco estoy del
    todo convencido).
@@ -137,5 +137,5 @@ De esta manera cuando instanciemos `MySQLManager` el valor de `static::$klass`
 se resuelve lo más tarde posible (tomando el valor definido en la subclase).
 
 
-[1]: http://php.net/releases/5_3_0.php
-[2]: http://www.ibm.com/developerworks/webservices/library/co-single/index.html
+[versión 5.3]: http://php.net/releases/5_3_0.php
+[está desaconsejado]: http://www.ibm.com/developerworks/webservices/library/co-single/index.html

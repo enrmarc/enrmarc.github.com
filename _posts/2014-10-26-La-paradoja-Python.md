@@ -8,10 +8,10 @@ permalink  : /blog/La-paradoja-Python
 disqus     : true
 ---
 
-*(Ésta es una traducción del original [The Python Paradox][original]
+*(Ésta es una traducción del original [The Python Paradox]
 de Paul Graham escrito en agosto de 2004).*
 
-En una [charla][talk] reciente dije algo que disgustó a mucha
+En una [charla] reciente dije algo que disgustó a mucha
 gente: que podías conseguir programadores más listos para trabajar
 en un proyecto Python que para trabajar en un proyecto Java.
 
@@ -55,14 +55,14 @@ la fealdad superficial de Perl no es el tipo de fealdad a la
 que me refiero. La verdadera fealdad no es una sintaxis horrenda,
 sino tener que desarrollar programas a partir de conceptos
 erróneos. Perl puede parecerse a una caricatura maldiciendo,
-pero hay [casos][cases] donde supera a Python conceptualmente.
-Bueno. Ambos lenguajes están en [constante evolución][moving].
+pero hay [casos] donde supera a Python conceptualmente.
+Bueno. Ambos lenguajes están en [constante evolución].
 Pero comparten, junto con Ruby (y Icon, y Joy y J y Lisp y
 Smalltalk) el hecho de que han sido creados y usados por
 gente que realmente se preocupa por la programación. Y esos
 suelen ser los únicos que tienden a programar bien.
 
-[original]: http://www.paulgraham.com/pypar.html
-[cases]: http://www.paulgraham.com/icad.html
-[moving]: http://www.paulgraham.com/hundred.html
-[talk]: http://www.paulgraham.com/gh.html
+[The Python Paradox]: http://www.paulgraham.com/pypar.html
+[casos]: http://www.paulgraham.com/icad.html
+[constante evolución]: http://www.paulgraham.com/hundred.html
+[charla]: http://www.paulgraham.com/gh.html
