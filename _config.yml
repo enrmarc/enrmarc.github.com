@@ -13,8 +13,4 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-#defaults:
-#  -
-#    values:
-#      is_post: true # automatically set is_post=true for all posts
 encoding: "utf-8"
