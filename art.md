@@ -1,6 +1,6 @@
 ---
 layout   : default
-title    : Arte
+title    : Art
 permalink: /art/
 summary  : for(;;) draw()
 scripts:
