@@ -78,7 +78,7 @@ Singleton funciona:
 ?>
 {% endhighlight %}
 
-####Late Static Binding
+#### Late Static Binding
 
 Pero esto empieza a complicarse si decides especializar el Singleton para dar soporte
 a múltiples bases de datos:

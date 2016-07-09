@@ -10,7 +10,7 @@ permalink: /blog/:title/
 #excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown
-kramdown:
-  input: GFM
+#kramdown:
+#  input: GFM
 
 encoding: "utf-8"

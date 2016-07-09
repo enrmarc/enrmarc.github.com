@@ -12,7 +12,7 @@ Combinar en un mismo proyecto Android, Axis2 y SOAP es como el <em>Inferno</em> 
 si lo que quieres es enviar objetos complejos. Solo escribo una de tantas formas de hacerlo.
 (Es necesario tener instalado y configurado [Axis2] e incluir la librería [Ksoap2] en el directorio `libs/` del proyecto Android ).
 
-####Servidor
+#### Servidor
 La manera más rápida de desplegar un servicio web en Axis2 es creando un
 [POJO] (Plain Old Java Object). El POJO utilizado para ilustrar el ejemplo
 representará a una persona.
@@ -83,7 +83,7 @@ objetos/
         └── Service.java
 {% endhighlight %}
 
-####Cliente
+#### Cliente
 El código Android utiliza la librería [Ksoap2] para poder gestionar los mensajes
 [SOAP]. Para que un objeto complejo pueda ser enviado en un mensaje SOAP debe
 implementar la interfaz `KvmSerializable`.

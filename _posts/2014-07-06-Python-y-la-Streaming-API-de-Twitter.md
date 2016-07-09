@@ -23,7 +23,7 @@ el grifo de Twitter: puedes descargar tweets en tiempo real.
 Se puede usar cualquier lenguaje para conectarte. Yo usaré
 Python, porque estoy fuertemente enganchado a él.
 
-####Autenticación
+#### Autenticación
 La API de Twitter es *gratis*, pero debes pedir permiso. Twitter usa [OAuth][oauth]
 para proveer acceso autorizado a su API.
 Lo primero que hay que hacer es obtener los *tokens de acceso* desde
@@ -73,7 +73,7 @@ def build_req(url, method, params):
 La petición se crea añadiendo las credenciales y firmándola
 con HMAC-SHA1.
 
-####Leyendo tweets
+#### Leyendo tweets
 La API devuelve una muestra aleatoria
 de tweets en formato JSON. Solo hay que imprimir tweet a tweet:
 
