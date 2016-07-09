@@ -2,7 +2,6 @@
 layout   : default
 title    : Projects
 permalink: /projects/
-summary  :
 ---
 
 <span class="equity-caps">Outside of</span> my day to day work I build things on my own. Below are a
