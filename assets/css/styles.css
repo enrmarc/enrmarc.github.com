@@ -1299,10 +1299,10 @@ max-width:1000px; min-width:520px; }
 
 /* own style */
 .highlight {
-    background: #fcfcfc;
+    /*background: #fcfcfc;*/
     padding: 0.5rem;
-    border-top: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
+    /*border-top: 1px solid #ebebeb;*/
+    /*border-bottom: 1px solid #ebebeb;*/
     margin-bottom: 1.2rem;
 }
 
