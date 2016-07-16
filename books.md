@@ -1,12 +1,11 @@
 ---
 layout   : default
-title    : Libros
+title    : Books
 permalink: /books/
 summary  : Fuck
 ---
 
-Una lista como cualquier otra.
-
+Some books I have read. A list like any other.
 
 #### *2016*
 
@@ -26,6 +25,6 @@ Una lista como cualquier otra.
 - Practical Object-Oriented Design in Ruby. *Sandi Metz*
 - Don't Make Me Think. *Steve Krug*
 
-#### *Anteriormente*
+#### *Previously*
 
-- Unos cuantos... y no voy a escribirlos todos.
+- A few ones... and I'm not writing them all here.
