@@ -25,11 +25,9 @@ I'm Enrique, software developer based in Spain and currently <strike>Android</st
 beautifully written, inspiring, and interesting posts, but in terms of writing I'm
 just a <em>dilettante</em>.
 
-Apart from working and writing about technical stuff, I spend my spare time
+Apart from working and writing, I spend my spare time
 reading, watching movies, drawing, running, and improving my guitar skills. If you
-want to know about my professional career, check out my [résumé](/data/resume.pdf).
-
-Whenever you are interested, just send me a message to [`enrmarc@gmail.com`](mailto:enrmarc@gmail.com).
+want to know about my professional career, check out my [résumé](/data/resume.pdf). Whenever you are interested, just send me a message to [`enrmarc@gmail.com`](mailto:enrmarc@gmail.com).
 I use that handle in some other sites like [GitHub](http://github.com/enrmarc)
 and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile).
 

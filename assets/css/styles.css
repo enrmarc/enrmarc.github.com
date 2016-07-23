@@ -52,6 +52,7 @@ html {
 }
 
 body {
+font-size: 22px;
 padding: 0rem 0em 0rem 0em;
 
 margin-left:auto;
@@ -91,7 +92,8 @@ margin-right: 2.5rem;
 
 @media all and (max-width:520px) {
     body > * {
-    margin: 2rem;
+    /*margin: 2rem;*/
+    margin: 1.5rem;
     margin-top:0;}
 
     .navigation {
@@ -874,7 +876,7 @@ font-style: normal; font-weight: normal; font-size: 90%;
 
 code {
 font-family: Courier, monospace;
-font-size: 95%;
+/*font-size: 95%;*/
 -moz-hyphens: none;
 -webkit-hyphens: none;
 -o-hyphens: none;

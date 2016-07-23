@@ -9,7 +9,7 @@
         {% if page.date %}
           <topic class="small">
             {{ page.title }} <span class="extra-topic">{{ page.extra }}</span>
-            <div class="ddate">{{ page.date | date: "%m.%d.%Y" }}</div>
+            <div class="ddate">{{ page.date | date: "%d.%m.%Y" }}</div>
           </topic>
         {% else %}
           <topic>

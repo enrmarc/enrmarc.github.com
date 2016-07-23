@@ -11,11 +11,11 @@ summary: "Noto un desespero enfermizo en tu risa"
     <li>
       {% if post.ext_url %}
         <a href="{{ post.ext_url }}" class="xref">
-          {{ post.title }} <span class="ddate">{{ post.date | date: "%m.%d.%Y" }}</span>
+          {{ post.title }} <span class="ddate">{{ post.date | date: "%d.%m.%Y" }}</span>
         </a>
       {% else %}
         <a href="{{ post.url }}" class="xref">
-          {{ post.title }} <span class="ddate">{{ post.date | date: "%m.%d.%Y" }}</span>
+          {{ post.title }} <span class="ddate">{{ post.date | date: "%d.%m.%Y" }}</span>
         </a>
       {% endif %}
     </li>
