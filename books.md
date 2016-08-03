@@ -9,6 +9,7 @@ Some books I have read. A list like any other.
 
 #### *2016*
 
+- Trópico de Cáncer. *Henry Miller*
 - The Mythical Man-Month. *Frederick Brooks*
 - A Developer's Guide to the Semantic Web. *Liyang Yu* (30%)
 - Probabilistic Graphical Models. Principles and Techniques. *Daphne Koller & Nir Friedman* (35%)
