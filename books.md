@@ -9,6 +9,8 @@ Some books I have read. A list like any other.
 
 #### *2016*
 
+- Stories of Your life. *Ted Chiang*
+- Rayuela. *Julio Cortázar*
 - Trópico de Cáncer. *Henry Miller*
 - The Mythical Man-Month. *Frederick Brooks*
 - A Developer's Guide to the Semantic Web. *Liyang Yu* (30%)
