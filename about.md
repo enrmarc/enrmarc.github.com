@@ -21,7 +21,8 @@ permalink: /about/
   &mdash;&nbsp;Holden Caulfield.
 </div>
 
-I'm Enrique, software developer based in Spain and currently <strike>Java (Android)</strike>, <strike>PHP</strike>, <strike>Ruby</strike>, JavaScript pays my bills. Ideally, this site should contain a collection of curated,
+I'm Enrique, software developer based in <strike>Spain</strike>, Germany,
+and currently <strike>Java (Android)</strike>, <strike>PHP</strike>, <strike>Ruby</strike>, JavaScript pays my bills. Ideally, this site should contain a collection of curated,
 beautifully written, inspiring, and interesting posts, but in terms of writing I'm
 just a <em>dilettante</em>.
 
