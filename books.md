@@ -9,6 +9,7 @@ Some books I have read. A list like any other.
 
 #### *2016*
 
+- The Stranger. *Albert Camus*
 - Stories of Your life. *Ted Chiang*
 - Rayuela. *Julio Cortázar*
 - Trópico de Cáncer. *Henry Miller*
