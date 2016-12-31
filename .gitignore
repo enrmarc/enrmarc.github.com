@@ -3,3 +3,4 @@ _ignore/
 .DS_Store
 _site
 Gemfile.lock
+.sass-cache/

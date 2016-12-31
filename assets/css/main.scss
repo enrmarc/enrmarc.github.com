@@ -1,0 +1,28 @@
+---
+---
+@charset "utf-8";
+
+$base-font-family: 'Palatino', Georgia, Times, 'Times New Roman', serif;
+$base-font-size:   12pt;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$mono-font-family: 'Ubuntu Mono', 'Source Code Pro', Menlo, monospace;
+
+$text-color:       hsl(0, 0%, 25%);
+
+$alt-color:        black;//hsl(0, 70%, 46%);
+$alt-color-darker: black;//darken($alt-color, 6%);
+
+$article-bg-color: white; //hsl(35, 36%, 95%);
+$background-color: white; //darken($article-bg-color, 6%);
+$bg-color-darker:  darken($article-bg-color, 15%);
+$alt-text-color:   darken($article-bg-color, 60%);
+
+$subdued-border:   rgba($bg-color-darker, 0.5);
+
+// Import partials from `sass_dir` (_config.yml)
+@import
+  "base",
+  "syntax-highlighting"
+;

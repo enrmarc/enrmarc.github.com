@@ -1,6 +1,25 @@
-<toc-topic>
-  <a class="toc" href="mailto:enrmarc@gmail.com">Contact</a>&nbsp;&nbsp;
-  <span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href="https://github.com/enrmarc">GitHub</a>&nbsp;&nbsp;
-  <!--span class="bottom-p">·</span>&nbsp;&nbsp;<a class="toc" href=""><span class="bottom-l">the</span> wut?</a-->
-  </toc-topic>
-<div class="paramedics"></div>
+<footer>
+  <div class="container">
+    <div class="row biography">
+      <div class="col-sm-4 offset-sm-2">
+        <h2>who am i</h2>
+        <p>{{ site.biography }}</p>
+      </div>
+
+      <div class="col-sm-4">
+        <h2>what is this</h2>
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
+    {% if site.colophon %}
+      <div class="row copyright">
+        <center>{{ site.colophon }}</center>
+      </div>
+    {% endif %}
+
+    <div class="row">
+      <center><div class="paramedics"></div></center>
+    </div>
+  </div>
+</footer>

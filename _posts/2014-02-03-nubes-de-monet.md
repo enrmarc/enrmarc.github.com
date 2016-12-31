@@ -59,7 +59,7 @@ Y el resultado:
 
 <p>
 {% capture image1 %}{{page.images[0]}}{% endcapture %}
-{% include picture.html pic=image1 klass="small-pic" alt="Ruido Monet" caption="¿Una tele mal sintonizada?" %}
+{% include picture.html wwidth="360" pic=image1 klass="small-pic" alt="Ruido Monet" caption="¿Una tele mal sintonizada?" %}
 </p>
 
 Como véis, no tiene aspecto de nube debido a que

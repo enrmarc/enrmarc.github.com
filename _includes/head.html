@@ -1,22 +1,39 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"     content="width=device-width, initial-scale=1.0">
-  <meta name="author"       content="Enrique Marcos">
-  <meta name="description"  content="TL;DR - Developer">
-  <link type="text/plain"   rel="author" href="/humans.txt">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="hsl(35, 36%, 95%)">
+  <title>{{ site.author }} | {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-  {% if page.title %}
-     <title>{{page.title}} | {{site.author}}</title>
-  {% else %}
-     <title>{{site.author}}</title>
-  {% endif %}
+  {% capture description %}
+    {% if page.description %}
+      {{ page.description }}
+    {% elsif page.title %}
+      {{ content | raw_content }}
+    {% else %}
+      {{ site.description }}
+    {% endif %}
+  {% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}" />
 
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/styles.css">
-  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/fonts.css">
+  {% capture keywords %}
+    {% if page.keywords %}
+      {{ page.keywords }}
+    {% elsif page.title %}
+      {{""}}
+    {% else %}
+      {{ site.keywords }}
+    {% endif %}
+  {% endcapture %}
+  <meta name="keywords" content="{{ keywords | strip_html | condense_spaces }}" />
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+  {% include math-ajax.html %}
   {% include google-analytics.html %}
   <script src="/assets/js/app.js"></script>
-
 </head>
