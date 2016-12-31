@@ -3,7 +3,7 @@ layout   : post
 title    : Late static binding en PHP
 summary  : Resolver referencias estáticas en tiempo de ejecución
 tags     : PHP late-static-binding
-category : note
+category : software
 permalink: /blog/Late-static-binding-php
 disqus   : true
 ---

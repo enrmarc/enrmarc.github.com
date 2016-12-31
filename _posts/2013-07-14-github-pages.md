@@ -3,7 +3,7 @@ layout   : post
 title    : GitHub Pages
 summary  : Sitio estático para un repositorio de GitHub
 tags     : github github-pages
-category : note
+category : software
 permalink: /blog/github-pages
 disqus   : true
 ---

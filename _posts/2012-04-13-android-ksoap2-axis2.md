@@ -3,7 +3,7 @@ layout    : post
 title     : Android, Axis2 y Ksoap2
 summary   : Enviar y recibir objetos complejos
 tags      : Axis2 Android Ksoap2 WebServices Java Http
-category  : note
+category  : software
 permalink : /blog/android-ksoap2-axis2
 disqus    : true
 ---

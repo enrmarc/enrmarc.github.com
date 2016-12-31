@@ -3,7 +3,7 @@ layout   : post
 title    : Instalar Scheme en Ubuntu
 summary  : Scheme en Ubuntu (10.04)
 tags     : Ubuntu Scheme Racket
-category : note
+category : software
 permalink: /blog/instalar-scheme-en-ubuntu
 disqus   : true
 ---

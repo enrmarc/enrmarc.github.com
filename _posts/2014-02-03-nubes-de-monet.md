@@ -3,7 +3,7 @@ layout   : post
 title    : Nubes de Monet usando el Ruido Perlin
 summary  : Generación de texturas de nubes
 tags     : JavaScript Processing.js nubes monet perlin
-category : note
+category : software
 permalink: /blog/nubes-de-monet
 disqus   : true
 images:

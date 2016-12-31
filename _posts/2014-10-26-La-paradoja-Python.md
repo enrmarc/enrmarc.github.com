@@ -3,7 +3,7 @@ layout     : post
 title      : La paradoja Python
 summary    : Traducción al español de The Python Paradox de Paul Graham
 tags       : paul graham python traduccion
-category   : note
+category   : software
 permalink  : /blog/La-paradoja-Python
 disqus     : true
 ---

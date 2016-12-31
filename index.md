@@ -17,8 +17,7 @@ title : Blog
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-8 offset-md-1">
-      {% assign categories = site.categories | sort %}
-      {% for category in categories %}
+      {% for category in site.categories %}
         <h3>On {{ category | first }}</h3>
         <p>
           {% for posts in category %}

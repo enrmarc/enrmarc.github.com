@@ -3,7 +3,7 @@ layout   : post
 title    : Depurar SQLite en Android sin ser root
 summary  : Unos scripts
 tags     : Android SQLite debugging root
-category : note
+category : software
 permalink: /blog/depurar-sqlite-android-sin-ser-root
 disqus   : true
 ---

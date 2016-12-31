@@ -3,7 +3,7 @@ layout      : post
 title       : The SICP challenge
 summary     : Read the book
 tags        : SICP books
-category    : note
+category    : software
 permalink   : /blog/the-sicp-challenge
 disqus      : false
 images      :

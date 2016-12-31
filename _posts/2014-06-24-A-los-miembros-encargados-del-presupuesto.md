@@ -3,7 +3,7 @@ layout     : post
 title      : A los miembros del Consejo de presupuestos
 summary    : Traducción de To the members of the Budget Council de E. W. Dijkstra
 tags       : traducción Edsger-Dijkstra
-category   : note
+category   : software
 permalink  : /blog/A-los-miembros-encargados-del-presupuesto
 scheme-code: "#000"
 disqus     : true
