@@ -3,7 +3,7 @@ layout     : post
 title      : Elige programar
 summary    : Just kidding
 tags       : Trainspotting
-category   : note
+category   : notes
 permalink  : /blog/elige-programar
 scheme-code: "#000"
 disqus     : true

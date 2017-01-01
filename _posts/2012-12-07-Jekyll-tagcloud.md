@@ -3,7 +3,7 @@ layout   : post
 title    : Jekyll-tagcloud
 summary  : Tag cloud for Jekyll without plugins.
 tags     : Jekyll proyectos JavaScript Html tagcloud
-category : project
+category : projects
 permalink: /blog/Jekyll-tagcloud
 disqus   : true
 ---

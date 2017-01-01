@@ -1,16 +1,24 @@
-# Site settings
-author: Enrique Marcos
-description: Developer
-name: enrmarc
-url: "http://enrmarc.github.io"
-github_username: enrmarc
-permalink: /blog/:title/
-
-# Build settings
-#excerpt_separator: ""
+author:      Enrique Marcos
+name:        enrmarc
+url:         "http://enrmarc.github.io"
+biography:   "I am a Software Developer currently working on my M.Sc. Thesis (Learning Analytics)
+             in the <a href='https://www.uni-due.de'>Universität Duisburg-Essen</a>.
+             If you are interested, here is my <a href='/data/resume.pdf'>Résumé</a>."
+keywords:    "Software Engineering, Mathematics, Programming, Machine-Learning, Artificial Intelligence"
+description: "This is a blog about software, some mathematics, and the occasional . Not necessarily in that order."
+colophon:    "© 2012 — 2017 by Enrique Marcos.<br>
+             Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>
+             Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>
+             This site is hosted at <a href='https://pages.github.com/''>Github Pages</a>
+             and created with <a href='http://jekyllrb.com/''>Jekyll</a>."
 highlighter: rouge
-markdown: kramdown
-#kramdown:
-#  input: GFM
+encoding:    "utf-8"
+baseurl:     ""
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir:  assets/css
 
-encoding: "utf-8"
+#permalink: /blog/:year/:month/:day/:title/
+#gems:
+#- jekyll-sitemap

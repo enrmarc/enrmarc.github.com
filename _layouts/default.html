@@ -2,24 +2,8 @@
 <html>
   {% include head.html %}
   <body>
-
     {% include navigation.html %}
-    <div class="content">
-      <div id="doc">
-        {% if page.date %}
-          <topic class="small">
-            {{ page.title }} <span class="extra-topic">{{ page.extra }}</span>
-            <div class="ddate">{{ page.date | date: "%d.%m.%Y" }}</div>
-          </topic>
-        {% else %}
-          <topic>
-            {{ page.title }} <span class="extra-topic">{{ page.extra }}</span>
-          </topic>
-        {% endif %}
-        {{ content }}
-      </div>
-    </div>
-
+    {{ content }}
     {% include footer.html %}
 
     {% for script in page.scripts %}
@@ -27,3 +11,4 @@
     {% endfor %}
   </body>
 </html>
+

@@ -3,7 +3,7 @@ layout   : post
 title    : Random post in Jekyll
 summary  : How to get a random post using Jekyll
 tags     : Jekyll proyectos JavaScript Html
-category : project
+category : projects
 permalink: /blog/random-post-in-jekyll
 scripts  :
   - src  : /assets/js/jquery.min.js

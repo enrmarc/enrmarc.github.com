@@ -2,7 +2,7 @@
 layout      : post
 title       : Starting again
 summary     : Starting again
-category    : note
+category    : others
 permalink   : /blog/starting-again
 disqus      : false
 ---

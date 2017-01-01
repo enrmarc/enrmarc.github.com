@@ -1,24 +1,37 @@
 ---
-layout : default
-title  : Blog
-summary: "Noto un desespero enfermizo en tu risa"
+layout: default
+title : Blog
 ---
+<div class="container main">
+  <div class="row">
+    <header>
+      <div>
+        <center><h1>{{ site.title }}</h1></center>
+      </div>
+      <center>
+        <span class="big-ornament">{% include ornament.html %}</span>
+      </center>
+    </header>
+  </div>
 
-<div style="height:1em"></div>
-<ul class="index children">
-
-  {% for post in site.posts %}
-    <li>
-      {% if post.ext_url %}
-        <a href="{{ post.ext_url }}" class="xref">
-          {{ post.title }} <span class="ddate">{{ post.date | date: "%d.%m.%Y" }}</span>
-        </a>
-      {% else %}
-        <a href="{{ post.url }}" class="xref">
-          {{ post.title }} <span class="ddate">{{ post.date | date: "%d.%m.%Y" }}</span>
-        </a>
-      {% endif %}
-    </li>
-
-  {% endfor %}
-</ul>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-8 offset-md-1">
+      {% for category in site.categories %}
+        <h3>On {{ category | first }}</h3>
+        <p>
+          {% for posts in category %}
+            {% for post in posts %}
+                {% if post.ext_url %}
+                  <a href="{{ post.ext_url }}">{{ post.title }}</a>
+                {% else %}
+                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                {% endif %}
+                {% if forloop.last == false %},&nbsp;&nbsp;{% endif %}
+            {% endfor %}
+          {% endfor %}
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
