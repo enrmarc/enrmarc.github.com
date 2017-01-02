@@ -134,9 +134,6 @@ no `new` operator, no `prototype` references, no pseudopolymorphism
 (`Glyp.call` and `Glyph.prototype.draw`); all we got are objects and delegate
 calls to the `this` object.
 
-This isn't rea
-If you really want to know more you should read the YDKJS book series
-
 [You Don't Know JS]: https://github.com/getify/You-Dont-Know-JS
 [JavaScript: The Definitive Guide]: https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527
 [JavaScript: The Good Parts]: https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/
