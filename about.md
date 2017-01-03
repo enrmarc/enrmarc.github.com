@@ -34,7 +34,6 @@ If you want to contact me just send me a message to
 [GitHub](http://github.com/enrmarc)
 and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile).
 
-<br>
 ### About this site
 
 [Jekyll](http://jekyllrb.com/) &mdash;
