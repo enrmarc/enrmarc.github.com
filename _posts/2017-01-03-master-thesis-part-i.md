@@ -21,7 +21,7 @@ Couldn't make it. And the reasons?
 > There are no reasons. Who needs reasons when you've got...
 
 Anyway, since I *have to* write for real, it could be a good idea
-to upload some of my work here and kill two birds with one shot (or is it
-a stone?). I'll try to write something every now and then.
+to upload some of my work here and kill two birds with one ~~shot~~ stone.
+I'll try to write something every now and then.
 
 [started again]: http://enrmarc.github.io/blog/starting-again
