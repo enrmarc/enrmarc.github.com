@@ -312,3 +312,44 @@ h1 {
     font-size: smaller;
   }
 }
+
+.index-date {
+  font-family: "Droid Sans Mono", mono;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+.index-posts {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.index-year {
+  padding-bottom: 16px;
+}
+
+.post-category {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bolder;
+
+  &.post-category-others {
+    color: #1f00b7;
+  }
+
+  &.post-category-software {
+    color: #03a598;
+  }
+
+  &.post-category-traveling {
+    color: #9500b7;
+  }
+
+  &.post-category-notes {
+    color: #b7005a;
+  }
+
+  &.post-category-projects {
+    color: black;
+  }
+}
