@@ -8,7 +8,7 @@ permalink   : /blog/the-difference-between-mathematics-and-engineering
 disqus      : false
 ---
 
-<div class="author-note">
+>
   Numbers that fool the Fermat test are called Carmichael numbers,
   and little is known about them other than that they are extremely rare.
   There are 255 Carmichael numbers below 100,000,000.
@@ -20,4 +20,3 @@ disqus      : false
   Considering an algorithm to be inadequate for the first reason
   but not for the second illustrates the difference between mathematics and engineering.<br>
   &mdash;&nbsp;Structure and Interpretation of Computer Programs.
-</div>
