@@ -1,11 +1,15 @@
 author:      Enrique Marcos
 name:        enrmarc
 url:         "http://enrmarc.github.io"
-biography:   "I am a Software Developer currently working on my M.Sc. Thesis (Learning Analytics)
+biography:   "I am a Software Developer. My blog isn't read by millions of people, I haven't
+             written a tool used by thousands neither have I worked for the Big 4.
+             Although, I like what I do.
+             Currently working on my M.Sc. Thesis (NLP and Learning Analytics)
              in the <a href='https://www.uni-due.de'>Universität Duisburg-Essen</a>.
-             If you are interested, here is my <a href='/data/resume.pdf'>Résumé</a>."
+             More information on my <a href='/data/resume.pdf'>Résumé</a>."
 keywords:    "Software Engineering, Mathematics, Programming, Machine-Learning, Artificial Intelligence"
-description: "This is a blog about software, some mathematics, and the occasional . Not necessarily in that order."
+description: "This is a blog about software, personal projects, and related stuff.
+             Sometimes creative, but not necessarily."
 colophon:    "© 2012 — 2017 by Enrique Marcos.<br>
              Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>
              Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>

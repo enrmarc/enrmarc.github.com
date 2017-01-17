@@ -28,11 +28,12 @@ beautifully written, inspiring notes, but in terms of writing I'm
 just a <em>dilettante</em>.
 
 I usually spend my spare time reading, watching movies, visiting cities,
-running, and working on small personal projects ([check them!](/projects)).
+running, and working on small [personal projects](/projects).
 If you want to contact me just send me a message to
 [enrmarc@gmail.com](mailto:enrmarc@gmail.com). I also use that handle in sites like
 [GitHub](http://github.com/enrmarc)
-and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile).
+and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile). More info
+on my [Résumé](http://enrmarc.github.io/data/resume.pdf).
 
 ### About this site
 
