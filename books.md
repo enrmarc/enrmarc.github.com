@@ -7,6 +7,10 @@ summary  : Fuck
 
 Some books I have read. A list like any other.
 
+#### *2017*
+
+- The Little Prince. *Antoine de Saint-Exupéry*
+
 #### *2016*
 
 - Animal Farm. *George Orwell*
