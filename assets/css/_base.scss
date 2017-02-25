@@ -290,7 +290,7 @@ table {
 // Override
 @media (min-width: 1200px) {
   .container {
-      width: 960px;//1140px;
+      /*width: 960px*/;//1140px;
       max-width: 100%;
   }
 }
@@ -352,4 +352,8 @@ h1 {
   &.post-category-projects {
     color: black;
   }
+}
+
+.top {
+  padding-top: 45px;
 }
