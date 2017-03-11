@@ -9,6 +9,7 @@ Some books I have read. A list like any other.
 
 #### *2017*
 
+- The Picture of Dorian Gray. *Oscar Wilde*
 - The Little Prince. *Antoine de Saint-Exupéry*
 
 #### *2016*
