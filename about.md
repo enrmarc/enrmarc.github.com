@@ -20,7 +20,7 @@ permalink: /about/
   <br>
   &mdash;&nbsp;Holden Caulfield. -->
 
-I'm Enrique, Software Developer based in <strike>Spain</strike>, Germany,
+I'm Enrique, software developer based in <strike>Spain</strike>, Germany,
 and currently <strike>Java</strike>, <strike>PHP</strike>, <strike>Python</strike>,
 JavaScript pays my bills.
 Ideally, this site should contain a collection of interesting,
