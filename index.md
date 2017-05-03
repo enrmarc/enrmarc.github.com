@@ -8,9 +8,7 @@ title : Blog
       <div>
         <center><h1>{{ site.title }}</h1></center>
       </div>
-      <center>
-        <span class="big-ornament">{% include ornament.html %}</span>
-      </center>
+      <!--center><span class="big-ornament">{% include ornament.html %}</span></center-->
     </header>
   </div>
 
@@ -22,7 +20,7 @@ title : Blog
         {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
         {% if forloop.first %}
-          <h1 id="{{ this_year }}-ref">{{this_year}}</h1>
+          <h3 id="{{ this_year }}-ref">{{this_year}}</h3>
           <ul class="index-year">
         {% endif %}
 
@@ -44,7 +42,7 @@ title : Blog
         {% else %}
           {% if this_year != next_year %}
             </ul>
-            <h1 id="{{ next_year }}-ref">{{next_year}}</h1>
+            <h3 id="{{ next_year }}-ref">{{next_year}}</h3>
             <ul class="index-year">
           {% endif %}
         {% endif %}
@@ -77,6 +75,6 @@ title : Blog
       {% endfor %}
     </div>
     {% endcomment %}
-    
+
   </div>
 </div>

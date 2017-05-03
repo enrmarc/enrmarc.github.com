@@ -10,7 +10,7 @@ $base-line-height: 1.5;
 $mono-font-family: 'Ubuntu Mono', 'Source Code Pro', Menlo, monospace;
 
 $text-color:       black; //hsl(0, 0%, 25%);
-$inline-code-color:darkblue;
+$inline-code-color:black; //darkblue;
 
 $alt-color:        black;//hsl(0, 70%, 46%);
 $alt-color-darker: black;//darken($alt-color, 6%);

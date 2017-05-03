@@ -6,7 +6,7 @@ extra    : TL;DR ・ Developer
 permalink: /about/
 ---
 
->
+<!-- >
   If you really want to hear about it, the first thing you’ll
   probably want to know is where I was born, and what my lousy
   childhood was like, and how my parents were occupied and all
@@ -18,20 +18,19 @@ permalink: /about/
   quite touchy about anything like that, especially my father.
   They’re nice and all —I’m not saying that—but they’re also touchy as hell.
   <br>
-  &mdash;&nbsp;Holden Caulfield.
+  &mdash;&nbsp;Holden Caulfield. -->
 
 I'm Enrique, Software Developer based in <strike>Spain</strike>, Germany,
-and currently <strike>Java (Android)</strike>, <strike>PHP</strike>, <strike>Ruby</strike>,
+and currently <strike>Java</strike>, <strike>PHP</strike>, <strike>Python</strike>,
 JavaScript pays my bills.
 Ideally, this site should contain a collection of interesting,
 beautifully written, inspiring notes, but in terms of writing I'm
 just a <em>dilettante</em>.
 
 I usually spend my spare time reading, watching movies, visiting cities,
-running, and working on small [personal projects](/projects).
-If you want to contact me just send me a message to
-[enrmarc@gmail.com](mailto:enrmarc@gmail.com). I also use that handle in sites like
-[GitHub](http://github.com/enrmarc)
+go running, and working on [personal projects](/projects).
+If you want to contact me just send me a message to `enrmarc@gmail.com`.
+I also use that handle in sites like [GitHub](http://github.com/enrmarc)
 and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile). More info
 on my [Résumé](http://enrmarc.github.io/data/resume.pdf).
 

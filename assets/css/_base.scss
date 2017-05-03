@@ -64,16 +64,16 @@ body {
   }
 
   article > :first-child {
-    &:first-letter {
-      color: $alt-color-darker;
-      display: inline-block;
-      float: left;
-      font-size: 3.2em;
-      line-height: 0.7em;
-      font-style: normal;
-      font-weight: bold;
-      margin: 0.12em 0.15em 0 -0.01em;
-    }
+    // &:first-letter {
+    //   color: $alt-color-darker;
+    //   display: inline-block;
+    //   float: left;
+    //   font-size: 3.2em;
+    //   line-height: 0.7em;
+    //   font-style: normal;
+    //   font-weight: bold;
+    //   margin: 0.12em 0.15em 0 -0.01em;
+    // }
 
     min-height: 2em + $base-line-height;
   }
@@ -122,8 +122,8 @@ article {
   }
 
   pre {
-    padding: 1em;
-    border-radius: 5px;
+    //padding: 1em;
+    //border-radius: 5px;
     white-space: pre-wrap;
   }
 
@@ -270,7 +270,8 @@ table {
 // Yyy...
 
 .navigation-content {
-  float: right;
+  //float: right;
+  float: left;
   padding-top: 16px;
 
   a {
@@ -302,6 +303,8 @@ h1 {
 .paramedics {
   padding-top: 16px;
   font-size: smaller;
+  //font-size: 12px;
+  //font-style: italic;
 }
 
 .centered-figure {
@@ -356,4 +359,32 @@ h1 {
 
 .top {
   padding-top: 45px;
+}
+
+body {
+  h3 {
+    letter-spacing: 0;
+  }
+}
+
+.index-year {
+  a {
+    font-weight: normal;
+  }
+
+  margin-bottom: 0.8rem;
+  padding-bottom: 0;
+}
+.navigation-content {
+  a {
+    //font-weight: normal;
+  }
+}
+
+.biography {
+  font-size: 15px;
+}
+
+.copyright {
+  font-size: 13px;
 }
