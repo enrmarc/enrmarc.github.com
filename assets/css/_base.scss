@@ -20,6 +20,7 @@ body {
     text-decoration: none;
     font-weight: bolder;
     border-bottom: dotted 1px black;
+    font-size: 100%;
   }
 
   a:hover {
@@ -387,4 +388,15 @@ body {
 
 .copyright {
   font-size: 13px;
+}
+
+.main {
+  a {
+    font-size: 85%;
+  }
+  .index-year {
+    a {
+      font-size: 100%;
+    }
+  }
 }
