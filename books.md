@@ -5,10 +5,11 @@ permalink: /books/
 summary  : Fuck
 ---
 
-Some books I have read. A list like any other.
+Some books I have read.
 
 #### *2017*
 
+- The Everything Learning German book. *Edward Swick*
 - The Picture of Dorian Gray. *Oscar Wilde*
 - The Little Prince. *Antoine de Saint-Exupéry*
 
@@ -39,4 +40,4 @@ Some books I have read. A list like any other.
 
 #### *Previously*
 
-- A few ones... and I'm not writing them all here.
+- A few ones...
