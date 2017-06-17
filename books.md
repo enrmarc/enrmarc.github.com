@@ -9,6 +9,7 @@ Some books I have read.
 
 #### *2017*
 
+- Ficciones. *Jorge Luis Borges*
 - The Everything Learning German book. *Edward Swick*
 - The Picture of Dorian Gray. *Oscar Wilde*
 - The Little Prince. *Antoine de Saint-Exupéry*
