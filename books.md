@@ -9,6 +9,8 @@ Some books I have read.
 
 #### *2017*
 
+- Introduction to Information Retrieval. *Christopher D. Manning* (65%)
+- Social Network Analysis. *Katherine Faust & Stanley Wasserman* (40%)
 - Ficciones. *Jorge Luis Borges*
 - The Everything Learning German book. *Edward Swick*
 - The Picture of Dorian Gray. *Oscar Wilde*
