@@ -9,6 +9,7 @@ Some books I have read.
 
 #### *2017*
 
+- The Talented Mr. Ripley. *Patricia Highsmith*
 - Introduction to Information Retrieval. *Christopher D. Manning* (65%)
 - Social Network Analysis. *Katherine Faust & Stanley Wasserman* (40%)
 - Ficciones. *Jorge Luis Borges*
