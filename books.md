@@ -9,6 +9,7 @@ Some books I have read.
 
 #### *2017*
 
+- Refactoring. Improving the Design of Existing Code. *Martin Fowler*
 - The Talented Mr. Ripley. *Patricia Highsmith*
 - Introduction to Information Retrieval. *Christopher D. Manning* (65%)
 - Social Network Analysis. *Katherine Faust & Stanley Wasserman* (40%)
