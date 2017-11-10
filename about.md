@@ -23,9 +23,8 @@ permalink: /about/
 I'm Enrique, software developer based in <strike>Spain</strike>, Germany,
 and currently <strike>Java</strike>, <strike>PHP</strike>, <strike>Python</strike>,
 JavaScript pays my bills.
-Ideally, this site should contain a collection of interesting,
-beautifully written, inspiring notes, but in terms of writing I'm
-just a <em>dilettante</em>.
+
+This blog should work fine, except in terms of success.
 
 I usually spend my spare time reading, watching movies, visiting cities,
 go running, and working on [personal projects](/projects).
