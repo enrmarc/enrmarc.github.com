@@ -6,6 +6,7 @@ category    : others
 permalink   : /blog/thesis-part-ii
 disqus      : false
 keywords    : master thesis learning-analytics germany nlp
+published   : false
 ---
 
 So, what's my thesis about? *Supporting teachers to manage

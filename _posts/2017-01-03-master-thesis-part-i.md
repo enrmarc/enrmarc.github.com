@@ -6,6 +6,7 @@ category    : others
 permalink   : /blog/thesis-part-i
 disqus      : false
 keywords    : master thesis learning-analytics germany
+published   : false
 ---
 
 Three months have passed since I [started again] and I have to say, it's been

@@ -27,3 +27,9 @@ $subdued-border:   rgba($bg-color-darker, 0.5);
   "base",
   "syntax-highlighting"
 ;
+
+.navigation-content {
+  a {
+    margin-right: 0.25rem;
+  }
+}
