@@ -6,7 +6,7 @@ title : Blog
   <div class="row">
     <header>
       <div>
-        <center><h1>{{ site.title }}</h1></center>
+        <center><h1>{{ page.title }}</h1></center>
       </div>
       <!--center><span class="big-ornament">{% include ornament.html %}</span></center-->
     </header>
