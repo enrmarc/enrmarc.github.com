@@ -27,7 +27,7 @@ JavaScript pays my bills.
 This blog should work fine, except in terms of success.
 
 I usually spend my spare time reading, relocating to yet another city, watching movies,
-running, and working on [personal projects](/projects).
+hanging out, running, and working on [personal projects](/projects).
 If you want to contact me just send me a message to `enrmarc@gmail.com`.
 I also use that handle in sites like [GitHub](http://github.com/enrmarc)
 and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile). More info
