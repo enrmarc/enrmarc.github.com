@@ -5,10 +5,11 @@ permalink: /books/
 summary  : Fuck
 ---
 
-Some books I have read.
+Something tells me you shouldn't be here. Rápido, házmelo saber.
 
 #### *2017*
 
+- Fight Club. *Chuck Palahniuk*
 - Post Office. *Charles Bukowski*
 - Explore Flask. *Robert Picard*
 - Refactoring. Improving the Design of Existing Code. *Martin Fowler*
