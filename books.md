@@ -5,7 +5,11 @@ permalink: /books/
 summary  : Fuck
 ---
 
-Something tells me you shouldn't be here. Rápido, házmelo saber.
+Books I've read. Something tells me you shouldn't be here; rápido, házmelo saber.
+
+#### *2018*
+
+- Think OS. A Brief Introduction to Operating Systems. *Allen B. Downey*
 
 #### *2017*
 
