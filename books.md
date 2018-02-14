@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- High Performance Web Sites. *Steve Souders*
 - Think OS. A Brief Introduction to Operating Systems. *Allen B. Downey*
 
 #### *2017*
