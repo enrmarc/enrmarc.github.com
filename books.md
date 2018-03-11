@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- Notes from Underground. *Fyodor Dostoevsky*
 - The Tao of Programming. *Geoffrey James*
 - The Cathedral and the Bazaar. *Eric S. Raymond*
 - High Performance Web Sites. *Steve Souders*
