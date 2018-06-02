@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- The Laughing Man. *J. D. Salinger*
 - Cuentos Completos. *Jorge Luis Borges*
 - Notes from Underground. *Fyodor Dostoevsky*
 - The Tao of Programming. *Geoffrey James*
