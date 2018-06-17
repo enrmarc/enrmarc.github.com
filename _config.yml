@@ -5,10 +5,6 @@ biography:   "I’m Enrique, software developer based in <strike>Spain</strike>,
              Germany, and currently <strike>Java, PHP, Python</strike>, JavaScript pays my bills."
 keywords:    "software"
 description: "This blog should work fine, except in terms of success."
-colophon:    "© 2012 — 2017 Enrique Marcos.<br>
-             Content available under Creative Commons (BY-NC-SA) unless otherwise noted.<br>
-             This site is hosted at <a href='https://pages.github.com/''>Github Pages</a>
-             and created with <a href='http://jekyllrb.com/''>Jekyll</a>."
 highlighter: rouge
 encoding:    "utf-8"
 baseurl:     ""
