@@ -1,220 +1,40 @@
-/**
- * Syntax highlighting styles
- */
+// figure pre code {
+//     display: block;
+//     overflow-x: auto;
+//     padding: .75em;
+//     color: #333;
+//     background: #fcfcfc;
+//     font-size: 75%;
+// }
 
- /*
+.hljs{display:block;overflow-x:auto;padding:0.5em;color:#000;-webkit-text-size-adjust:none}.hljs-comment{color:#006a00}.hljs-keyword{color:#02E}.hljs-literal,.nginx .hljs-title{color:#aa0d91}.method,.hljs-list .hljs-title,.hljs-tag .hljs-title,.setting .hljs-value,.hljs-winutils,.tex .hljs-command,.http .hljs-title,.hljs-request,.hljs-status,.hljs-name{color:#008}.hljs-envvar,.tex .hljs-special{color:#660}.hljs-string{color:#c41a16}.hljs-tag .hljs-value,.hljs-cdata,.hljs-filter .hljs-argument,.hljs-attr_selector,.apache .hljs-cbracket,.hljs-date,.hljs-regexp{color:#080}.hljs-sub .hljs-identifier,.hljs-pi,.hljs-tag,.hljs-tag .hljs-keyword,.hljs-decorator,.ini .hljs-title,.hljs-shebang,.hljs-prompt,.hljs-hexcolor,.hljs-rule .hljs-value,.hljs-symbol,.hljs-symbol .hljs-string,.hljs-number,.css .hljs-function,.hljs-function .hljs-title,.coffeescript .hljs-attribute{color:#A0C}.hljs-function .hljs-title{font-weight:bold;color:#000}.hljs-class .hljs-title,.smalltalk .hljs-class,.hljs-type,.hljs-typename,.hljs-tag .hljs-attribute,.hljs-doctype,.hljs-class .hljs-id,.hljs-built_in,.setting,.hljs-params,.clojure .hljs-attribute{color:#5c2699}.hljs-variable{color:#3f6e74}.css .hljs-tag,.hljs-rule .hljs-property,.hljs-pseudo,.hljs-subst{color:#000}.css .hljs-class,.css .hljs-id{color:#9b703f}.hljs-value .hljs-important{color:#ff7700;font-weight:bold}.hljs-rule .hljs-keyword{color:#c5af75}.hljs-annotation,.apache .hljs-sqbracket,.nginx .hljs-built_in{color:#9b859d}.hljs-preprocessor,.hljs-preprocessor *,.hljs-pragma{color:#643820}.tex .hljs-formula{background-color:#eee;font-style:italic}.diff .hljs-header,.hljs-chunk{color:#808080;font-weight:bold}.diff .hljs-change{background-color:#bccff9}.hljs-addition{background-color:#baeeba}.hljs-deletion{background-color:#ffc8bd}.hljs-comment .hljs-doctag{font-weight:bold}.method .hljs-id{color:#000}
+
 .highlight {
-    .c     {  color: lighten($text-color, 35%); font-style: italic } // Comment
-    .err   {  } // Error
-    .k     {  color: $alt-color; font-weight: bold } // Keyword
-    .o     {  font-weight: bold }  // Operator
-    .cm    {  font-style: italic } // Comment.Multiline
-    .cp    {  font-weight: bold }  // Comment.Preproc
-    .c1    {  font-style: italic } // Comment.Single
-    .cs    {  font-weight: bold; font-style: italic } // Comment.Special
-    .gd    {  } // Generic.Deleted
-    .gd .x {  } // Generic.Deleted.Specific
-    .ge    {  font-style: italic } // Generic.Emph
-    .gr    {  } // Generic.Error
-    .gh    {  } // Generic.Heading
-    .gi    {  } // Generic.Inserted
-    .gi .x {  } // Generic.Inserted.Specific
-    .go    {  } // Generic.Output
-    .gp    {  } // Generic.Prompt
-    .gs    {  font-weight: bold } // Generic.Strong
-    .gu    {  } // Generic.Subheading
-    .gt    {  } // Generic.Traceback
-    .kc    {  font-weight: bold } // Keyword.Constant
-    .kd    {  font-weight: bold } // Keyword.Declaration
-    .kp    {  font-weight: bold } // Keyword.Pseudo
-    .kr    {  font-weight: bold } // Keyword.Reserved
-    .kt    {  font-weight: bold } // Keyword.Type
-    .m     {  } // Literal.Number
-    .s     { font-style: italic } // Literal.String
-    .na    {  } // Name.Attribute
-    .nb    {  } // Name.Builtin
-    .nc    {  font-weight: bold } // Name.Class
-    .no    {  } // Name.Constant
-    .ni    {  } // Name.Entity
-    .ne    {  font-weight: bold } // Name.Exception
-    .nf    {  font-weight: bold } // Name.Function
-    .nn    {  } // Name.Namespace
-    .nt    {  } // Name.Tag
-    .nv    {  } // Name.Variable
-    .ow    {  font-weight: bold } // Operator.Word
-    .w     {  } // Text.Whitespace
-    .mf    {  } // Literal.Number.Float
-    .mh    {  } // Literal.Number.Hex
-    .mi    {  } // Literal.Number.Integer
-    .mo    {  } // Literal.Number.Oct
-    .sb    {  } // Literal.String.Backtick
-    .sc    {  } // Literal.String.Char
-    .sd    {  } // Literal.String.Doc
-    .s2    {  } // Literal.String.Double
-    .se    {  } // Literal.String.Escape
-    .sh    {  } // Literal.String.Heredoc
-    .si    {  } // Literal.String.Interpol
-    .sx    {  } // Literal.String.Other
-    .sr    {  } // Literal.String.Regex
-    .s1    {  } // Literal.String.Single
-    .ss    {  } // Literal.String.Symbol
-    .bp    {  } // Name.Builtin.Pseudo
-    .vc    {  } // Name.Variable.Class
-    .vg    {  } // Name.Variable.Global
-    .vi    {  } // Name.Variable.Instance
-    .il    {  } // Literal.Number.Integer.Long
-}*/
-//
-// .highlight .hll { background-color: #ffffcc }
-// .highlight .c { color: #228B22 } /* Comment */
-// .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
-// .highlight .k { color: #008b80; /*#8B008B;*/ font-weight: bold } /* Keyword */
-// .highlight .cm { color: #228B22 } /* Comment.Multiline */
-// .highlight .cp { color: #1e889b } /* Comment.Preproc */
-// .highlight .c1 { color: #228B22 } /* Comment.Single */
-// .highlight .cs { color: #8B008B; font-weight: bold } /* Comment.Special */
-// .highlight .gd { color: #aa0000 } /* Generic.Deleted */
-// .highlight .ge { font-style: italic } /* Generic.Emph */
-// .highlight .gr { color: #aa0000 } /* Generic.Error */
-// .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-// .highlight .gi { color: #00aa00 } /* Generic.Inserted */
-// .highlight .go { color: #888888 } /* Generic.Output */
-// .highlight .gp { color: #555555 } /* Generic.Prompt */
-// .highlight .gs { font-weight: bold } /* Generic.Strong */
-// .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-// .highlight .gt { color: #aa0000 } /* Generic.Traceback */
-// .highlight .kc { color: #8B008B; font-weight: bold } /* Keyword.Constant */
-// .highlight .kd { color: #8B008B; font-weight: bold } /* Keyword.Declaration */
-// .highlight .kn { color: #8B008B; font-weight: bold } /* Keyword.Namespace */
-// .highlight .kp { color: #8B008B; font-weight: bold } /* Keyword.Pseudo */
-// .highlight .kr { color: #8B008B; font-weight: bold } /* Keyword.Reserved */
-// .highlight .kt { color: #a7a7a7; font-weight: bold } /* Keyword.Type */
-// .highlight .m { color: #B452CD } /* Literal.Number */
-// .highlight .s { color: #6955cd; /*#CD5555*/ } /* Literal.String */
-// .highlight .na { color: #658b00 } /* Name.Attribute */
-// .highlight .nb { color: #658b00 } /* Name.Builtin */
-// .highlight .nc { color: #008b45; font-weight: bold } /* Name.Class */
-// .highlight .no { color: #00688B } /* Name.Constant */
-// .highlight .nd { color: #707a7c } /* Name.Decorator */
-// .highlight .ne { color: #008b45; font-weight: bold } /* Name.Exception */
-// .highlight .nf { color: #71008b; /*#008b45*/ } /* Name.Function */
-// .highlight .nn { color: #008b45; text-decoration: underline } /* Name.Namespace */
-// .highlight .nt { color: #008b7a; /*#8B008B;*/ font-weight: bold } /* Name.Tag */
-// .highlight .nv { color: #00688B } /* Name.Variable */
-// .highlight .ow { color: #8B008B } /* Operator.Word */
-// .highlight .w { color: #bbbbbb } /* Text.Whitespace */
-// .highlight .mf { color: #B452CD } /* Literal.Number.Float */
-// .highlight .mh { color: #B452CD } /* Literal.Number.Hex */
-// .highlight .mi { color: #B452CD } /* Literal.Number.Integer */
-// .highlight .mo { color: #B452CD } /* Literal.Number.Oct */
-// .highlight .sb { color: #CD5555 } /* Literal.String.Backtick */
-// .highlight .sc { color: #CD5555 } /* Literal.String.Char */
-// .highlight .sd { color: #CD5555 } /* Literal.String.Doc */
-// .highlight .s2 { color: #CD5555 } /* Literal.String.Double */
-// .highlight .se { color: #CD5555 } /* Literal.String.Escape */
-// .highlight .sh { color: #1c7e71; font-style: italic } /* Literal.String.Heredoc */
-// .highlight .si { color: #CD5555 } /* Literal.String.Interpol */
-// .highlight .sx { color: #cb6c20 } /* Literal.String.Other */
-// .highlight .sr { color: #1c7e71 } /* Literal.String.Regex */
-// .highlight .s1 { color: #CD5555 } /* Literal.String.Single */
-// .highlight .ss { color: #CD5555 } /* Literal.String.Symbol */
-// .highlight .bp { color: #658b00 } /* Name.Builtin.Pseudo */
-// .highlight .vc { color: #00688B } /* Name.Variable.Class */
-// .highlight .vg { color: #00688B } /* Name.Variable.Global */
-// .highlight .vi { color: #00688B } /* Name.Variable.Instance */
-// .highlight .il { color: #B452CD } /* Literal.Number.Integer.Long */
-//
+  width: 200%;
+  margin-left: -50%;
+}
 
-.hljs {
+pre.highlight, figure.highlight, pre {
+  code.hljs, code {
     display: block;
     overflow-x: auto;
-    padding: .75em;
-    color: #333;
-    background: #f8f8f8
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 75%;
+    padding-left: 25%;
+    background-color: #f6f6f6;
+    font-family: "Roboto Mono", Menlo, monospace;
+    white-space: pre-wrap;
+  }
+
+  code.language-bash, code.language-console, code.shell {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
-.hljs-comment,
-.hljs-quote {
-    color: #998;
-    font-style: italic
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-    color: #333;
-    font-weight: 700
-}
-
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-    color: teal
-}
-
-.hljs-string,
-.hljs-doctag {
-    color: #d14
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-    color: #900;
-    font-weight: 700
-}
-
-.hljs-subst {
-    font-weight: 400
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-    color: #458;
-    font-weight: 700
-}
-
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-    color: navy;
-    font-weight: 400
-}
-
-.hljs-regexp,
-.hljs-link {
-    color: #009926
-}
-
-.hljs-symbol,
-.hljs-bullet {
-    color: #990073
-}
-
-.hljs-built_in,
-.hljs-builtin-name {
-    color: #0086b3
-}
-
-.hljs-meta {
-    color: #999;
-    font-weight: 700
-}
-
-.hljs-deletion {
-    background: #fdd
-}
-
-.hljs-addition {
-    background: #dfd
-}
-
-.hljs-emphasis {
-    font-style: italic
-}
-
-.hljs-strong {
-    font-weight: 700
+code {
+  background-color: #f7f7f9;
+  font-size: 75%;
+  color: black;
 }

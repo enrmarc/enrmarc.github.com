@@ -26,7 +26,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   });
 
-  // ...
   var h4 = document.getElementsByTagName('h4');
   [].forEach.call(h4, function(el) {el.className = 'subhead';});
+
+  document.querySelectorAll('code.language-bash, code.language-console, code.shell').forEach(function(el) {
+    el.style.cssText = 'padding-left: 0 !important; background: white !important;';
+    el.parentElement.parentElement.style.cssText = 'width: 100%; margin-left: 0;';
+  });
 });

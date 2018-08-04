@@ -2,12 +2,36 @@
 ---
 @charset "utf-8";
 
-$base-font-family: Georgia, Times, 'Times New Roman', serif;
-$base-font-size:   14pt; /*12pt;*/
+@font-face { font-family: "et-book";
+             src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+             src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+             font-weight: normal;
+             font-style: normal; }
+
+@font-face { font-family: "et-book";
+             src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+             src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+             font-weight: normal;
+             font-style: italic; }
+
+@font-face { font-family: "et-book";
+             src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+             src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+             font-weight: bold;
+             font-style: normal; }
+
+@font-face { font-family: "et-book-roman-old-style";
+             src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+             src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+             font-weight: normal;
+             font-style: normal; }
+
+$base-font-family: 'et-book', Georgia, Times, 'Times New Roman', serif;
+$base-font-size: 1.4rem; //15pt;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$mono-font-family: 'Ubuntu Mono', 'Source Code Pro', Menlo, monospace;
+$mono-font-family: "Menlo", monospace;
 
 $text-color:       black; //hsl(0, 0%, 25%);
 $inline-code-color:black; //darkblue;

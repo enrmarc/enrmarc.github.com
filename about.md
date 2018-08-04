@@ -21,8 +21,8 @@ permalink: /about/
   &mdash;&nbsp;Holden Caulfield. -->
 
 I'm Enrique, software developer based in <strike>Spain</strike>, Germany,
-and currently <strike>Java</strike>, <strike>PHP</strike>, <strike>Python</strike>,
-JavaScript pays my bills.
+and currently <strike>Java</strike>, PHP, <strike>Python</strike>, and
+JavaScript pay my bills.
 
 This blog should work fine, except in terms of success.
 
