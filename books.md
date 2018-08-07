@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- The Call of Cthulhu. *H. P. Lovecraft*
 - The Laughing Man. *J. D. Salinger*
 - Cuentos Completos. *Jorge Luis Borges*
 - Notes from Underground. *Fyodor Dostoevsky*
