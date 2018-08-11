@@ -1,8 +1,11 @@
-<figure class="centered-figure">
-   <img class="{{include.klass}}" src="{{include.pic}}" alt="{{include.alt}}" width="{{ include.wwidth }}px">
+<figure class="centered-figure {% if include.float == 1 %} fig-float {% endif %}"> 
+   <img class="myfig {{include.klass}}" src="{{include.pic}}" alt="{{include.alt}}" width="{{ include.wwidth }}px">
    {% if include.caption %}
-      <figcaption>
-         {{include.caption}}
+      <figcaption style="font-size: smaller; font-style: italic;">
+          {% if include.num %}
+          <span style="font-weight: bolder;">{{ include.num }}</span>
+          {% endif %}
+          {{ include.caption }}
       </figcaption>
    {% endif %}
 </figure>

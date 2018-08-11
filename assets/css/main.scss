@@ -57,3 +57,18 @@ $subdued-border:   rgba($bg-color-darker, 0.5);
     margin-right: 0.25rem;
   }
 }
+
+@media (min-width: 1281px) {
+  .fig-float {
+    float:right; 
+    margin-right: -40% 
+  }
+}
+
+@media (max-width: 1281px) {
+  figure:not(.fig-float) {
+   .myfig {
+     width: 100%;
+    }
+  }
+}
