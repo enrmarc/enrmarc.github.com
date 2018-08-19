@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- El Alquimista. *Paulo Coelho*
 - Structure and Interpretation of Computer Programs. *Abelson, Jerry & Julie Sussman*
 - The Call of Cthulhu. *H. P. Lovecraft*
 - The Laughing Man. *J. D. Salinger*
