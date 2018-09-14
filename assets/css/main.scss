@@ -26,10 +26,10 @@
              font-weight: normal;
              font-style: normal; }
 
-$base-font-family: 'et-book', Georgia, Times, 'Times New Roman', serif;
-$base-font-size: 1.4rem; //15pt;
+$base-font-family: 'Times New Roman', 'et-book', Georgia, Times, 'Times New Roman', serif;
+$base-font-size: 1.3rem;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.35;
 
 $mono-font-family: "Menlo", monospace;
 

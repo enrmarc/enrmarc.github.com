@@ -20,6 +20,32 @@ body {
     font-size: 100%;
   }
 
+  xarticle a {
+    color: #0000FF;
+    font-weight: normal;
+    border: none;
+
+    &:hover {
+      color: #0000ff;
+      color: #0000d0;
+      border: none;
+    }
+  }
+
+  .post-index-title {
+    font-size: 1.3rem !important;
+  }
+
+  .index-year {
+    a {
+      border: none;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+  }
+
   p {
     margin-top: 1.4rem;
         margin-bottom: 1.4rem;
@@ -52,7 +78,7 @@ body {
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-variant: small-caps;
     text-transform: lowercase;
     font-weight: bold;
@@ -281,7 +307,7 @@ h1 {
 
 .post-category {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 0.6rem; //11px;
   font-weight: bolder;
 
   &.post-category-others {
@@ -339,7 +365,7 @@ body {
 
 .main {
   a {
-    font-size: 85%;
+    //font-size: 85%;
   }
   .index-year {
     a {

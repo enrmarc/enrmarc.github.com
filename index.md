@@ -26,12 +26,12 @@ title : Blog
 
         {% if post.ext_url %}
           <li>
-            <a href="{{ post.ext_url }}">{{ post.title }}</a>
+            <a class="post-index-title" href="{{ post.ext_url }}">{{ post.title }}</a>
             <span class="post-category post-category-{{post.category}}">&nbsp;{{ post.category }}</span>
           </li>
         {% else %}
           <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a class="post-index-title" href="{{ post.url }}">{{ post.title }}</a>
             <span class="post-category post-category-{{post.category}}">&nbsp;{{ post.category }}</span>
           </li>
         {% endif %}
