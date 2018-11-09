@@ -65,10 +65,10 @@ $subdued-border:   rgba($bg-color-darker, 0.5);
   }
 }
 
-@media (max-width: 1281px) {
-  figure:not(.fig-float) {
-   .myfig {
-     width: 100%;
-    }
-  }
-}
+// @media (max-width: 1281px) {
+//   figure:not(.stay) {
+//    .myfig {
+//      width: 50%;
+//     }
+//   }
+// }
