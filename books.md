@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- Migrating to Microservice Databases. *Edson Yanaga*
 - La invención de Morel. *Adolfo Bioy Casares*
 - Best Kept Secrets of Peer Code Review. *Jason Cohen*
 - El Alquimista. *Paulo Coelho*
