@@ -9,6 +9,7 @@ Books I've read. Something tells me you shouldn't be here; rápido, házmelo sab
 
 #### *2018*
 
+- Domain-Driven Design. Tackling Complexity in the Heart of Software. *Eric J. Evans*
 - High Performance MySQL. Optimization, Backups, and Replication. *Baron Schwartz* (50%)
 - Migrating to Microservice Databases. *Edson Yanaga*
 - La invención de Morel. *Adolfo Bioy Casares*
