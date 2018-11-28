@@ -5,7 +5,7 @@ permalink: /books/
 summary  : Fuck
 ---
 
-Books I've read. Something tells me you shouldn't be here; rápido, házmelo saber.
+Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, házmelo saber.
 
 #### *2018*
 
