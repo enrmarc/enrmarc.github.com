@@ -4,8 +4,8 @@ title    : Art
 permalink: /art/
 summary  : for(;;) draw()
 scripts:
-  - src  : https://rawgit.com/enrmarc/art/master/lib/p5.min.js
-  - src  : https://rawgit.com/enrmarc/art/master/build/frontpage/bundle.js
+  - src  : https://cdn.jsdelivr.net/gh/enrmarc/art/lib/p5.min.js
+  - src  : https://cdn.jsdelivr.net/gh/enrmarc/art/build/frontpage/bundle.js
 ---
 
 <div id="dots"></div>
