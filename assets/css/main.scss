@@ -27,9 +27,9 @@
 //              font-style: normal; }
 
 $base-font-family: 'Times New Roman', Georgia, Times, serif;
-$base-font-size: 1.3rem;
+$base-font-size: 1.2rem;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.35;
+$base-line-height: 1.25rem;
 
 $mono-font-family: "Menlo", monospace;
 
@@ -72,3 +72,8 @@ $subdued-border:   rgba($bg-color-darker, 0.5);
 //     }
 //   }
 // }
+
+body {
+   width: 1045px;
+}
+}
