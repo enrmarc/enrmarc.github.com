@@ -1,8 +1,7 @@
 ---
 layout   : post
 title    : About
-summary  : TL;DR ・ Developer
-extra    : TL;DR ・ Developer
+summary  : tl;dr developer
 permalink: /about/
 ---
 
@@ -20,9 +19,8 @@ permalink: /about/
   <br>
   &mdash;&nbsp;Holden Caulfield. -->
 
-I'm Enrique, software developer based in <strike>Spain</strike>, Germany,
-and currently <strike>Java</strike>, PHP, <strike>Python</strike>, and
-JavaScript pay my bills.
+<p><em>{{ page.summary }}</em></p>
+{{ site.biography }}
 
 This blog should work fine, except in terms of success.
 
@@ -33,13 +31,13 @@ I also use that handle in sites like [GitHub](http://github.com/enrmarc)
 and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile). More info
 on my [CV](http://enrmarc.github.io/data/resume.pdf).
 
-### About this site
+# About this site
 
 [Jekyll](http://jekyllrb.com/) &mdash;
 [GitHub](http://github.com/) &mdash;
 [Atom](https://atom.io)
 
-Built using Jekyll, Git, Atom (sometimes Vim) and hosted on GitHub.
+Built using Jekyll, Git, VS Code (sometimes Vim) and hosted on GitHub.
 Content available under [Creative Commons (BY-NC-SA)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 unless otherwise noted.
 

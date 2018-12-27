@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(event) {
   // Random phrases
+  var descriptions = [
+    "Asteroid Blues",
+    "Waltz for Venus",
+    "Ganymede Elegy",
+    "Jupiter Jazz",
+    "Cowboy Funk",
+  ];
+
   var notes = [
     'Noto un desespero enfermizo en tu risa.',
     'Go ahead HQ.',
@@ -7,8 +15,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
     'Sick Boy: Para ser vegetariano, Rents, eres un tirador de lo más sanguinario.',
     'Enviad más paramédicos.',
     'In the pipe, 5 by 5.',
-    'Hold me now, I need assistance.'
+    "There's no beef in here",
+    "Bang!",
   ];
+
+  var descriptionEl = document.querySelector('.nav-desc');
+  if (descriptionEl) {
+    descriptionEl.innerHTML = descriptions[Math.floor(Math.random() * descriptions.length)];
+  }
+
   var el = document.querySelector('.paramedics');
   if (el) {
     el.innerHTML = notes[Math.floor(Math.random() * notes.length)];
@@ -34,3 +49,5 @@ document.addEventListener('DOMContentLoaded', function(event) {
     el.parentElement.parentElement.style.cssText = 'width: 100%; margin-left: 0;';
   });
 });
+
+console.log('Bang!');

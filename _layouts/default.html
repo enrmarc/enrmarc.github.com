@@ -3,9 +3,10 @@
   {% include head.html %}
   <body>
     {% include navigation.html %}
-    {{ content }}
+    <section id="main">
+      {{ content }}
+    </section>    
     {% include footer.html %}
-
     {% for script in page.scripts %}
       <script type="text/javascript" src="{{ script.src }}"></script>
     {% endfor %}

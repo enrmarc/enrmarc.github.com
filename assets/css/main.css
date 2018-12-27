@@ -1,0 +1,323 @@
+ * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+ body {
+     background: #fefefe;
+     font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    /*color: #000000;
+    */
+     font-size: 0.9rem;
+     line-height: 1.3rem;
+}
+ i, em {
+     font-family: Georgia, serif;
+}
+ body > header {
+     padding-bottom: 1rem;
+}
+ body > header h1 {
+     font-family: Georgia, serif;
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: normal;
+}
+ .post h1 {
+    font-weight: normal;
+     margin-top: 0;
+     font-size: 1.1rem;
+}
+ .post h2 {
+    font-weight: normal;
+     margin-top: 0;
+     font-size: 1.1rem;
+    font-style: italic;
+}
+ .post h3 {
+    font-weight: normal;
+     margin-top: 0;
+     font-size: 1rem;
+}
+ .post {
+     margin-bottom: 2em;
+}
+ blockquote {
+     font-style: italic;
+}
+ blockquote em {
+     font-style: normal;
+}
+ .permalink a {
+     text-decoration:none;
+}
+ .permalink a:hover {
+     text-decoration:underline;
+}
+ a {
+     color: #0000ff;
+     text-decoration: none;
+}
+ a:hover {
+     color: #ff0000;
+     text-decoration: underline;
+}
+ a img {
+     outline: 0;
+     border: none;
+}
+ nav {
+     width: 100%;
+     display: table-row;
+     table-layout: fixed;
+}
+ nav span {
+     display:table-cell;
+     width:15em;
+}
+ #past {
+    text-align: left
+}
+ #pageno {
+    text-align: center
+}
+ #future {
+    text-align: right;
+}
+ .chatlog {
+     width: 100%;
+     display: table;
+     table-layout: fixed;
+}
+ .chatlog div {
+     display: table-row;
+}
+ .chatlog span {
+     display:table-cell;
+     width:1rem;
+}
+ .photopost {
+     width:100%;
+     max-width:500px;
+}
+ hr {
+     height: 0;
+     border: solid 1px;
+     color: #cccccc;
+     width: 100%;
+     max-width: 36rem;
+}
+ foote {
+     text-align: center;
+}
+ footer ul {
+     padding-left: 0;
+}
+ footer li {
+     display: inline-block;
+     list-style-type: none;
+}
+ footer li:after {
+     content: " — ";
+}
+ footer li:last-child:after {
+     content: "";
+}
+ @media all and (max-width: 600px) {
+     article {
+         padding-top: 1rem;
+    }
+     .permalink {
+         display: inline;
+    }
+     .permalink span:after {
+         content:": ";
+    }
+     .post header h1 {
+         display:inline;
+    }
+     nav {
+         border-top: solid 1px;
+         width: 100%;
+    }
+     body {
+         padding-left:3px;
+         padding-right:3px;
+    }
+     body > header a {
+         display:block;
+         padding-bottom: 0.2em;
+    }
+     blockquote, pre, ul, ol {
+         padding-left:1rem;
+         margin-left: 0;
+         padding-right: 0;
+         margin-right: 0;
+    }
+     .post {
+         border-top: solid 1px #000000;
+         padding-top: 3px;
+    }
+}
+ @media all and (min-width: 600px) {
+     body > header em:before {
+         content:" — ";
+    }
+     blockquote, pre {
+         margin-left: 0rem;
+         padding-left: 1rem;
+         margin-top: 0;
+         border-left: dotted 1px ;
+    }
+     blockquote blockquote {
+         margin-left: 0;
+    }
+     blockquote ul, blockquote ol {
+         padding-left: 1rem;
+    }
+     ul, ol {
+         padding-left: 1rem;
+    }
+     .permalink {
+         float:left;
+         margin-left: -8rem;
+         text-align:right;
+         padding-top: 0.1rem;
+    }
+     section, nav, footer {
+         max-width:36rem;
+    }
+     body {
+         padding-left:12rem;
+    }
+     body > header {
+         padding-top: 2rem;
+    }
+}
+ .tex sub, .latex sub, .latex sup {
+     text-transform: uppercase;
+}
+ .tex sub, .latex sub {
+     vertical-align: -0.5ex;
+     margin-left: -0.1667em;
+     margin-right: -0.125em;
+}
+ .tex, .latex, .tex sub, .latex sub {
+     font-size: 0.9em;
+}
+ .latex sup {
+     font-size: 0.85em;
+     vertical-align: 0.15em;
+     margin-left: -0.36em;
+     margin-right: -0.15em;
+}
+
+/** ------------------------------------ **/
+.post-list li {
+    list-style: none;
+}
+
+.post-list ol {
+    padding-left: 0;
+}
+
+.post-category {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: bolder
+}
+
+.post-category.post-category-others {
+    color: #1f00b7
+}
+
+.post-category.post-category-software {
+    color: #03a598
+}
+
+.post-category.post-category-traveling {
+    color: #9500b7
+}
+
+.post-category.post-category-notes {
+    color: #b7005a
+}
+
+.post-category.post-category-projects {
+    color: black
+}
+
+footer {
+    text-align: center;
+}
+
+.ultra-footer {
+    margin-top: 3.5rem;
+    font-size: 10px;
+    color: #666;
+    border-top: 1px solid rgba(217,217,217,0.5);
+}
+
+.ultra-footer .ultra-footer_col {
+    float: left;
+    width: 50%;
+    margin-bottom: 2.5rem;
+}
+
+img.s {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.56)
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+.centered-figure {
+    text-align: center
+}
+
+.centered-figure figcaption {
+    padding-top: 8px;
+    font-size: smaller
+}
+
+/** syntax highlight **/
+figure {
+    margin: 0;
+}
+
+figure pre {
+    border-left: none;
+    padding-left: 0;
+    font-size: 90%;
+}
+
+.hljs{white-space: pre-wrap;display:block;overflow-x:auto;padding:0.5em;color:#000;-webkit-text-size-adjust:none}.hljs-comment{color:#006a00}.hljs-keyword{color:#02E}.hljs-literal,.nginx .hljs-title{color:#aa0d91}.method,.hljs-list .hljs-title,.hljs-tag .hljs-title,.setting .hljs-value,.hljs-winutils,.tex .hljs-command,.http .hljs-title,.hljs-request,.hljs-status,.hljs-name{color:#008}.hljs-envvar,.tex .hljs-special{color:#660}.hljs-string{color:#c41a16}.hljs-tag .hljs-value,.hljs-cdata,.hljs-filter .hljs-argument,.hljs-attr_selector,.apache .hljs-cbracket,.hljs-date,.hljs-regexp{color:#080}.hljs-sub .hljs-identifier,.hljs-pi,.hljs-tag,.hljs-tag .hljs-keyword,.hljs-decorator,.ini .hljs-title,.hljs-shebang,.hljs-prompt,.hljs-hexcolor,.hljs-rule .hljs-value,.hljs-symbol,.hljs-symbol .hljs-string,.hljs-number,.css .hljs-function,.hljs-function .hljs-title,.coffeescript .hljs-attribute{color:#A0C}.hljs-function .hljs-title{font-weight:bold;color:#000}.hljs-class .hljs-title,.smalltalk .hljs-class,.hljs-type,.hljs-typename,.hljs-tag .hljs-attribute,.hljs-doctype,.hljs-class .hljs-id,.hljs-built_in,.setting,.hljs-params,.clojure .hljs-attribute{color:#5c2699}.hljs-variable{color:#3f6e74}.css .hljs-tag,.hljs-rule .hljs-property,.hljs-pseudo,.hljs-subst{color:#000}.css .hljs-class,.css .hljs-id{color:#9b703f}.hljs-value .hljs-important{color:#ff7700;font-weight:bold}.hljs-rule .hljs-keyword{color:#c5af75}.hljs-annotation,.apache .hljs-sqbracket,.nginx .hljs-built_in{color:#9b859d}.hljs-preprocessor,.hljs-preprocessor *,.hljs-pragma{color:#643820}.tex .hljs-formula{background-color:#eee;font-style:italic}.diff .hljs-header,.hljs-chunk{color:#808080;font-weight:bold}.diff .hljs-change{background-color:#bccff9}.hljs-addition{background-color:#baeeba}.hljs-deletion{background-color:#ffc8bd}.hljs-comment .hljs-doctag{font-weight:bold}.method .hljs-id{color:#000}
+pre.highlight code.language-bash,pre.highlight code.language-console,pre.highlight code.shell,figure.highlight code.language-bash,figure.highlight code.language-console,figure.highlight code.shell,pre code.language-bash,pre code.language-console,pre code.shell {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+pre.highlight code.hljs,pre.highlight code,figure.highlight code.hljs,figure.highlight code,pre code.hljs,pre code {
+    display: block;
+    overflow-x: auto;
+    background-color: #f6f6f6;
+    font-family: "Roboto Mono", monospace;
+    white-space: pre-wrap;
+    border-left: none;
+    padding: 1.25rem;
+}
+
+pre.highlight code.language-bash,pre.highlight code.language-console,pre.highlight code.shell,figure.highlight code.language-bash,figure.highlight code.language-console,figure.highlight code.shell,pre code.language-bash,pre code.language-console,pre code.shell {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+ @media all and (max-width: 600px) {
+    pre.highlight code.hljs,pre.highlight code,figure.highlight code.hljs,figure.highlight code,pre code.hljs,pre code {
+        padding: 0.5rem;
+    }
+}

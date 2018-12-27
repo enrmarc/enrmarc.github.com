@@ -2,7 +2,7 @@ author:      Enrique Marcos
 name:        enrmarc
 url:         "http://enrmarc.github.io"
 biography:   "I’m Enrique, software developer based in <strike>Spain</strike>,
-             Germany, and currently <strike>Java, Python</strike>, PHP, and JavaScript pay my bills."
+             Germany, and currently <strike>Java, Python</strike>, PHP, Go, and JavaScript pay my bills."
 keywords:    "software"
 description: "This blog should work fine, except in terms of success."
 highlighter: rouge
