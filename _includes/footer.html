@@ -1,29 +1,19 @@
 <footer>
-  <div class="container">
-    <div class="row biography">
-      <div class="col-sm-4 offset-sm-2">
-        <h2>who am i</h2>
-        <p>{{ site.biography }}</p>
-      </div>
+  <ul>
+    <li><a href="/">news</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="https://github.com/enrmarc/enrmarc.github.com/issues/new">ask</a></li>
+    <li><a href="https://github.com/enrmarc">@enrmarc</a></li>
+  </ul>
 
-      <div class="col-sm-4">
-        <h2>what is this</h2>
-        <p>{{ site.description }}</p>
-      </div>
+  <div class="ultra-footer">
+    <div class="ultra-footer_col">
+      <p>who am i</p>
+      <p>{{ site.biography }}</p>
     </div>
-
-    <div class="row copyright">
-       <center>
-          © 2012 — {{site.time | date: '%Y'}} Enrique Marcos.<br>
-          Content available under Creative Commons (BY-NC-SA) unless otherwise noted.<br>
-          This site is hosted at 
-          <a href="https://pages.github.com/">Github Pages</a>
-          and created with <a href="http://jekyllrb.com/">Jekyll</a>.
-       </center>
-    </div>
-
-    <div class="row">
-      <center><div class="paramedics"></div></center>
+    <div class="ultra-footer_col">
+      <p>what is this</p>
+      <p>This blog should work fine, except in terms of success.</p>
     </div>
   </div>
 </footer>
