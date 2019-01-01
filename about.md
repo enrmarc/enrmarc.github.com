@@ -34,7 +34,7 @@ on my [CV](http://enrmarc.github.io/data/resume.pdf).
 # About this site
 
 [Jekyll](http://jekyllrb.com/) &mdash;
-[GitHub](http://github.com/) &mdash;
+[GitHub](http://github.com/)
 
 Built using Jekyll, Git, VS Code (sometimes Vim) and hosted on GitHub.
 Content available under [Creative Commons (BY-NC-SA)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
