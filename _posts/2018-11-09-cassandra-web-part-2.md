@@ -23,7 +23,7 @@ frontend, rather than query the server each time the app wants to know "at what 
 coming the next bus?").
 
 {% assign pic = page.images[1] %}
-{% include picture.html klass="s" pic=pic alt="Cassandra" wwidth="400" num="Fig. 1." caption="Secondary screen" %}
+{% include picture.html klass="s" pic=pic alt="Cassandra" wwidth="400" num="Fig. 2." caption="Secondary screen" %}
 
 Besides, these days I'm busy refreshing my knowledge about DDD, getting familiarized
 (once again) with Docker and Kubernetes, and learning Go... yeah, microservices all the
