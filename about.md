@@ -25,7 +25,7 @@ permalink: /about/
 This blog should work fine, except in terms of success.
 
 I usually spend my spare time reading, relocating to yet another city, watching movies,
-hanging out, running, and working on [personal projects](/projects).
+hanging out, running, and working on personal projects.
 If you want to contact me just send me a message to `enrmarc@gmail.com`.
 I also use that handle in sites like [GitHub](http://github.com/enrmarc)
 and [Stackoverflow](http://stackoverflow.com/users/434171/enrique-marcos?tab=profile). More info
@@ -35,7 +35,6 @@ on my [CV](http://enrmarc.github.io/data/resume.pdf).
 
 [Jekyll](http://jekyllrb.com/) &mdash;
 [GitHub](http://github.com/) &mdash;
-[Atom](https://atom.io)
 
 Built using Jekyll, Git, VS Code (sometimes Vim) and hosted on GitHub.
 Content available under [Creative Commons (BY-NC-SA)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
