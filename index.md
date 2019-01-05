@@ -12,6 +12,9 @@ title : News
   <div class="post-list">
     <ol>
       {% for post in site.posts %}
+      {% if post.hidden %}
+        {% continue %}
+      {% endif %}
       {% if post.ext_url %}
       <li>
         <span>{{ post.date | date: "%Y-%m-%d" }}</span>&nbsp;&nbsp;
