@@ -7,6 +7,10 @@ summary  : Fuck
 
 Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, házmelo saber.
 
+#### *2019*
+
+- The Go Programming Language. *Alan A. A. Donovan, Brian W. Kernighan*
+
 #### *2018*
 
 - Domain-Driven Design. Tackling Complexity in the Heart of Software. *Eric J. Evans*

@@ -1,4 +1,5 @@
 _ignore/
+_wip/
 *.swp
 .DS_Store
 _site
