@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; r√°pido, h√
 
 #### *2019*
 
+- Domain Driven Design in PHP. *K. Akbary, C. Buenosvinos, C. Soronellas*
 - The Go Programming Language. *Alan A. A. Donovan, Brian W. Kernighan*
 
 #### *2018*
