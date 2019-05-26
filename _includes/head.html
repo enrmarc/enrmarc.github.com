@@ -25,8 +25,6 @@
       {{ site.keywords }}
     {% endif %}
   {% endcapture %}
-  <meta name="keywords" content="{{ keywords | strip_html | condense_spaces }}" />
-
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="/favicon.png" rel="icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
