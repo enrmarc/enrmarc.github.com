@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; r√°pido, h√
 
 #### *2019*
 
+- Agile Product Management with Scrum. *Roman Pichler*
 - The Time Machine. *H. G. Wells*
 - Head First Networking. *Al Anderson & Ryan Benedetti*
 - I Have No Mouth, and I Must Scream. *Harlan Ellison*
