@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; r√°pido, h√
 
 #### *2019*
 
+- Overcoming the Five Dysfunctions of a Team. *Patrick Lencioni*
 - Implementing Domain-Driven Design. *Vaughn Vernon*
 - Agile Product Management with Scrum. *Roman Pichler*
 - The Time Machine. *H. G. Wells*
