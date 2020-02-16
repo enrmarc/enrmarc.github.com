@@ -7,6 +7,10 @@ summary  : Fuck
 
 Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, házmelo saber.
 
+#### *2020*
+
+- Go Web Programming. *Sau Sheong Chang*
+
 #### *2019*
 
 - Designing Data-Intensive Applications. *Martin Kleppmann*
