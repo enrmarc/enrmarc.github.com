@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; r√°pido, h√
 
 #### *2020*
 
+- Divina Comedia. *Dante Alighieri*
 - Go Web Programming. *Sau Sheong Chang*
 
 #### *2019*
