@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, h�
 
 #### *2020*
 
+- 101 Zen Stories. *Nyogen Senzaki*
 - Historias de Cronopios y de Famas. *Julio Cortázar*
 - Meditations. *Marcus Aurelius*
 - Go in Practice. *Matt Butcher & Matt Farina*
