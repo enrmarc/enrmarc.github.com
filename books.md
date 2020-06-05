@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, h�
 
 #### *2020*
 
+- Foucault's Pendulum. *Umberto Eco*
 - 101 Zen Stories. *Nyogen Senzaki*
 - Historias de Cronopios y de Famas. *Julio Cortázar*
 - Meditations. *Marcus Aurelius*
