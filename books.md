@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, h�
 
 #### *2020*
 
+- The DevOps Handbook. *Gene Kim, John Willis, Patrick Debois*
 - El Club Dumas. *Arturo Pérez-Reverte*
 - Foucault's Pendulum. *Umberto Eco*
 - 101 Zen Stories. *Nyogen Senzaki*
