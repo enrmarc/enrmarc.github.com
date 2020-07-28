@@ -9,6 +9,7 @@ Books I have read. Irgendwie denke ich, du solltest nicht hier sein; rápido, h�
 
 #### *2020*
 
+- CORS in Action. *Monsur Hossain*
 - Patterns of Enterprise Application Architecture. *Martin Fowler*
 - The DevOps Handbook. *Gene Kim, John Willis, Patrick Debois*
 - El Club Dumas. *Arturo Pérez-Reverte*
